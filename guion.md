@@ -60,13 +60,48 @@ Así que quedate tranquila que todo va a estar bien. Prestame tu celular... abr�
 [receta  y aparición de Vale aquí]
 
 
-### 5. Pepenacho habla de finanzas y chan-chan mientras Sofi duerme
+### 5.1. Pepenacho habla de finanzas
 
+Y ahora les quiero hablar un poco sobre las finanzas del producto. Para estimar el mercado hicimos el cálculo 2 veces: una a partir de los datos del INDEC y otra a partir de las estadísticas de uso de pedidosYa, y llegamos a resultados parecidos: alrededor de 30K clientes iniciales.
 
+En nuestro negocio tenemos cuatro transacciones: 
+- La del plato para hacer, que es la que vieron recién
+- Un plan mensual que te cubre cierto número de comidas al mes
+- Un recargo sobre el delivery
+- Platos sponsoreados. Una marca de comida o no, capaz utilisima, pueden ponerle su marca a un plato, como Marvel le pone su marca a algunas series de Netflix. Se cobra por plato sponsoreado vendido.
 
+Acá en el centro yo escribí "DIVERSIDAD" porque es lo que define a nuestro mercado. Fijense que la torta ya está cortada en varios pedazos, pero se puede cortar más.
 
+Pensemos un minutito en Netflix. Porque Netflix es un servicio cuyo éxito creo que tiene que ver con la diversidad de su mercado:
+- hay gente que mira series en familia: lo usa para cenar.
+- hay gente que hace maratones: lo usa como el plan del finde.
+- hay gente que mira series en el bondi: lo usa para viajar.
+- mi hermano usa netflix para estudiar: lo deja reproduciendose y estudia.
+- hay gente que mira netflix en pareja: lo usa para varias cosas
+Netflix es un montón de cosas, porque tiene un montón de usos distintos y un mercado gigante gracias a eso.
 
+Con Cocinalo es parecido. Este bloque de 55% en realidad es un montón de fetitas chiquitas:
+[VOY DIBUJANDO LAS FETAS] 
+- Hay gente que lo va a usar porque es barato
+- Hay gente que lo va a usar para probar algo para lo cual es dificil conseguir los ingredientes tipo comida mexicana o china
+- Hay gente que va a pedir platos dificiles o desafiantes
+- Hay gente que lo va a usar porque es saludable (...diabéticos...celíacos...etc), a ellos tener control sobre la preparación les da seguridad.
+- Hay gente que va a pedir platos dificiles de hacer
+- Hay gente que va a cocinar para otros
+- Hay gente que va a cocinar para eventos
+- Hay gente que va a personalizar los platos
+- Hay gente que va a combinar platos
+[y para planes mensuales]
+- Hay gente que va a querer hacer dieta
+- Pastas los domingos
+- Asado los sábados
+- Planes con distintos precios...
 
+A partir de este feteado vemos que hay un mercado muy seguro: si alguno de estos nichos se me cae, entonces tengo a todo el resto para mantenerme mientras abro nuevos o lucho por recuperarlo. Debido a esto **Cocinalo es una inversión muy segura**, siempre va a haber clientes.
+
+### 5.2 El chan-chan de José
+
+Es impresionante el efecto que tuvo Netflix sobre la cultura internacional.
 
 
 
