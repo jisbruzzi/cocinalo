@@ -12,15 +12,17 @@
 
 ### 1. Pepenacho dice hola, misión, visión
 
-[slide: foto de nosotros]
-Bueno arranco. Me llamo José, también me dicen Pepenacho, represento a Cocinalo. Estos 8 somos Cocinalo. 
+[slide: Cocinalo]
+Bueno arranco. Me llamo José, también me dicen Pepenacho, represento a Cocinalo. Que levantela mano cocinalo! Estos 8 somos Cocinalo. [levanta las manos Cocinalo]
 
 [slide: una foto del brownie y de la tarta de manzana casera arriba de la mesa de mi comedor]
 Nuestra visión es "Unir a las personas **a través de la cocina**".
 
-Fijense que no pusimos "unir a las personas a través de la **comida**". A mi me pasa en los cumpleaños familiares. Vos tenés ahí en la mesa la tarta esa de manzana que la abuela Hortencia se mató haciendo tpda la noche, y tenés un brownie espectacular que compró la tía Isabel. 
+Fijense que no pusimos "unir a las personas a través de la **comida**". 
 
-Objetivamente, el brownie que compró la tía puede ser más rico, _pero yo me quedo con la tarta de la abuela_. 
+Les cuento algo que me pasa a mí en los cumpleaños familiares. Vos tenés ahí en la mesa la tarta esa de manzana que la abuela Hortencia se mató haciendo tpda la noche, y tenés una de chocolate espectacular que compró la tía Isabel de camino para acá. 
+
+Objetivamente, la de chocolate que compró la tía puede ser más rica, _pero yo me quedo con la tarta de la abuela_. 
 
 _La tarta de la abuela es una caricia._ Hace que la quiera más. 
 
@@ -28,7 +30,7 @@ Me _une_ a ella.
 
 [slide: la Misión.]
 
-Nuestra misión es "Acercarle a nuestros clientes recetas e ingredientes para hacer el cocinar más fácil y placentero".
+Nuestra misión es "Acercarle a nuestros clientes recetas e ingredientes para que disfruten más cocinar".
 
 [Pum!!! acá interrumpe Sofi]
 
@@ -37,11 +39,10 @@ Nuestra misión es "Acercarle a nuestros clientes recetas e ingredientes para ha
 [diálogo entre las chicas]
 
 ### 3. José se aparece y les dice tranquilas chicas y les explica el producto
-Hola chicas! Cómo están? No las veo muy bien... Tenés que cocinar para mañana, no? Bueno, yo soy de una empresa que se llama cocinalo, mirá nuestra misión: "Acercarle a nuestros clientes recetas e ingredientes para hacer el cocinar más fácil y placentero". 
+Hola chicas! Cómo están? No las veo muy bien... Tenés que cocinar para mañana, no? Bueno, yo soy de una empresa que se llama cocinalo, mirá nuestra misión: "Acercarle a nuestros clientes recetas e ingredientes para que disfruten más cocinar". 
 
 Ves? Sofi, yo quiero que cocinar no sea una carga para vos, quiero que lo disfrutes!
 
-[El proceso de cocinar, ilustrado. Al lado de cada paso salvo comer está el loguito de Cocinalo]
 Qué es cocinar? Cocinar tiene varios pasos, el primero es elegir qué querés comer, otro es conseguir la receta, otro conseguir los ingredientes, otro es el proceso este de agarrar y ponerte a cocinar, y al final comés.
 
 Cocinalo te acompaña en cada paso del proceso. 
@@ -101,22 +102,13 @@ A partir de este feteado vemos que hay un mercado muy seguro: si alguno de estos
 
 ### 5.2 El chan-chan de José
 
-Es impresionante el efecto que tuvo Netflix sobre la cultura internacional. Los historiadores dicen que estamos viviendo la segunda eddad de oro de la televisión. Las series fueron incorporando elementos artísticos y riesgosos, y plataformas como netflix hicieron que las "series gourmet" se volvieran populares.
+**Concinalo no es solamente un producto ni un servício. Cocinalo es, sobre todo, una propuesta.** 
 
-La otra vez escuché un director argentino que decía por la radio que "House of Cards es la serie mejor filmada de la historia" esto es porque tiene alto contenido artístico, innovador. Netflix hizo que nos acostumbráramos a este tipo de contenido, cambió nuestros gustos: subió la vara, elevó la calidad que esperamos de la TV. Puso lo gourmet en boca de todos.
-
-Me voy a tomar el atrevimiento de hablar así de Cocinalo. **Concinalo no es solamente un producto ni un servício. Cocinalo es, sobre todo, una propuesta.** 
-
-A medida que la sociedad se fue urbanizando y crecieron las comunicaciones y la tecnología, el día a día de la gente se fue volviendo cada vez más apretado. Cambiaron las costumbres. **Perdimos la cocina.**
-
-Cuando llevo la comida que me hace mi vieja al laburo siempre me dicen qué elaborado, qué bueno poder comer comida casera. Esto no es justo. Nos acostumbramos a la comida mala, de restaurante, hecha por un nadie.
+Por motivos culturales, hoy **perdimos la cocina**.
 
 La premisa que trae Cocinalo es sencilla: _Vos podés cocinar_. No importa qué sabés, qué no sabés ni cuánto tiempo tenés: _Vos podés cocinar_.
 
-Cocinalo es una propuesta. 
-
-La propuesta es una nueva edad de oro de la cocina. Cocinalo propone que nos acostumbremos a la comida casera, que recuperemos la cocina, que recuperemos esta manera de acariciar, la manera de acariciar de mi abuela. 
-
+Cocinalo propone _que nos acostumbremos a la comida casera_, que _recuperemos la cocina_, que recuperemos esta manera de acariciar, la manera de acariciar de mi abuela. 
 
 Y para que me crean qué bueno que está recuperar la cocina, los invito a que veamos cómo sigue la historia de Sofía.
 
