@@ -101,47 +101,23 @@ A partir de este feteado vemos que hay un mercado muy seguro: si alguno de estos
 
 ### 5.2 El chan-chan de José
 
-Es impresionante el efecto que tuvo Netflix sobre la cultura internacional.
+Es impresionante el efecto que tuvo Netflix sobre la cultura internacional. Los historiadores dicen que estamos viviendo la segunda eddad de oro de la televisión. Las series fueron incorporando elementos artísticos y riesgosos, y plataformas como netflix hicieron que las "series gourmet" se volvieran populares.
+
+La otra vez escuché un director argentino que decía por la radio que "House of Cards es la serie mejor filmada de la historia" esto es porque tiene alto contenido artístico, innovador. Netflix hizo que nos acostumbráramos a este tipo de contenido, cambió nuestros gustos: subió la vara, elevó la calidad que esperamos de la TV. Puso lo gourmet en boca de todos.
+
+Me voy a tomar el atrevimiento de hablar así de Cocinalo. **Concinalo no es solamente un producto ni un servício. Cocinalo es, sobre todo, una propuesta.** 
+
+A medida que la sociedad se fue urbanizando y crecieron las comunicaciones y la tecnología, el día a día de la gente se fue volviendo cada vez más apretado. Cambiaron las costumbres. **Perdimos la cocina.**
+
+Cuando llevo la comida que me hace mi vieja al laburo siempre me dicen qué elaborado, qué bueno poder comer comida casera. Esto no es justo. Nos acostumbramos a la comida mala, de restaurante, hecha por un nadie.
+
+La premisa que trae Cocinalo es sencilla: _Vos podés cocinar_. No importa qué sabés, qué no sabés ni cuánto tiempo tenés: _Vos podés cocinar_.
+
+Cocinalo es una propuesta. 
+
+La propuesta es una nueva edad de oro de la cocina. Cocinalo propone que nos acostumbremos a la comida casera, que recuperemos la cocina, que recuperemos esta manera de acariciar, la manera de acariciar de mi abuela. 
 
 
+Y para que me crean qué bueno que está recuperar la cocina, los invito a que veamos cómo sigue la historia de Sofía.
 
-
-
-[esto no sé bien dónde va...]
-Fijense que esta app se puede usar de muchísimas maneras
- 1. Cocinar con un amigo o pareja: sí ó sí sale bien!
- 2. Descubrir comidas nuevas y poder cocinarlas
- 3. Poder hacer comida con ingredientes difíciles de conseguir.
- 4. Podés personalizar las recetas, porque estás en tu casa.
-
-
-
-
-
-
-
-
-
-
-
-Nos dimos cuenta que la parte más fea de todo el proceso de cocinar, es conseguir los ingredientes correctos y la mejor receta. A través de nuestra aplicación, podés pedir un plato y obtener
- 1. recetas diseñadas por nuestros chef de reconocimiento internacional, e 
- 2. ingredientes seleccionados de una calidad altísima, mucho mejor que la que vas a encontrar en cualquier supermercado o almacén.
-
-
-Vos te bajás la aplicación o accedés por la compu, y vas a ver un montón de platos para cocinar
-
-
-
-
-No es un delivery! Sofi, a vos no te interesa un delivery. Vos no querés ser como mi tía y llevar algo comprado al laburo. _Vos querés ser como mi abuela, que pone de ella_: pone su estilo y pone su cariño en el plato.
-
-
-y estamos desarrollando una app para que cocinar sea un placer, no una carga.
-
-
-
-
-... me llevó mucho tiempo hacer los nachos porque no encontraba la harina de maíz y porque no tenía papel de cocina y fue un quilombo hacerlo porque no sabía cómo amasarlo y cómo hacer las proporciones, y me costó encontrar la receta porque hay un montón en internet y eran todas distintas...
-
-Slogan: Nosotros ponemos los ingredientes, vos ponés lo tuyo. {ESTO PORQUE VOS PODÉS PONERLE UN POQUITO MENOS O UN POQUITO MÁS, LAS CHICAS ME CONTABAN QUE ESTABAN DISTINTOS... ERA PORQUE ME SALIERON ANCHOS LOS NACHOS, PERO FUERON ÚNICOS, estaban medio quemaditos también}
+### 6. Sofi se despierta y alimenta a las fieras
