@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import 'typeface-roboto'
+import SingleLineGridList from './SingleLineGridList';
+import tileData from './tileData.js';
 
 import AppBar from './AppBar.js'
 
@@ -13,43 +15,17 @@ class App extends Component {
         <br/>
         <br/>
         <br/>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <br/>
-        p
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        hola
-        <br/>
-        <br/>
-        <br/>
-        v
-        <br/>
-        <br/>
-        v
-        v
-        v
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        v
-        v
-        v
-        v
-        <br/>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        aaasss
+        <p>Recomendados</p>
+        
+        <SingleLineGridList scrollData={tileData} />
+        <p>Los más comprados</p>
+        <SingleLineGridList scrollData={tileData} />
+        <p>Veggie</p>
+        <SingleLineGridList scrollData={tileData} />
 
-      </div>
+
+  
+      </div>      
     );
   }
 }
