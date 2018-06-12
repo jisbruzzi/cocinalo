@@ -17,7 +17,8 @@
     [4 horas]
 
 - Inicio: Muestra categorias estáticas. Estado: ninguno [2 horas]
-- Categoria: Carga cuáles son los productos de cierta categoría de la db y muestra los ThumbnailProducto como slider horizontal. Estado: listado de productos de esta categoria.[4 horas]
+- Categoria: Carga cuáles son los productos de cierta categoría de la db y muestra los ThumbnailProducto como slider horizontal. Estado: listado de productos de esta categoria.
+[4 horas]
 
 - Favoritos, Comprados y Resultados: son listas de productos, casi lo mismo. Hacen un cierto "request" a la db y muestran una cuadricula de ThumbnailProducto. Estado: lo que viene de db.[8 horas]
 

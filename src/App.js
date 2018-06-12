@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import 'typeface-roboto'
 import SingleLineGridList from './SingleLineGridList';
+import SimpleBottonNavigation from './SimpleBottonNavigation';
 import tileData from './tileData.js';
 
 import AppBar from './AppBar.js'
@@ -23,6 +24,8 @@ class App extends Component {
         <p>Veggie</p>
         <SingleLineGridList scrollData={tileData} />
 
+
+        <SimpleBottonNavigation />
 
   
       </div>      
