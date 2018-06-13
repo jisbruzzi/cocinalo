@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import 'typeface-roboto'
-import SingleLineGridList from './SingleLineGridList';
+import { BrowserRouter } from 'react-router-dom';
 import SimpleBottonNavigation from './SimpleBottonNavigation';
-import tileData from './tileData.js';
+import { NavLink, Switch, Route } from 'react-router-dom';
+import Categorias from './Categorias';
+import Perfil from './Perfil';
+import Favoritos from './Favoritos';
+//import tileData from './tileData.js';
 
 import AppBar from './AppBar.js'
 
@@ -16,16 +20,23 @@ class App extends Component {
         <br/>
         <br/>
         <br/>
-        <p>Recomendados</p>
-        
-        <SingleLineGridList scrollData={tileData} />
-        <p>Los más comprados</p>
-        <SingleLineGridList scrollData={tileData} />
-        <p>Veggie</p>
-        <SingleLineGridList scrollData={tileData} />
 
+        <BrowserRouter>
+          <div>
+         
+            <Switch>
+              <Route exact path='/' component={Categorias}></Route>
+              <Route exact path='/favoritos' component={Favoritos}></Route>
+              <Route exact path='/perfil' component={Perfil}></Route>
+            </Switch>
 
-        <SimpleBottonNavigation />
+            <SimpleBottonNavigation />
+          </div>
+   
+        </BrowserRouter>
+        <br/>
+        <br/>
+        <br/>
 
   
       </div>      

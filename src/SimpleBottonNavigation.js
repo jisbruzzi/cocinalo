@@ -7,6 +7,9 @@ import HomeIcon from '@material-ui/icons/Home';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import PermIdentity from '@material-ui/icons/PermIdentity';
+import { NavLink, Switch, Route } from 'react-router-dom';
+import { withRouter } from 'react-router-dom'
+
 
 const styles = {
   root: {
@@ -15,12 +18,15 @@ const styles = {
 };
 
 class SimpleBottomNavigation extends React.Component {
+
   state = {
-    value: 0,
+    value: "/"
   };
 
   handleChange = (event, value) => {
     this.setState({ value });
+    this.props.history.push(value);
+ 
   };
 
   render() {
@@ -33,11 +39,12 @@ class SimpleBottomNavigation extends React.Component {
         onChange={this.handleChange}
         showLabels
         className={classes.root}
-        style={{position:"fixed", bottom:"0", width:"100%"}}
-      >
-        <BottomNavigationAction label="Home" icon={<HomeIcon />} />
-        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-        <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
+        style={{position:"fixed", bottom:"0", width:"100%"}}>
+
+        <BottomNavigationAction value="/" label="Home" icon={<HomeIcon />} />
+        <BottomNavigationAction value="/favoritos" label="Favorites" icon={<FavoriteIcon />} />
+        <BottomNavigationAction value="/perfil" label="Nearby" icon={<LocationOnIcon />} />
+
       </BottomNavigation>
     );
   }
@@ -47,4 +54,4 @@ SimpleBottomNavigation.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(SimpleBottomNavigation);
+export default withStyles(styles)(withRouter(SimpleBottomNavigation));
