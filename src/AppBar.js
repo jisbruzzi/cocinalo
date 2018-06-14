@@ -17,9 +17,7 @@ function SimpleAppBar(props) {
   return (
         <AppBar position="fixed" color="default">
             <Toolbar style={estiloToolbar}>
-                <Typography variant="title" color="inherit">
-                    Cocinalo!
-                </Typography>
+                <img src={require("./img/logo.png")} height="65" width="177"/>
                 <div>
                     <IconButton aria-label="carrito">
                         <ShoppingCartIcon />
