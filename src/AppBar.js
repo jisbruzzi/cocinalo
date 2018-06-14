@@ -8,6 +8,8 @@ import Button from '@material-ui/core/Button';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import SearchIcon from '@material-ui/icons/Search';
 import { IconButton } from '@material-ui/core';
+import { withRouter } from 'react-router-dom';
+
 
 function SimpleAppBar(props) {
   let estiloToolbar={
@@ -21,7 +23,7 @@ function SimpleAppBar(props) {
                     Cocinalo!
                 </Typography>
                 <div>
-                    <IconButton aria-label="carrito">
+                    <IconButton aria-label="carrito" onClick={()=>{props.history.push('/carrito')}}>
                         <ShoppingCartIcon />
                     </IconButton>
                     <IconButton aria-label="buscar">
@@ -41,4 +43,4 @@ SimpleAppBar.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default SimpleAppBar;//withStyles(styles)(SimpleAppBar);
+export default withRouter(SimpleAppBar);//withStyles(styles)(SimpleAppBar);

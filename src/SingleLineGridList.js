@@ -6,6 +6,8 @@ import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import IconButton from '@material-ui/core/IconButton';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
+import { withRouter } from 'react-router-dom';
+
 /*import tileData from './tileData.js';
 */
 const styles = theme => ({
@@ -47,6 +49,12 @@ const styles = theme => ({
  *   },
  * ];
  */
+function mostrarProducto (props, idProducto){
+  props.history.push('/producto/'+idProducto);
+  console.log(idProducto);
+
+}
+
 function SingleLineGridList(props) {
   const { classes } = props;
 
@@ -55,7 +63,7 @@ function SingleLineGridList(props) {
       <GridList className={classes.gridList} cols={2.5}>
         {props.scrollData.map(tile => (
           <GridListTile key={tile.img}>
-            <img src={tile.img} alt={tile.title}/>
+            <img src={tile.img} alt={tile.title} onClick={()=>{mostrarProducto(props, tile.id)}}/>
             <GridListTileBar
               //title={tile.title}
               classes={{
@@ -80,4 +88,4 @@ SingleLineGridList.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(SingleLineGridList);
+export default withStyles(styles)(withRouter(SingleLineGridList));
