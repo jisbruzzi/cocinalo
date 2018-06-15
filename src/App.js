@@ -13,7 +13,7 @@ import Packs from './Packs';
 import Producto from './Producto';
 import Comprar from './Comprar';
 import Carrito from './Carrito';
-import proxy from './Proxy';
+
 
 
 //import tileData from './tileData.js';
@@ -22,36 +22,32 @@ import AppBar from './AppBar.js'
 
 class App extends Component {
   render() {
-    console.log(proxy.getPlatos());
-
+    
     return (
       <div className="App">
         <br/>
         <br/>
         <br/>
-
         <BrowserRouter>
-          <div>
-            <AppBar />
+            <div>
+              <AppBar />
 
-            <Switch>
-              <Route exact path='/' component={Categorias}></Route>
-              <Route exact path='/favoritos' component={Favoritos}></Route>
-              <Route exact path='/packs' component={Packs}></Route>
-              <Route exact path='/comprados' component={Comprados}></Route>
-              <Route exact path='/perfil' component={Perfil}></Route>
-              <Route exact path='/producto/:id' component={Producto}></Route>
-              <Route exact path='/comprar/:id' component={Comprar}></Route>
-              <Route exact path='/carrito' component={Carrito}></Route>
+              <Switch>
+                <Route exact path='/' component={Categorias}></Route>
+                <Route exact path='/favoritos' component={Favoritos}></Route>
+                <Route exact path='/packs' component={Packs}></Route>
+                <Route exact path='/comprados' component={Comprados}></Route>
+                <Route exact path='/perfil' component={Perfil}></Route>
+                <Route exact path='/producto/:id' component={Producto}></Route>
+                <Route exact path='/comprar/:id' component={Comprar}></Route> 
+                <Route exact path='/carrito' component={Carrito}></Route>
+              </Switch>
 
-
-
-            </Switch>
-
-            <SimpleBottonNavigation />
-          </div>
-   
+              <SimpleBottonNavigation />
+            </div>
         </BrowserRouter>
+
+
         <br/>
         <br/>
         <br/>

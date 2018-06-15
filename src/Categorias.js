@@ -2,22 +2,28 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import 'typeface-roboto'
-//import { BrowserRouter } from 'react-router-dom';
 import SingleLineGridList from './SingleLineGridList';
-import tileData from './tileData.js';
-
+import proxy from './Proxy';
 
 class Categorias extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      platos: []
+    }
+  }
+  componentDidMount() {
+      proxy.getPlatos().then((value)=>{this.setState({platos: value})});
+  }
   render() {
     return (
         <div>
             <p>Recomendados</p>
-        
-            <SingleLineGridList scrollData={tileData} />
+            <SingleLineGridList scrollData={this.state.platos} />
             <p>Los más comprados</p>
-            <SingleLineGridList scrollData={tileData} />
+            <SingleLineGridList scrollData={this.state.platos} />
             <p>Veggie</p>
-            <SingleLineGridList scrollData={tileData} />
+            <SingleLineGridList scrollData={this.state.platos} />
         </div>
     );
   }

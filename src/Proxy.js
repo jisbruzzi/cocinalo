@@ -1,9 +1,9 @@
-import tileData from './tileData.js';
+import appdata from './appData.js';
 
 class Proxy {
     constructor() {
       this._type = 'Proxy';
-      this.data = tileData;
+      this.data = appdata;
     }
   
     singletonMethod() {
@@ -23,7 +23,9 @@ class Proxy {
     }
 
     getPlatos() {
-        return this.data;
+        return new Promise(function(resolve, reject){
+              resolve(appdata.platos);
+        });
     }
   }
   

@@ -12,7 +12,6 @@ import { IconButton } from '@material-ui/core';
 import { withRouter } from 'react-router-dom';
 import logo from './img/logo.png';
 
-
 function SimpleAppBar(props) {
   let estiloToolbar={
       display:"flex",
@@ -42,8 +41,8 @@ function SimpleAppBar(props) {
 }
 //<Button color="inherit"><Icon><></Button>
 
-SimpleAppBar.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
+//SimpleAppBar.propTypes = {
+//  classes: PropTypes.object.isRequired,
+//};
 
 export default withRouter(SimpleAppBar);//withStyles(styles)(SimpleAppBar);
