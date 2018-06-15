@@ -5,7 +5,9 @@ import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import HomeIcon from '@material-ui/icons/Home';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import RestaurantIcon from '@material-ui/icons/Restaurant';
+import RedeemIcon from '@material-ui/icons/Redeem';
 import PermIdentity from '@material-ui/icons/PermIdentity';
 import { NavLink, Switch, Route } from 'react-router-dom';
 import { withRouter } from 'react-router-dom'
@@ -43,9 +45,9 @@ class SimpleBottomNavigation extends React.Component {
 
         <BottomNavigationAction value="/" label="Home" icon={<HomeIcon />} />
         <BottomNavigationAction value="/favoritos" label="Favoritos" icon={<FavoriteIcon />} />
-        <BottomNavigationAction value="/packs" label="Packs" icon={<LocationOnIcon />} />
-        <BottomNavigationAction value="/comprados" label="Comprados" icon={<LocationOnIcon />} />
-        <BottomNavigationAction value="/perfil" label="Perfil" icon={<LocationOnIcon />} />
+        <BottomNavigationAction value="/packs" label="Packs" icon={<RedeemIcon />} />
+        <BottomNavigationAction value="/comprados" label="Comprados" icon={<RestaurantIcon />} />
+        <BottomNavigationAction value="/perfil" label="Perfil" icon={<AccountCircleIcon />} />
         
 
       </BottomNavigation>
