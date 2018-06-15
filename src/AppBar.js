@@ -21,7 +21,7 @@ function SimpleAppBar(props) {
   return (
         <AppBar position="fixed" color="default">
             <Toolbar style={estiloToolbar}>
-                <img src={logo} height="55" width="137"/>
+                <img src={logo} height="33" width="140"/>
                 <div>
                     <IconButton aria-label="buscar">
                         <SearchIcon />
