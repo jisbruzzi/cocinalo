@@ -35,9 +35,9 @@ import image4 from './img/sushi.jpg';
               {
                 id: 1,
                 img: image,
-                title: 'Image1',
-                author: 'author',
-                descripcion: 'plato rico',
+                title: 'Papas fritas',
+                author: 'Carlos Alberto “El Gato” Dumas',
+                descripcion: 'Las papas fritas o patatas fritas, también conocidas como papas a la francesa o patatas a la francesa, son las papas que se preparan cortándose en rodajas o en forma de bastones y friéndolas en aceite caliente hasta que queden doradas, retirándolas del aceite y luego sazonándolas con sal.',
                 tiempo: 30,
                 precio: 100,
                 estrellas: 5,
