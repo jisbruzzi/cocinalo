@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import 'typeface-roboto'
 import { Button } from '@material-ui/core';
 

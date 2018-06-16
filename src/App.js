@@ -5,14 +5,14 @@ import 'typeface-roboto'
 import { BrowserRouter } from 'react-router-dom';
 import SimpleBottonNavigation from './SimpleBottonNavigation';
 import { NavLink, Switch, Route } from 'react-router-dom';
-import Categorias from './Categorias';
-import Perfil from './Perfil';
-import Favoritos from './Favoritos';
-import Comprados from './Comprados';
-import Packs from './Packs';
-import Producto from './Producto';
-import Comprar from './Comprar';
-import Carrito from './Carrito';
+import Categorias from './paginas/Categorias';
+import Perfil from './paginas/Perfil';
+import Favoritos from './paginas/Favoritos';
+import Comprados from './paginas/Comprados';
+import Packs from './paginas/Packs';
+import Producto from './paginas/Producto';
+import Comprar from './paginas/Comprar';
+import Carrito from './paginas/Carrito';
 
 
 

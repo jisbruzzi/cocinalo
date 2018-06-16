@@ -1,4 +1,4 @@
-import appdata from './appData.js';
+import appdata from '../appData.js';
 
 class Proxy {
     constructor() {

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import 'typeface-roboto';
 import { Button } from '@material-ui/core';
 import { withRouter } from 'react-router-dom';
 import proxy from './Proxy';
-import './Producto.css';
+//import './Producto.css';
 import StarRatings from 'react-star-ratings';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';

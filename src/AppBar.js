@@ -39,10 +39,5 @@ function SimpleAppBar(props) {
         </AppBar>
   );
 }
-//<Button color="inherit"><Icon><></Button>
 
-//SimpleAppBar.propTypes = {
-//  classes: PropTypes.object.isRequired,
-//};
-
-export default withRouter(SimpleAppBar);//withStyles(styles)(SimpleAppBar);
+export default withRouter(SimpleAppBar);
