@@ -4,7 +4,7 @@ import './App.css';
 import 'typeface-roboto'
 import { BrowserRouter } from 'react-router-dom';
 import SimpleBottonNavigation from './SimpleBottonNavigation';
-import { NavLink, Switch, Route } from 'react-router-dom';
+import { NavLink, Switch, Route, Redirect } from 'react-router-dom';
 import * as paginas from "./paginas";
 
 
@@ -25,16 +25,21 @@ class App extends Component {
             <div>
               <AppBar />
 
-              <Switch>
-                <Route exact path='/' component={paginas.Categorias}></Route>
-                <Route exact path='/favoritos' component={paginas.Favoritos}></Route>
-                <Route exact path='/packs' component={paginas.Packs}></Route>
-                <Route exact path='/comprados' component={paginas.Comprados}></Route>
-                <Route exact path='/perfil' component={paginas.Perfil}></Route>
-                <Route exact path='/producto/:id' component={paginas.Producto}></Route>
-                <Route exact path='/comprar/:id' component={paginas.Comprar}></Route> 
-                <Route exact path='/carrito' component={paginas.Carrito}></Route>
-              </Switch>
+              
+                <Route path={`(.*)/buscador`} render={paginas.Buscador}/>
+                <Route path='/favoritos' component={paginas.Favoritos}></Route>
+                <Route path='/packs' component={paginas.Packs}></Route>
+                <Route path='/comprados' component={paginas.Comprados}></Route>
+                <Route path='/perfil' component={paginas.Perfil}></Route>
+                <Route path='/producto/:id' component={paginas.Producto}></Route>
+                <Route path='/comprar/:id' component={paginas.Comprar}></Route> 
+                <Route path='/carrito' component={paginas.Carrito}></Route>
+                <Route path='/home' component={paginas.Categorias}></Route>
+                <Route exact path='/' render={
+                  ()=><Redirect to={"/home"}/>
+                }></Route>
+
+              
 
               <SimpleBottonNavigation />
             </div>
