@@ -10,7 +10,7 @@
 - Database: Una clase que haría de proxy con el server, cosa de que el día de mañana se lo pueda agregar. **Tiene que devolver siempre promesas para que el día demañana se pueda poner un json-server o algo similar**. Debería tener una parte que sea un json facil de leer cosa de que podamos alterar la base de datos en un solo lugar, sin tener que buscar los datos por toda la aplicación. **Manejar estado global en react es muy engorroso.**
 [tiempo estimado: ?]
 
-- Cocinalo:
+- Cocinalo: **TERMINADO**
     Tiene un BottomNaviation y un AppBar, maneja si se muestra <Inicio/> <Favoritos/> <Packs/> <Comprados/> <Perfil/> <Carrito/>,  <Busqueda/>, <Resultados/> o algún <Producto/> (estos datos vienen por callback) (implementar un router?)
     No te permite ir a Perfil ni a Packs.
     Estado: Cuál muestra

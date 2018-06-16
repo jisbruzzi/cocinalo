@@ -5,14 +5,7 @@ import 'typeface-roboto'
 import { BrowserRouter } from 'react-router-dom';
 import SimpleBottonNavigation from './SimpleBottonNavigation';
 import { NavLink, Switch, Route } from 'react-router-dom';
-import Categorias from './paginas/Categorias';
-import Perfil from './paginas/Perfil';
-import Favoritos from './paginas/Favoritos';
-import Comprados from './paginas/Comprados';
-import Packs from './paginas/Packs';
-import Producto from './paginas/Producto';
-import Comprar from './paginas/Comprar';
-import Carrito from './paginas/Carrito';
+import * as paginas from "./paginas";
 
 
 
@@ -33,14 +26,14 @@ class App extends Component {
               <AppBar />
 
               <Switch>
-                <Route exact path='/' component={Categorias}></Route>
-                <Route exact path='/favoritos' component={Favoritos}></Route>
-                <Route exact path='/packs' component={Packs}></Route>
-                <Route exact path='/comprados' component={Comprados}></Route>
-                <Route exact path='/perfil' component={Perfil}></Route>
-                <Route exact path='/producto/:id' component={Producto}></Route>
-                <Route exact path='/comprar/:id' component={Comprar}></Route> 
-                <Route exact path='/carrito' component={Carrito}></Route>
+                <Route exact path='/' component={paginas.Categorias}></Route>
+                <Route exact path='/favoritos' component={paginas.Favoritos}></Route>
+                <Route exact path='/packs' component={paginas.Packs}></Route>
+                <Route exact path='/comprados' component={paginas.Comprados}></Route>
+                <Route exact path='/perfil' component={paginas.Perfil}></Route>
+                <Route exact path='/producto/:id' component={paginas.Producto}></Route>
+                <Route exact path='/comprar/:id' component={paginas.Comprar}></Route> 
+                <Route exact path='/carrito' component={paginas.Carrito}></Route>
               </Switch>
 
               <SimpleBottonNavigation />
@@ -57,12 +50,5 @@ class App extends Component {
     );
   }
 }
-
-/*
-<header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        */
 
 export default App;
