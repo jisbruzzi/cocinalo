@@ -19,10 +19,10 @@ const styles = theme => ({
   textField: {
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
-    width: '100%',
+    width: '95%',
   },
   menu: {
-    width: 200,
+    width: '95%',
   },
 });
 
@@ -73,11 +73,14 @@ class Producto extends Component {
     return (
       <div className= "Producto">
               <img src={this.state.producto.img} width='100%'/>
-               <div className='info'>
-           
-
+              
+              
+                <div className='info'>
+          
                   <h2> {this.state.producto.title} </h2>
-                  <div className='descripcion-producto'> {this.state.producto.descripcion}</div>
+                  <div className='descripcion-producto'>
+                    {this.state.producto.descripcion}
+                  </div>
 
                   <p> <b>Autor</b>: {this.state.producto.author}</p>
                   <p> Cantidad de estrellas: {this.state.producto.estrellas}</p>
@@ -88,6 +91,7 @@ class Producto extends Component {
                     
                     numberOfStars={5}
                     name='rating'/>
+
                 </div>
 
                 <div className="boton">
@@ -111,10 +115,10 @@ class Producto extends Component {
                         {option.label}
                       </option>
                     ))}
-                  </TextField>
+                </TextField>
 
 
-                </div>
+              </div>
 
             <div className="boton">
               <Button fullWidth variant="contained" onClick={()=>{this.comprarProducto(this.state.producto.id)}}>
