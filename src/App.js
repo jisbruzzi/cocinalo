@@ -26,7 +26,7 @@ class App extends Component {
               <AppBar />
 
               
-                <Route path={`(.*)/buscador`} render={paginas.Buscador}/>
+                <Route path={`(.*)/buscador`} component={paginas.Buscador}/>
                 <Route path='/favoritos' component={paginas.Favoritos}></Route>
                 <Route path='/packs' component={paginas.Packs}></Route>
                 <Route path='/comprados' component={paginas.Comprados}></Route>
