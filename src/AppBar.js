@@ -107,6 +107,9 @@ class SimpleAppBar extends Component{
                                             this.inputBusqueda.blur()
                                         }else{
                                             this.props.history.push(this.props.location.pathname+'/buscador')
+                                            this.setState({
+                                                value:""
+                                            })
                                         }
                                         if(this.inputBusqueda){
                                             this.inputBusqueda.focus()
@@ -160,11 +163,16 @@ class SimpleAppBar extends Component{
                         </div>
                     </Toolbar>
                     
-                    {this.state.value.length>0 && <Route path="(.*)/buscador" render={()=>{
+                    {this.state.value.length>0 
+                        && this.state.sugerencias.length>0 
+                        && <Route path="(.*)/buscador" render={()=>{
                             return (<div><hr/>
                             <MenuList>
                                 {this.state.sugerencias.map((s)=>{
-                                    return <MenuItem>{s}</MenuItem>
+                                    return <MenuItem onClick={()=>{
+                                        this.setState({value:s+" "})
+                                        this.actualizarSugerencias(s+" ")
+                                    }}>{s}</MenuItem>
                                 })}
                             </MenuList></div>)
                         

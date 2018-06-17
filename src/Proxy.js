@@ -29,13 +29,15 @@ class Proxy {
     }
     getSugerenciasCon(busqueda){
       return new Promise(function(resolve,reject){
-        busqueda=busqueda.toLocaleLowerCase()
-        let palabra=""
-        let ret=[]
-        let platos=appdata.platos
         function arreglar(str){
           return str.toLocaleLowerCase().replace(".","").replace(",","").replace(";","")
         }
+
+        busqueda=arreglar(busqueda)
+        let palabra=""
+        let ret=[]
+        let platos=appdata.platos
+        
         let titulosMatch=platos
           .map((p)=>arreglar(p.title))
           .filter((titulo)=>titulo.includes(busqueda))
@@ -66,7 +68,7 @@ class Proxy {
           return self.indexOf(item)==pos
         })
 
-        resolve(ret)
+        resolve(ret.map((s)=>arreglar(s)))
       })
     }
   }
