@@ -1,0 +1,10 @@
+Omelette
+autor: 
+tiempo: 10 min
+precio: 
+descripcion: Un delicioso desayuno, almuerzo o cena en muy poco tiempo. Los omelettes son realmente fáciles de hacer y súper ricos. Para una persona, dificultad: "súper fácil".
+estrellas: 
+tags: omelette, huevo
+
+Para receta:
+https://www.jamieoliver.com/recipes/eggs-recipes/omelette/

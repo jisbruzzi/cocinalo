@@ -1,0 +1,10 @@
+La última lasaña vegetariana de John Bishop
+autor: 
+tiempo: 4 hs
+precio: 
+descripcion: Con pesto casero y semillas crujientes, construido a partir del amor de John por lasaña de su esposa. Con un toque de berenjena ahumada para intensificar el sabor, además de un relleno de pesto súper fresco. ¡Delicioso! Para 14 porciones, dificultad: "no tan complicado".
+estrellas: 
+tags: vegetariano, verduras
+
+Para receta:
+https://www.jamieoliver.com/recipes/vegetable-recipes/john-bishop-s-ultimate-veggie-lasagne/

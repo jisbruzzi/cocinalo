@@ -1,0 +1,10 @@
+Pimientos vegetarianos ahumados
+autor: Jamie Oliver
+tiempo: 1 hr 45 min
+precio: 130
+descripcion: Vegetariano y sin gluten. Usar cacao en polvo ayuda a agregar una deliciosa profundidad de sabor, y nutricionalmente - tiene un alto contenido de cobre mineral, que necesitamos para mantener nuestra piel y cabello fuertes y saludables  Rinde para 8 y con dificultad: "no demasiado complicado".
+estrellas: 4
+tags: Verduras, vegetariano, sin-gluten
+
+Para receta:
+https://www.jamieoliver.com/recipes/vegetable-recipes/smoky-veggie-chilli/

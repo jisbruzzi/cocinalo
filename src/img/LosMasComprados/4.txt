@@ -1,0 +1,10 @@
+Empanadas de carne
+autor: 
+tiempo: 1h 40min
+precio: 
+descripcion: Perfectamente condimentado con pimentón y chile fresco. Rellenas de ternera tierna, son una gran opción. Rinde para 14 personas, dificultad: "no tan complicado".
+estrellas: 
+tags: empanadas, carne
+
+Para receta:
+https://www.jamieoliver.com/recipes/beef-recipes/beef-empanadas/

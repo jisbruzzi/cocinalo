@@ -1,0 +1,10 @@
+Estofado de carne
+autor: 
+tiempo: 4 hs
+precio: 
+descripcion: Una receta de estofado de ternera tierna con una preparación mínima: ponla en el horno enseguida y déjala actuar de manera mágica.. Para 6 personas, dificultad: "no tan complicado".
+estrellas: 
+tags: carne
+
+Para receta:
+https://www.jamieoliver.com/recipes/beef-recipes/beef-stew/

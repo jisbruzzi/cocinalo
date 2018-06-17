@@ -1,0 +1,10 @@
+Helado de banana y canela
+autor: 
+tiempo: 30 min
+precio: 
+descripcion: Increíble helado vegetariano y sin gluten. En algún lugar entre el yogurt congelado y el helado, es fácil de hacer y tan difícil de resistir. Para 8 porciones, dificultad: "super facil".
+estrellas: 
+tags: helado, sin-gluten
+
+Para receta:
+https://www.jamieoliver.com/recipes/fruit-recipes/roasted-banana-cinnamon-ice-cream/

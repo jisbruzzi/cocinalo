@@ -1,0 +1,10 @@
+Squaffee pie
+autor: 
+tiempo: 1h 30 min
+precio: 
+descripcion: Fabuloso plato vegetariano con una llovizna de caramelo de café. Posee un relleno denso y rico, perfecto para capas con caramelo. Para 12 porciones, dificultad: "no tan complicado".
+estrellas: 
+tags: tarta, vegetariano
+
+Para receta:
+https://www.jamieoliver.com/recipes/butternut-squash-recipes/squaffee-pie/

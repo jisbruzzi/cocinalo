@@ -1,0 +1,10 @@
+Black bean burgers
+autor: 
+tiempo: 40 min
+precio: 
+descripcion: Estas hamburguesas vegetarianas están repletas de proteínas, un nutriente que a menudo falta en una dieta vegetariana. ¡Pero por supuesto, no tenes que ser vegetariano para disfrutar esto! La mozzarella morada, las cebollas balsámicas picantes y un repollo crujiente y picante hacen de este plato un alimento básico para la noche, y podes lograrlo en menos de una hora. Para 2 porciones, dificultad: "no tan complicado".
+estrellas: 
+tags: vegetariano
+
+Para receta:
+https://www.jamieoliver.com/recipes/vegetable-recipes/black-bean-burgers/

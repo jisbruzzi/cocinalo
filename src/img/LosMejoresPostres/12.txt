@@ -1,0 +1,10 @@
+Tarta de rizo de limón
+autor: 
+tiempo: 1h
+precio: 
+descripcion: Deliciosa tarta vegetariana. Con solo un bocado obtendrá un suave relleno de limón, una masa quebradiza y un poco de azúcar caramelizado. ¡Disfrutar!. Para 10 porciones, dificultad: "para presumir".
+estrellas: 
+tags: tarta, vegetariano
+
+Para receta:
+https://www.jamieoliver.com/recipes/fruit-recipes/lemon-ripple-tart/

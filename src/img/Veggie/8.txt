@@ -1,0 +1,10 @@
+Halloumi con verduras a la plancha
+autor: 
+tiempo: 25 min
+precio: 
+descripcion: Fabuloso plato vegetariano. Rapido y facil de hacer. Rinde para 2, dificultad: "super facil".
+estrellas: 
+tags: vegetariano, verdura
+
+Para receta:
+https://www.jamieoliver.com/recipes/cheese-recipes/halloumi-with-griddled-vegetables/

@@ -1,0 +1,10 @@
+Torta de chocolate Guinness
+autor: Jamie Oliver
+tiempo: 1 hs 10 min
+precio: 100
+descripcion: Con una mezcla embriagadora de Guinness y chocolate, esta torta es una delicia. Rico y oscuro, la amargura aterciopelada de la Guinness resalta el sabor del chocolate, por lo que tiene un sabor fuerte, mientras le da a la esponja un sabor sutil. La riqueza se equilibra con la dulzura del glaseado de crema agria, que hace que el pastel se parezca a la famosa stout irlandesa, negra con una cabeza cremosa. ¡Aclamaciones! Para 10 porciones y con dificultad: "no demasiado complicado".
+estrellas: 4
+tags: chocolate, vegetariano
+
+Para receta:
+https://www.jamieoliver.com/recipes/chocolate-recipes/chocolate-guinness-cake/

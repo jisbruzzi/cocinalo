@@ -1,0 +1,10 @@
+Insanity burger
+autor: 
+tiempo: 35 min
+precio: 
+descripcion: Con mostaza y salsa de hamburgueza casera, utiliza la técnica de cepillar las hamburguesas con mostaza y un chorrito de salsa Chipotle de Tabasco mientras se cocinan para formar una increíble capa de condimento. Rinde para 4, dificultad: "súper fácil".
+estrellas: 
+tags: hamburguesa
+
+Para receta:
+https://www.jamieoliver.com/recipes/beef-recipes/insanity-burger/

@@ -1,0 +1,10 @@
+Mousse de chocolate con ciruelas
+autor: 
+tiempo: 2 hs 30 min
+precio: 
+descripcion: Riquisimo y tentador postre vegetariano y sin gluten. Cualquier mezcla de ciruela pasa se mantendrá en un recipiente hermético por hasta un mes, ¡pruébalo con arroz con leche! Rinde para 12/14 porciones, dificultad: "no tan complicado".
+estrellas:
+tags: moussse, sin-gluten
+
+Para receta:
+https://www.jamieoliver.com/recipes/chocolate-recipes/chocolate-mousse-with-prunes/
