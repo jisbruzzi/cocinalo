@@ -1,0 +1,10 @@
+Ensalada de sushi simple
+autor: 
+tiempo: 35
+precio: 
+descripcion: Con salmón ahumado, aguacate y col rizada. Rinde para 2 porciones, dificultad: "no tan complicado".
+estrellas: 
+tags: ensalada, sushi
+
+Para receta:
+https://www.jamieoliver.com/recipes/fish-recipes/simple-sushi-salad/

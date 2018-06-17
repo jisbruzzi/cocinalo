@@ -1,0 +1,10 @@
+Tostada anglo-francesa
+autor: 
+tiempo: 20 min
+precio: 
+descripcion: Con queso y jamón. El sándwich tostado se transforma con rellenos súper sabrosos. Para una persona, dificultad: "súper fácil".
+estrellas: 
+tags: tostada
+
+Para receta:
+https://www.jamieoliver.com/recipes/bread-recipes/anglo-french-toastie/

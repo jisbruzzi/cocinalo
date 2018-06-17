@@ -1,0 +1,10 @@
+Ensalada de berenjenas a la parrilla y pepino
+autor: 
+tiempo: 1h 
+precio: 
+descripcion: Una deliciosa comida con semillas de sésamo tostadas. Vegano, sin gluten. 4 personas, dificultad: "no tan complicado".
+estrellas: 
+tags: vegano, vegetarian, sin-gluten
+
+Para receta:
+https://www.jamieoliver.com/recipes/aubergine-recipes/miso-grilled-aubergine-cucumber-pickle-rice-bowl/

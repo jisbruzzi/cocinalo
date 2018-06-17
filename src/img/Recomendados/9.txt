@@ -1,0 +1,11 @@
+Spring pie
+autor: 
+tiempo: 55 min
+precio:
+descripcion: Tocino rayado, espinacas y puerros en masa filo.
+Ideal para prepararlo junto a los chicos ya que es un plato muy desordenado y que lo tira todo. Sirve a 6, dificultad: "súper fácil".
+estrellas: 
+tags: tarta
+
+Para receta:
+https://www.jamieoliver.com/recipes/vegetables-recipes/spring-pie/

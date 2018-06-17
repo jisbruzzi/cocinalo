@@ -1,0 +1,10 @@
+Pasta al pesto
+autor: 
+tiempo: 15 min
+precio: 
+descripcion: Plato delicioso, con ajo y pollo al romeo. A todo el mundo le gusta la pasta al pesto. Agregar el pollo y las judías verdes hace que la cena se convierta en una gran noche. Para 4 porciones, dificultad: "super facil".
+estrellas: 
+tags: pasta
+
+Para receta:
+https://www.jamieoliver.com/recipes/pasta-recipes/pasta-pesto/?family-food-category=105554

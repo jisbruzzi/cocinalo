@@ -1,0 +1,10 @@
+Deliciosa mousse de chocolate
+autor: 
+tiempo: 30 min
+precio: 
+descripcion: Riquisimo postre sin gluten, con guindas y chapas de sésamo molidas. Esta receta de mousse de chocolate está repleta de ingredientes deliciosos y un poco traviesos. Para 10 porciones, dificultad: "súper fácil".
+estrellas: 
+tags: mousse, chocolate, sin-guten
+
+Para receta:
+https://www.jamieoliver.com/recipes/chocolate-recipes/delicious-chocolate-mousse/

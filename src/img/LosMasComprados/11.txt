@@ -1,0 +1,10 @@
+Muffins con chispas de chocolate
+autor: 
+tiempo: 45 min
+precio: 
+descripcion: Receta deliciosa e ideal para disfrutar con amigos y familia. Rinde 15 unidades, dificultad: "no tan complicado".
+estrellas: 
+tags: muffins, chocolate
+
+Para receta:
+https://www.jamieoliver.com/recipes/chocolate-recipes/chocolate-chip-muffins/

@@ -1,0 +1,10 @@
+Pan de queso y ajo
+autor: 
+tiempo: 1h 45 min
+precio: 
+descripcion: Receta para lograr un pan de queso y ajo riquísimo. Sirve de 4 a 6, dificultad: "no tan complicado".
+estrellas: 
+tags: pan
+
+Para receta:
+https://www.jamieoliver.com/recipes/bread-recipes/cheese-garlic-tear-n-share-bread/

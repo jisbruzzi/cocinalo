@@ -1,0 +1,10 @@
+Pollo y papas fritas mediterráneas
+autor: 
+tiempo: 1h
+precio: 
+descripcion: Preciosas patas de pollo con limón y papas nuevas trituradas, todo cocinado en una bandeja: es una cena sencilla y satisfactoria, y los sabores herbales traerán un poco de sol a la mesa. Para 4 personas, dificultad: "no tan complicado".
+estrellas: 
+tags: pollo
+
+Para receta:
+https://www.jamieoliver.com/recipes/chicken-recipes/mediterranean-chicken-n-chips/

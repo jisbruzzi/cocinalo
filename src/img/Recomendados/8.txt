@@ -1,0 +1,10 @@
+Tacos de pescado mexicano
+autor: 
+tiempo: 1h 25 min
+precio: 
+descripcion: Increíbles tacos de pescado con todos los adornos: guacamole grueso, salsa de piña dulce, crema agria de ajo y un repollo con jalapeño. Sirve a 4, dificultad: "no tan complicado".
+estrellas: 
+tags: tacos
+
+Para receta:
+https://www.jamieoliver.com/recipes/fish-recipes/mexican-fish-tacos/

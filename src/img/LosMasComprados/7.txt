@@ -1,0 +1,10 @@
+Pizza básica
+autor: 
+tiempo: 1h 20 min
+precio: 
+descripcion: Deliciosa masa y cobertura. Uvez que vean lo simple y sabrosa que es esta receta de masa de pizza, no querrán comida para llevar. Sirve 8 porciones, dificultad: "súper fácil".
+estrellas: 
+tags: pizza
+
+Para receta:
+https://www.jamieoliver.com/recipes/bread-recipes/basic-pizza/

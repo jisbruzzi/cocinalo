@@ -1,0 +1,10 @@
+Hot cross muffins
+autor: 
+tiempo: 1h 20 min
+precio: 
+descripcion: Un regalo de Pascua sin gluten. Para 24 porciones, dificultad: "no tan complicado".
+estrellas: 
+tags: muffins, sin-gluten
+
+Para receta:
+https://www.jamieoliver.com/recipes/fruit-recipes/hot-cross-muffins/

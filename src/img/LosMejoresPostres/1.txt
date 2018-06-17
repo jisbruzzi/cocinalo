@@ -1,0 +1,10 @@
+Cranachan de arándano congelado
+autor: 
+tiempo: 1h
+precio:
+descripcion: Un cremoso semifrío inspirado en el postre de avena escocés cranachan, y coronado con una crema Drambuie. Cumple todos los requisitos en cuanto a capas, sabor y textura, y mejor aún, puede prepararse con anticipación. Para 12 porciones, dificultad: "no tan complicado".
+estrellas: 
+tags: postre
+
+Para receta:
+https://www.jamieoliver.com/recipes/fruit-recipes/frozen-cranberry-cranachan/

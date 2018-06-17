@@ -1,0 +1,10 @@
+Ensalada César de pollo asado
+autor: 
+tiempo: 1h 45 min
+precio: 
+descripcion: Lleve su ensalada de pollo César a la próxima galaxia poniendo el pollo en salmuera durante la noche, lo que agregará un montón de sabor, jugosidad y caramelización, y asando sus crotones en los jugos de pollo para la textura final y el sabor. Sirve de 10 a 12, dificultad: "para presumir".
+estrellas: 
+tags: ensalada, pollo
+
+Para receta:
+https://www.jamieoliver.com/recipes/chicken-recipes/ultimate-roast-chicken-caesar-salad/

@@ -1,0 +1,10 @@
+Alitas de pollo, estilo agridulce
+autor: 
+tiempo: 1h 15 min
+precio:
+descripcion: Alitas de pollo dulces y deliciosas con espléndido glaseado de miel. Este es un plato muy simple que invierte en grandes sabores, por lo que solo necesita una bruschetta a la parrilla y cebollas cortadas en vinagre para servir. Rinde entre 4/6, dificultad: "no tan complicado".
+estrellas: 
+tags: alitas, pollo
+
+Para receta:
+https://www.jamieoliver.com/recipes/chicken-recipes/chicken-wings-agrodolce-style/
