@@ -1,10 +1,13 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 
+
+
+
 let styles={}
 styles.fondo={
-    zIndex:10000,
-    backgroundColor:"rgba(255,255,255,0.8)",
+    zIndex:100,
+    backgroundColor:"rgba(0,0,0,0.6)",
     position:"fixed",
     padding:0,
     margin:0,
@@ -17,8 +20,8 @@ styles.fondo={
 function buscador(){
     console.log("Renderizan el buscador :)")
     return <div style={styles.fondo}>
-        HOLA SOY EL BUSCADOR!!! GILESSSSSSSSSS
+        Holi
+        
     </div>
 }
-
 export default (buscador)

@@ -1,0 +1,163 @@
+
+.toolbar{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+  }
+
+.vacio{
+    flex:1;
+    transition:flex 300ms ease-out;
+  }
+  .vacio.grande{
+    flex:0;
+  }
+  
+  .logo {
+    flex:1;
+    transition:flex 300ms ease-out;
+  }
+  .logo img{
+    width:100%;
+  }
+  .logo.grande {
+    flex:0;
+  }
+  
+  
+  
+  .texto-busqueda{
+    flex:0;
+    transition:flex 300ms ease-out;
+  }
+  .texto-busqueda div{
+    width:0;
+    opacity:0;
+    align-items:center;
+  }
+  .texto-busqueda.grande div{
+    animation: campo-entra 500ms forwards;
+  }
+  .texto-busqueda.grande{
+    flex:2;
+  }
+  
+  @keyframes campo-entra{
+    0% {
+      width:0;
+      opacity:0;
+      flex:0;
+    }
+    60% {
+      width:0;
+      opacity:0;
+      flex:0;
+    }
+    80% {
+      flex:1;
+      width:50%;
+      opacity:0;
+    }
+    100% {
+      flex:2;
+      width:100%;
+      opacity:1;
+    }
+  }
+  
+  
+  
+  .carrito *{
+    width:100%;
+    height:100%;
+  
+  }
+  .cancelar *{
+    width:100%;
+    height:100%
+  }
+  
+  .carrito {
+    transition:flex 300ms ease-out,
+    width 300ms ease-out,
+    opacity 300ms ease-out;
+  }
+  .cancelar {
+    transition:flex 300ms ease-out,
+    opacity 300ms ease-out;
+  }
+  
+  
+  .botones {
+    display:flex;
+  }
+  .botones.normal {
+    flex:1;
+    transition:flex 300ms ease-out;
+  }
+  .botones.grande {
+    flex:1;
+    transition:flex 300ms ease-out;
+  }
+  
+  .cancelar-carrito{
+    display:flex;
+    flex-direction: row;
+    flex:0;
+  }
+  
+  .carrito{
+    min-width:0;
+  }
+  .cancelar{
+    min-width:0;
+  }
+  
+  
+  .carrito.grande{
+    flex:0;
+    opacity:0;
+    width:0
+  }
+  .carrito.normal{
+    flex:1;
+    opacity:1;
+    width:fit-content;
+  }
+  
+  .cancelar.grande{
+    flex:1;
+    opacity:1;
+    width:fit-content;
+  }
+  .cancelar.normal{
+    flex:0;
+    opacity:0;
+    width:0;
+  }
+  
+  
+  .texto-busqueda.grande{
+    flex:1;
+  }
+  
+  .utiles{
+    flex:0;
+    flex-direction: row;
+    display:flex;
+    display:flex;
+    justify-content: space-between;
+    transition:flex 300ms ease-out;
+  }
+  .utiles.grande{
+    flex:1;
+    
+  }
+  
+  .vcentered {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+  }
