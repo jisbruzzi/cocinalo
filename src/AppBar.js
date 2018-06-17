@@ -172,6 +172,7 @@ class SimpleAppBar extends Component{
                                     return <MenuItem onClick={()=>{
                                         this.setState({value:s+" "})
                                         this.actualizarSugerencias(s+" ")
+                                        this.inputBusqueda.focus()
                                     }}>{s}</MenuItem>
                                 })}
                             </MenuList></div>)
