@@ -16,74 +16,114 @@ import logo from './img/logo.png';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { CSSTransitionGroup} from "react-transition-group";
 import "./AppBar.css"
+
+
 import TextField from '@material-ui/core/TextField';
 
-//LO QUE TENGO QUE HACER ES PONER UN ROUTER ADENTRO DE UN ROUTER COMO EN https://reacttraining.com/react-router/web/example/basic
+function TextFieldBuscador(props){
+    return <TextField
+        id="full-width"
+        InputLabelProps={{
+            shrink: true,
+        }}
+        value={props.value}
+        placeholder="Buscar platos"
+        fullWidth
+        margin="normal"
+        inputRef={props.inputRef}
+        onChange={props.onChange}
+    />
+}
 
-function SimpleAppBar(props) {
-  let estiloToolbar={
-      display:"flex",
-      flexDirection:"row",
+class SimpleAppBar extends Component{
+    constructor (props){
+        super(props)
+        this.state={
+            value:""
+        }
+        this.inputBusqueda=null;
+    }
 
-      justifyContent:"space-between",
-      alignItems:"center",
-  }
-  console.log(props.location)
-  let grande=props.location.pathname.includes("buscador")
-  let clase=""
-  if(grande){
-      clase="grande"
-  }else{
-      clase="normal"
-  }
-  return (
-      <div>
-        <AppBar position="fixed" color="default">
-            <Toolbar>
-                <div class="toolbar vcentered">
-                            
-                    <div class={"vcentered logo "+clase}>
-                        <img src={logo} height="33" width="140"/>
-                    </div>
-                    <div class={"vacio "+clase}>
-                    </div>
-                    <div class={"vcentered utiles "+clase}>
-
-                        <div class={"vcentered"}><IconButton 
-                            aria-label="buscar" 
-                            onClick={()=>{props.history.push(props.location.pathname+'/buscador')}}>
-                            <SearchIcon />
-                        </IconButton></div>
-
-
-                        <div class={"vcentered botones "+clase}>
-
-                            <div class={"vcentered texto-busqueda "+clase}><div><TextField
-                                id="full-width"
-                                InputLabelProps={{
-                                    shrink: true,
-                                }}
-                                placeholder="Buscar platos"
-                                fullWidth
-                                margin="normal"
-                            /></div></div>
-
-                            <div class={"cancelar-carrito "+clase}>
-                                <div class={"vcentered carrito "+clase}><IconButton aria-label="carrito" onClick={()=>{props.history.push('/carrito')}}>
-                                    <ShoppingCartIcon/>
+    render(){
+        let estiloToolbar={
+            display:"flex",
+            flexDirection:"row",
+    
+            justifyContent:"space-between",
+            alignItems:"center",
+        }
+        let grande=this.props.location.pathname.includes("buscador")
+        let clase=""
+        if(grande){
+            clase="grande"
+        }else{
+            clase="normal"
+        }
+        return (
+            <div>
+                <AppBar position="fixed" color="default">
+                    <Toolbar>
+                        <div className="toolbar vcentered">
+                                    
+                            <div className={"vcentered logo "+clase}>
+                                <img src={logo} height="33" width="140"/>
+                            </div>
+                            <div className={"vacio "+clase}>
+                            </div>
+                            <div className={"vcentered utiles "+clase}>
+    
+                                <div className={"vcentered"}><IconButton 
+                                    aria-label="buscar" 
+                                    onClick={()=>{
+                                        this.props.history.push(this.props.location.pathname+'/buscador')
+                                        if(this.inputBusqueda){
+                                            this.inputBusqueda.focus()
+                                        }
+                                        
+                                    }}>
+                                    <SearchIcon />
                                 </IconButton></div>
-
-                                <div class={"vcentered cancelar "+clase}><IconButton aria-label="carrito" onClick={()=>{props.history.push('/cancelado')}}>
-                                    <CancelIcon/>
-                                </IconButton></div>
+    
+    
+                                <div className={"vcentered botones "+clase}>
+    
+                                    <div className={"vcentered texto-busqueda "+clase}><div>
+                                        <TextFieldBuscador 
+                                            inputRef={(input)=>{
+                                                console.log("ME LLEGA UN NUEVO INPUT!")
+                                                this.inputBusqueda=input
+                                            }}
+                                            value={this.state.value}
+                                            onChange={(e)=>this.setState({value:e.target.value})}
+                                        />
+                                    </div></div>
+    
+                                    <div className={"cancelar-carrito "+clase}>
+                                        <div className={"vcentered carrito "+clase}><IconButton aria-label="carrito" onClick={()=>{this.props.history.push('/carrito')}}>
+                                            <ShoppingCartIcon/>
+                                        </IconButton></div>
+    
+                                        <div className={"vcentered cancelar "+clase}><IconButton aria-label="carrito" onClick={()=>{
+                                            if(this.inputBusqueda){
+                                                this.inputBusqueda.focus()
+                                                this.setState({
+                                                    value:""
+                                                })
+                                            }
+                                        }}>
+                                            <CancelIcon/>
+                                        </IconButton></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </Toolbar>
-        </AppBar>
-    </div>
-  );
+                    </Toolbar>
+                </AppBar>
+            </div>
+        );
+    }
+
+    
 }
 
 export default withRouter(SimpleAppBar);
