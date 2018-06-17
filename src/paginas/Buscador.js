@@ -17,10 +17,9 @@ styles.fondo={
     height:"100vh",
 }
 
-function buscador(){
+function buscador(props){
     console.log("Renderizan el buscador :)")
-    return <div style={styles.fondo}>
-        Holi
+    return <div style={styles.fondo} onClick={props.history.goBack}>
         
     </div>
 }

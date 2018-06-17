@@ -17,10 +17,16 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { CSSTransitionGroup} from "react-transition-group";
 import "./AppBar.css"
 
+import Paper from '@material-ui/core/Paper';
 
 import TextField from '@material-ui/core/TextField';
 
+import MenuItem from '@material-ui/core/MenuItem';
+import MenuList from '@material-ui/core/MenuList';
+
 function TextFieldBuscador(props){
+    //return <IntegrationAutosuggest/>
+    
     return <TextField
         id="full-width"
         InputLabelProps={{
@@ -32,16 +38,33 @@ function TextFieldBuscador(props){
         margin="normal"
         inputRef={props.inputRef}
         onChange={props.onChange}
+        onKeyDown={(e)=>{
+            if(e.key==="Enter" && props.onEnter){
+                props.onEnter()
+            }
+        }}
     />
+    
 }
 
 class SimpleAppBar extends Component{
     constructor (props){
         super(props)
         this.state={
-            value:""
+            value:"",
+            sugerencias:[]
         }
         this.inputBusqueda=null;
+    }
+
+    actualizarSugerencias(value){
+        this.setState({
+            sugerencias:[
+                value+"2",
+                value+"3",
+                value+"si"
+            ]
+        })
     }
 
     render(){
@@ -75,7 +98,16 @@ class SimpleAppBar extends Component{
                                 <div className={"vcentered"}><IconButton 
                                     aria-label="buscar" 
                                     onClick={()=>{
-                                        this.props.history.push(this.props.location.pathname+'/buscador')
+
+                                        if(grande){
+                                            this.props.history.push('/busqueda?q='+this.state.value)
+                                            this.setState({
+                                                value:""
+                                            })
+                                            this.inputBusqueda.blur()
+                                        }else{
+                                            this.props.history.push(this.props.location.pathname+'/buscador')
+                                        }
                                         if(this.inputBusqueda){
                                             this.inputBusqueda.focus()
                                         }
@@ -94,8 +126,17 @@ class SimpleAppBar extends Component{
                                                 this.inputBusqueda=input
                                             }}
                                             value={this.state.value}
-                                            onChange={(e)=>this.setState({value:e.target.value})}
-                                        />
+                                            onChange={(e)=>{
+                                                this.setState({value:e.target.value})
+                                                this.actualizarSugerencias(e.target.value)
+                                            }}
+                                            onEnter={()=>{
+                                                this.props.history.push('/busqueda?q='+this.state.value)
+                                                this.setState({
+                                                    value:""
+                                                })
+                                                this.inputBusqueda.blur()
+                                        }}/>
                                     </div></div>
     
                                     <div className={"cancelar-carrito "+clase}>
@@ -118,6 +159,17 @@ class SimpleAppBar extends Component{
                             </div>
                         </div>
                     </Toolbar>
+                    
+                    {this.state.value.length>0 && <Route path="(.*)/buscador" render={()=>{
+                            return (<div><hr/>
+                            <MenuList>
+                                {this.state.sugerencias.map((s)=>{
+                                    return <MenuItem>{s}</MenuItem>
+                                })}
+                            </MenuList></div>)
+                        
+                    }}/>}
+                    
                 </AppBar>
             </div>
         );
