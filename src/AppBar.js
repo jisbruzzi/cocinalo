@@ -24,6 +24,8 @@ import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 
+import proxy from "./Proxy"
+
 function TextFieldBuscador(props){
     //return <IntegrationAutosuggest/>
     
@@ -58,12 +60,10 @@ class SimpleAppBar extends Component{
     }
 
     actualizarSugerencias(value){
-        this.setState({
-            sugerencias:[
-                value+"2",
-                value+"3",
-                value+"si"
-            ]
+        proxy.getSugerenciasCon(value).then((sug)=>{
+            this.setState({
+                sugerencias:sug.slice(0,3)
+            })
         })
     }
 

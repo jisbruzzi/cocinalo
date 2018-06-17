@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 //import './App.css';
 import 'typeface-roboto'
 import SingleLineGridList from './SingleLineGridList';
-import proxy from './Proxy';
+import proxy from '../Proxy';
 
 class Categorias extends Component {
   constructor(props) {

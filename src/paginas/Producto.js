@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import 'typeface-roboto';
 import { Button } from '@material-ui/core';
 import { withRouter } from 'react-router-dom';
-import proxy from './Proxy';
+import proxy from '../Proxy';
 //import './Producto.css';
 import StarRatings from 'react-star-ratings';
 import TextField from '@material-ui/core/TextField';

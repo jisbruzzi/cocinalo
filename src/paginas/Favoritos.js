@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'typeface-roboto'
 import TileBarGridList from '../TileBarGridList';
-import proxy from './Proxy';
+import proxy from '../Proxy';
 
 class Favoritos extends Component {
   constructor(props) {
