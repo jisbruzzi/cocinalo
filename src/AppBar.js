@@ -100,7 +100,7 @@ class SimpleAppBar extends Component{
                                     onClick={()=>{
 
                                         if(grande){
-                                            this.props.history.push('/busqueda?q='+this.state.value)
+                                            this.props.history.push('/busqueda/'+this.state.value)
                                             this.setState({
                                                 value:""
                                             })
@@ -134,7 +134,7 @@ class SimpleAppBar extends Component{
                                                 this.actualizarSugerencias(e.target.value)
                                             }}
                                             onEnter={()=>{
-                                                this.props.history.push('/busqueda?q='+this.state.value)
+                                                this.props.history.push('/busqueda/'+this.state.value)
                                                 this.setState({
                                                     value:""
                                                 })

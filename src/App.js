@@ -28,6 +28,7 @@ class App extends Component {
               
                 <Route path={`(.*)/buscador`} component={paginas.Buscador}/>
                 <Route path='/favoritos' component={paginas.Favoritos}></Route>
+                <Route path='/busqueda/:query' component={paginas.Busqueda}></Route>
                 <Route path='/packs' component={paginas.Packs}></Route>
                 <Route path='/comprados' component={paginas.Comprados}></Route>
                 <Route path='/perfil' component={paginas.Perfil}></Route>

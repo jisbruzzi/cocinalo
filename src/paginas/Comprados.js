@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import 'typeface-roboto'
-import TileBarGridList from '../TileBarGridList';
+import TileBarGridList from './TileBarGridList';
 import proxy from '../Proxy';
 
 class Comprados extends Component {

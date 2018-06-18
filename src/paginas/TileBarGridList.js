@@ -57,9 +57,9 @@ function TitlebarGridList(props) {
   return (
     <div className={classes.root}>
       <GridList cellHeight={180} className={classes.gridList}>
-        <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-          <ListSubheader component="div">December</ListSubheader>
-        </GridListTile>
+        {props.subheader && <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
+          <ListSubheader component="div">{props.subheader}</ListSubheader>
+        </GridListTile>}
         {props.data.map(tile => (
           <GridListTile key={tile.img}>
             <img src={tile.img} alt={tile.title} onClick={()=>{mostrarProducto(props, tile.id)}}/>

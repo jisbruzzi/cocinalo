@@ -27,6 +27,22 @@ class Proxy {
               resolve(appdata.platos);
         });
     }
+    getPlatosConsulta(consulta){
+      function parecidas(a,b){
+        return(a.toUpperCase().includes(b.toUpperCase()))
+      }
+      return new Promise(function(resolve,reject){
+        let matchTitulo=appdata.platos.filter((plato)=>parecidas(plato.title,consulta))
+        let matchAutor=appdata.platos.filter((plato)=>parecidas(plato.author,consulta))
+        let matchDescripcion=appdata.platos.filter((plato)=>parecidas(plato.descripcion,consulta))
+        let ret=[].concat(matchTitulo).concat(matchAutor).concat(matchDescripcion)
+        ret=ret.filter((item,pos,self)=>{
+          return self.indexOf(item)==pos
+        })
+
+        resolve(ret)
+      })
+    }
     getSugerenciasCon(busqueda){
       return new Promise(function(resolve,reject){
         function arreglar(str){
