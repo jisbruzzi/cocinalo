@@ -81,11 +81,10 @@ class Producto extends Component {
                     {this.state.producto.descripcion}
                   </div>
 
-                  <p> <b>Autor</b>: {this.state.producto.author}</p>
-                  <p> Cantidad de estrellas: {this.state.producto.estrellas}</p>
+                  <p> Cantidad de estrellas: </p>
                   <StarRatings
                     starDimension='30px'
-                    rating={3.7}
+                    rating={this.state.producto.estrellas}
                     starRatedColor="blue"
                     
                     numberOfStars={5}
