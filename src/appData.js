@@ -40,7 +40,7 @@ import image4 from './img/sushi.jpg';
                 descripcion: 'Las papas fritas o patatas fritas, también conocidas como papas a la francesa o patatas a la francesa, son las papas que se preparan cortándose en rodajas o en forma de bastones y friéndolas en aceite caliente hasta que queden doradas, retirándolas del aceite y luego sazonándolas con sal.',
                 tiempo: 30,
                 precio: 100,
-                estrellas: 5,
+                estrellas: 4.4,
               },
               {
                 id: 2,
@@ -50,7 +50,7 @@ import image4 from './img/sushi.jpg';
                 descripcion: 'La torta de verdura es una plato Vegetariano que se prepara con huevo, papa, y un preparado de verdura de alta calidad, luego se da una cocción de 15 minutos y se puede comer.',
                 tiempo: 60,
                 precio: 150,
-                estrellas: 4,
+                estrellas: 4.3,
               },
               {
                 id: 3,
@@ -60,7 +60,7 @@ import image4 from './img/sushi.jpg';
                 descripcion: 'La clásica hamburguesa de ternera, fácil y rápida de hacer. Incluye cebolla caramelizada, panceta, y el mejor queso especial seleccionado por Utilísima.',
                 tiempo: 40,
                 precio: 120,
-                estrellas: 3,
+                estrellas: 3.7,
               },
               {
                 id: 4,
@@ -70,7 +70,7 @@ import image4 from './img/sushi.jpg';
                 descripcion: 'Ingredientes preparados para que puedas cocinar sushi.',
                 tiempo: 120,
                 precio: 200,
-                estrellas: 2,
+                estrellas: 2.5,
               }
             ],
   };
