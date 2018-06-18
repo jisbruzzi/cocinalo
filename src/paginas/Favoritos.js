@@ -11,7 +11,7 @@ class Favoritos extends Component {
     }
   }
   componentDidMount() {
-      proxy.getPlatos().then((value)=>{this.setState({platos: value})});
+      proxy.getPlatosFavoritos().then((value)=>{this.setState({platos: value})});
   }
   render() {
     return (

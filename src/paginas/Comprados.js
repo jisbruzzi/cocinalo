@@ -11,7 +11,7 @@ class Comprados extends Component {
     }
   }
   componentDidMount() {
-      proxy.getPlatos().then((value)=>{this.setState({platos: value})});
+      proxy.getPlatosComprados().then((value)=>{this.setState({platos: value})});
   }
   render() {
     return (

@@ -27,6 +27,7 @@ class Proxy {
               resolve(appdata.platos);
         });
     }
+
     getPlatosConsulta(consulta){
       function parecidas(a,b){
         return(a.toUpperCase().includes(b.toUpperCase()))
@@ -43,6 +44,7 @@ class Proxy {
         resolve(ret)
       })
     }
+
     getSugerenciasCon(busqueda){
       return new Promise(function(resolve,reject){
         function arreglar(str){
@@ -86,6 +88,30 @@ class Proxy {
 
         resolve(ret.map((s)=>arreglar(s)))
       })
+    }
+
+    getPlatosFavoritos() {
+      return new Promise(function(resolve, reject) {
+        function idEnFavoritos(favoritos, id) {
+          return favoritos.filter(e => e == id).length != 0;
+        }
+
+        let favIds = appdata.favoritos;
+        let platosFavoritos = appdata.platos.filter(element => idEnFavoritos(favIds, element.id));
+        resolve(platosFavoritos);
+      });
+    }
+
+    getPlatosComprados() {
+      return new Promise(function(resolve, reject) {
+        function idEnComprados(comprados, id) {
+          return comprados.filter(e => e == id).length != 0;
+        }
+
+        let ids = appdata.comprados;
+        let platosComprados = appdata.platos.filter(element => idEnComprados(ids, element.id));
+        resolve(platosComprados);
+      });
     }
   }
   
