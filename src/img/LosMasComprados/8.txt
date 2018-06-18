@@ -1,10 +1,10 @@
-Insanity burger
+Omelette
 autor: 
-tiempo: 35 min
+tiempo: 10 min
 precio: 
-descripcion: Con mostaza y salsa de hamburgueza casera, utiliza la técnica de cepillar las hamburguesas con mostaza y un chorrito de salsa Chipotle de Tabasco mientras se cocinan para formar una increíble capa de condimento. Rinde para 4, dificultad: "súper fácil".
+descripcion: Un delicioso desayuno, almuerzo o cena en muy poco tiempo. Los omelettes son realmente fáciles de hacer y súper ricos. Para una persona, dificultad: "súper fácil".
 estrellas: 
-tags: hamburguesa
+tags: omelette, huevo
 
 Para receta:
-https://www.jamieoliver.com/recipes/beef-recipes/insanity-burger/
+https://www.jamieoliver.com/recipes/eggs-recipes/omelette/

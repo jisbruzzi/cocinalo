@@ -1,8 +1,8 @@
-Pechuga de pollo asada con tomates cherry y espárragos
+Pechuga de pollo asada con tomates cherry y espï¿½rragos
 autor: 
-tiempo: 15
+tiempo: 40
 precio: 
-descripcion: ¿Por qué guardar un asado para cuando venga la familia? Esta versión mini es genial cualquier día de la semana. Para una persona, dificultad: "super facil".
+descripcion: ï¿½Por quï¿½ guardar un asado para cuando venga la familia? Esta versiï¿½n mini es genial cualquier dï¿½a de la semana. Para una persona, dificultad: "super facil".
 estrellas: 
 tags: pechuga, pollo
 

@@ -2,7 +2,7 @@ Sushi de espárragos
 autor: 
 tiempo: 45
 precio: 
-descripcion: Delicioso suchi con aguacate y salsa de lima. Para 24 piezas, dificultad: "no tan complicado".
+descripcion: Delicioso sushi con aguacate y salsa de lima. Para 24 piezas, dificultad: "no tan complicado".
 estrellas: 
 tags: sushi
 

@@ -1,10 +1,10 @@
-Ensalada de sushi simple
+Albóndigas
 autor: 
-tiempo: 35
+tiempo: 1h 50 min
 precio: 
-descripcion: Con salmón ahumado, aguacate y col rizada. Rinde para 2 porciones, dificultad: "no tan complicado".
+descripcion: Estas albóndigas de carne de res y de cerdo, en una salsa de tomate y chile, son fáciles de hacer y saludables también. Rinde para 4, dificultad: "súper fácil".
 estrellas: 
-tags: ensalada, sushi
+tags: albóndigas, carne
 
 Para receta:
-https://www.jamieoliver.com/recipes/fish-recipes/simple-sushi-salad/
+https://www.jamieoliver.com/recipes/beef-recipes/meatballs/

@@ -1,10 +1,10 @@
-Tortilla
+Insanity burger
 autor: 
 tiempo: 35 min
 precio: 
-descripcion: Este plato clásico español es muy versátil y rápido de hacer. La tortilla se puede servir caliente o fría y es una forma fantástica de usar todo tipo de ingredientes: simplemente agregue los vegetales sobrantes, el queso desmenuzado o rallado, los pimientos rojos enharinados o la salchicha cocida. Todos sabrán muy bien, ¡así que experimenta! Para 6 porciones, dificultad: "no tan complicado".
-estrellas:
-tags: tortilla
+descripcion: Con mostaza y salsa de hamburguesa casera, utiliza la tï¿½cnica de cepillar las hamburguesas con mostaza y un chorrito de salsa Chipotle de Tabasco mientras se cocinan para formar una increï¿½ble capa de condimento. Rinde para 4, dificultad: "sï¿½per fï¿½cil".
+estrellas: 
+tags: hamburguesa
 
 Para receta:
-https://www.jamieoliver.com/recipes/eggs-recipes/spanish-tortilla/
+https://www.jamieoliver.com/recipes/beef-recipes/insanity-burger/

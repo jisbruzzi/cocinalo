@@ -1,10 +1,10 @@
-Albóndigas
+Tostada anglo-francesa
 autor: 
-tiempo: 1h 50 min
+tiempo: 20 min
 precio: 
-descripcion: Estas albóndigas de carne de res y de cerdo, en una salsa de tomate y chile, son fáciles de hacer y saludables también. Rinde para 4, dificultad: "súper fácil".
+descripcion: Con queso y jamón. El sándwich tostado se transforma con rellenos súper sabrosos. Para una persona, dificultad: "súper fácil".
 estrellas: 
-tags: albóndigas, carne
+tags: tostada
 
 Para receta:
-https://www.jamieoliver.com/recipes/beef-recipes/meatballs/
+https://www.jamieoliver.com/recipes/bread-recipes/anglo-french-toastie/

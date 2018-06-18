@@ -2,7 +2,7 @@ Canelones al horno
 autor: 
 tiempo: 40 min
 precio: 
-descripcion: Con espinacas, nueces y salvia crujiente. Con su delicioso relleno de tres quesos, este canelón de vegetales dorados y burbujeantes es un verdadero placer. Para 8 porciones, dificultad: "super facil".
+descripcion: Con espinaca, nueces y salvia crujiente. Con su delicioso relleno de tres quesos, este canelï¿½n de vegetales dorados y burbujeantes es un verdadero placer. Para 8 porciones, dificultad: "super facil".
 estrellas: 
 tags: pasta
 

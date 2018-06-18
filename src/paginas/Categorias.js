@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import './App.css';
-import 'typeface-roboto'
+import 'typeface-roboto';
 import SingleLineGridList from './SingleLineGridList';
 import proxy from '../Proxy';
 
@@ -17,12 +17,14 @@ class Categorias extends Component {
   render() {
     return (
         <div>
-            <p>Recomendados</p>
-            <SingleLineGridList scrollData={this.state.platos} />
-            <p>Los más comprados</p>
-            <SingleLineGridList scrollData={this.state.platos} />
-            <p>Veggie</p>
-            <SingleLineGridList scrollData={this.state.platos} />
+            <p><b>Recomendados</b></p>
+            <SingleLineGridList scrollData={this.state.platos.filter(elemento => elemento.categoria == "Recomendados")} />
+            <p><b>Los más comprados</b></p>
+            <SingleLineGridList scrollData={this.state.platos.filter(elemento => elemento.categoria == "Los más comprados")} />
+            <p><b>Veggie</b></p>
+            <SingleLineGridList scrollData={this.state.platos.filter(elemento => elemento.categoria == "Veggie")} />
+            <p><b>Tentaciones</b></p>
+            <SingleLineGridList scrollData={this.state.platos.filter(elemento => elemento.categoria == "Tentaciones")} />
         </div>
     );
   }

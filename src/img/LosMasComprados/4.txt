@@ -1,10 +1,10 @@
-Empanadas de carne
+Pizza básica
 autor: 
-tiempo: 1h 40min
+tiempo: 1h 20 min
 precio: 
-descripcion: Perfectamente condimentado con pimentón y chile fresco. Rellenas de ternera tierna, son una gran opción. Rinde para 14 personas, dificultad: "no tan complicado".
+descripcion: Deliciosa masa y cobertura. Uvez que vean lo simple y sabrosa que es esta receta de masa de pizza, no querrán comida para llevar. Sirve 8 porciones, dificultad: "súper fácil".
 estrellas: 
-tags: empanadas, carne
+tags: pizza
 
 Para receta:
-https://www.jamieoliver.com/recipes/beef-recipes/beef-empanadas/
+https://www.jamieoliver.com/recipes/bread-recipes/basic-pizza/
