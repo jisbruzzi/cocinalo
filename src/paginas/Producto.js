@@ -68,7 +68,7 @@ class Producto extends Component {
 
   comprarProducto(cantidad, idProducto){
         this.props.history.push({
-          pathname: '/comprar/'+idProducto,
+          pathname: '/comprar/'+ idProducto,
         state: { cantidadPedida: cantidad }
         });
   }

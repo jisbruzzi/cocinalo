@@ -28,6 +28,14 @@ class Proxy {
         });
     }
 
+    getPlatoById(id) {
+      return new Promise((resolve, reject) => { 
+        let elem = appdata.platos.find(e => e.id == id);
+        console.log("PROXY-ELEM:", elem)
+        resolve(elem);
+      });
+    }
+
     getCarrito(){
         return new Promise(function(resolve, reject){
           function getPlatoById(listadoPlatos, id) {
