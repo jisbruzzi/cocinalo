@@ -9,32 +9,29 @@ class Comprar extends Component {
     //this.handleChange = this.handleChange.bind(this);
     //this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {
-      plato: {}
+      plato: {},
+      user: {}
     }
   }
+
   componentDidMount() {
-    console.log("xxx:" + this.props.match.params.id);
+    proxy.getUsuario().then(u => {this.setState({user: u})});
     proxy.getPlatoById(this.props.match.params.id).then((p)=>{this.setState({plato: p}); 
     //var producto2 = this.state.platos.find((e)=>{return e.id==this.props.match.params.id});
     //this.setState({producto: producto2});
     });
   }
 
-username: 'Pepenacho',
-nombre: 'José',
-apellido: 'Sbruzzi',
-direccion: 'Paseo Colón 850',
-tarjetaNumero: '1249-9203-3021-8745',
   render() {
     return (
         <div>
             <br/>
             <br/>
-            <p> Datos del usuario </p>
-            <p> Nombre: </p>
-            <p> Apelido: </p>
-            <p> Direccion: </p>
-            <p> Numero de tarjeta: </p>
+            <h2> Datos del usuario</h2>
+            <p> Nombre: { this.state.user.nombre } </p>
+            <p> Apelido: { this.state.user.apellido } </p>
+            <p> Direccion: { this.state.user.direccion } </p>
+            <p> Numero de tarjeta: { this.state.user.tarjetaNumero } </p>
             <h2> Datos del producto </h2>
             <p> Nombre: {this.state.plato.title} </p>
             <p> Cantidad: {this.props.location.state.cantidadPedida}</p>

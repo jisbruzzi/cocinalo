@@ -55,7 +55,7 @@ import image48 from './img/Tentaciones/12.jpg';
               nombre: 'José',
               apellido: 'Sbruzzi',
               direccion: 'Paseo Colón 850',
-              tarjetaNumero: '1249-9203-3021-8745',
+              tarjetaNumero: 'XXXX-XXXX-XXXX-8745',
     },
     favoritos: [9,16,19,29,34],
     comprados: [4,6,39],

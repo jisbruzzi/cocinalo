@@ -22,6 +22,11 @@ class Proxy {
       this._type = value;
     }
 
+    getUsuario() {
+      return new Promise(function(resolve, reject){
+        resolve(appdata.usuario);
+  });
+    }
     getPlatos() {
         return new Promise(function(resolve, reject){
               resolve(appdata.platos);
