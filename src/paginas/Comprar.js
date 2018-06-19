@@ -10,6 +10,11 @@ class Comprar extends Component {
             <br/>
             <br/>
             <p> Ingrese sus datos </p>
+            <p> Nombre: </p>
+            <p> Apellido: </p>
+            <p> Direccion: </p>
+            <p> Tarjeta número: </p>
+            <p> Cantidad: {this.props.location.state.cantidadPedida}</p>
             <br/>
             <br/>
             <br/>

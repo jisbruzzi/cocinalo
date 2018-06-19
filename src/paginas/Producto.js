@@ -66,8 +66,11 @@ class Producto extends Component {
     });
   }
 
-  comprarProducto (idProducto){
-        this.props.history.push('/comprar/'+idProducto);
+  comprarProducto(cantidad, idProducto){
+        this.props.history.push({
+          pathname: '/comprar/'+idProducto,
+        state: { cantidadPedida: cantidad }
+        });
   }
 
   agregarProductoACarrito(cantidad, idProducto){
@@ -136,7 +139,7 @@ class Producto extends Component {
               </div>
 
             <div className="boton">
-              <Button fullWidth variant="contained" onClick={()=>{this.comprarProducto(this.state.producto.id)}}>
+              <Button fullWidth variant="contained" onClick={()=>{this.comprarProducto(this.state.currency, this.state.producto.id)}}>
               Comprar
               </Button>
             </div>
