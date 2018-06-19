@@ -142,6 +142,14 @@ class Proxy {
         console.log(this.data.carrito);
 
     }
+
+    quitarPlatoDeCarrito(id){
+      let resultado = this.data.carrito.find(e => e.idPlato == id);
+      this.data.carrito.pop(id);
+
+      console.log(this.data.carrito);
+
+  }
   }
   
 export default new Proxy();

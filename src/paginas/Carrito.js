@@ -23,6 +23,7 @@ class Carrito extends Component {
                <ProductCard itemCarrito={item}/>
             </div>
           )}
+            <br />
             <Button variant="contained">
             Confirmar compra
             </Button>

@@ -6,9 +6,10 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
-import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-import SkipNextIcon from '@material-ui/icons/SkipNext';
+import DeleteIcon from '@material-ui/icons/Delete';
+import proxy from './Proxy';
+import { withRouter } from 'react-router-dom';
+
 
 var styles = theme => ({
   card: {
@@ -31,6 +32,10 @@ var styles = theme => ({
   },
 });
 class ProductCard extends Component {
+  quitarProducto(id){
+    proxy.quitarPlatoDeCarrito(id);
+    this.props.history.push('/carrito');
+  }
   render(){
         return (
             <div>
@@ -41,12 +46,14 @@ class ProductCard extends Component {
                     <Typography variant="subheading" align="left" color="textSecondary">
                     Cantidad: {this.props.itemCarrito.cantidad}
                     </Typography>
+                    <IconButton aria-label="delete" onClick={()=>this.quitarProducto(this.props.itemCarrito.id)}>
+                                <DeleteIcon/>
+                    </IconButton>
                 </CardContent>
                 </div>
                 <CardMedia
                 className={this.props.classes.cover}
                 image={this.props.itemCarrito.datosPlato.img}
-                title="Live from space album cover"
                 />
             </Card>
             </div>
@@ -59,4 +66,4 @@ ProductCard.propTypes = {
   theme: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles, { withTheme: true })(ProductCard);
+export default withStyles(styles, { withTheme: true })(withRouter(ProductCard));
