@@ -139,17 +139,26 @@ class Proxy {
         } else {
           resultado.cantidad += parseInt(cantidadPedida);
         }
-        console.log(this.data.carrito);
-
     }
 
     quitarPlatoDeCarrito(id){
-      let resultado = this.data.carrito.find(e => e.idPlato == id);
-      this.data.carrito.pop(id);
-
+      console.log("ESTOY quitarPlato en proxy")
+      console.log("id recibido:" + id);
+      console.log("XXX DATA CARRITO PROXYYYY");
       console.log(this.data.carrito);
-
-  }
+      /*let resultado = this.data.carrito.filter((e)=>{e.idPlato == parseInt(id)});
+      console.log("Resultado de filter");
+      console.log(resultado);
+      return resultado;
+      */let resultado = this.data.carrito.find(e => e.idPlato == id);
+      var index = this.data.carrito.indexOf(resultado);
+      console.log("El índice encontrado es" + index);
+      console.log("id buscado: " + id);
+      if (index >= -1) {
+        this.data.carrito.splice(index, 1);
+      }
+      return this.data.carrito.filter((e)=>true);
+      }
   }
   
 export default new Proxy();
