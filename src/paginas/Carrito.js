@@ -18,6 +18,10 @@ class Carrito extends Component {
   }
 
   delete(id){
+    //Borro elemento en el modelo
+    proxy.quitarPlatoDeCarrito(id);
+
+    //Borro elemento en la vista
     this.setState(function(state) {
       var nuevaLista = state.platos.slice();
 
