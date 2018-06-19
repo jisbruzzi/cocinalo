@@ -28,6 +28,21 @@ class Proxy {
         });
     }
 
+    getCarrito(){
+        return new Promise(function(resolve, reject){
+          function getPlatoById(listadoPlatos, id) {
+            return listadoPlatos.find(e => e.id == id);
+          }
+          let resultado = appdata.carrito.map((p)=>{return {
+                                                    idPlato: p.idPlato,
+                                                    cantidad: p.cantidad,
+                                                    datosPlato: getPlatoById(appdata.platos, p.idPlato)
+                                                  }});
+          console.log(resultado);
+          resolve(resultado);
+        });
+    }
+
     getPlatosConsulta(consulta){
       function parecidas(a,b){
         return(a.toUpperCase().includes(b.toUpperCase()))
@@ -112,6 +127,20 @@ class Proxy {
         let platosComprados = appdata.platos.filter(element => idEnComprados(ids, element.id));
         resolve(platosComprados);
       });
+    }
+
+    agregarPlatoACarrito(cantidadPedida, id){
+        let resultado = this.data.carrito.find(e => e.idPlato == id);
+        if(!resultado){
+          this.data.carrito.push({
+                                  idPlato: id,
+                                  cantidad: cantidadPedida,
+                                });
+        } else {
+          resultado.cantidad += parseInt(cantidadPedida);
+        }
+        console.log(this.data.carrito);
+
     }
   }
   

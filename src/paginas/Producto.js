@@ -27,23 +27,23 @@ const styles = theme => ({
 
 const cantidades = [
   {
-    value: '1',
+    value: 1,
     label: '1 UNIDAD',
   },
   {
-    value: '2',
+    value: 2,
     label: '2 UNIDADES',
   },
   {
-    value: '3',
+    value: 3,
     label: '3 UNIDADES',
   },
   {
-    value: '4',
+    value: 4,
     label: '4 UNIDADES',
   },
   {
-    value: '5',
+    value: 5,
     label: '5 UNIDADES',
   }
 ];
@@ -51,9 +51,12 @@ const cantidades = [
 class Producto extends Component {
   constructor(props) {
     super(props);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {
       platos: [],
-      producto: {}
+      producto: {},
+      currency: 1
     }
   }
   componentDidMount() {
@@ -65,6 +68,19 @@ class Producto extends Component {
 
   comprarProducto (idProducto){
         this.props.history.push('/comprar/'+idProducto);
+  }
+
+  agregarProductoACarrito(cantidad, idProducto){
+    proxy.agregarPlatoACarrito(cantidad, idProducto);
+  }
+
+  handleChange(event) {
+    this.setState({currency: event.target.value});
+  }
+
+  handleSubmit(cantidad, id) {
+    this.agregarProductoACarrito(cantidad, id);
+    this.props.history.push('/home');
   }
 
   render() {
@@ -100,6 +116,7 @@ class Producto extends Component {
                     className={classes.textField}
                     value={this.state.currency}
                     margin="normal"
+                    onChange={this.handleChange}
 
                     SelectProps={{
                       native: true,
@@ -123,7 +140,7 @@ class Producto extends Component {
               Comprar
               </Button>
             </div>
-            <Button fullWidth variant="contained">
+            <Button fullWidth variant="contained" onClick={()=>{this.handleSubmit(this.state.currency, this.state.producto.id)}}>
             Añadir al carrito
             </Button>
         </div>

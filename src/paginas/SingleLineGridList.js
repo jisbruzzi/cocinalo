@@ -51,8 +51,6 @@ const styles = theme => ({
  */
 function mostrarProducto (props, idProducto){
   props.history.push('/producto/'+idProducto);
-  console.log(idProducto);
-
 }
 
 function SingleLineGridList(props) {

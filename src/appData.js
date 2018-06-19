@@ -58,9 +58,18 @@ import image48 from './img/Tentaciones/12.jpg';
               tarjetaNumero: '1249-9203-3021-8745',
     },
     favoritos: [9,16,19,29,34],
-    comprados: [4,6],
+    comprados: [4,6,39],
     packsComprados: [2],
-
+    carrito: [
+              {
+                idPlato: 5,
+                cantidad: 2,
+              },
+              {
+                idPlato: 2,
+                cantidad: 1,
+              }
+            ],
     packs: [
             {
               id: 1,
