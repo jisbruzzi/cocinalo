@@ -38,7 +38,6 @@ class Proxy {
                                                     cantidad: p.cantidad,
                                                     datosPlato: getPlatoById(appdata.platos, p.idPlato)
                                                   }});
-          console.log(resultado);
           resolve(resultado);
         });
     }
@@ -150,14 +149,17 @@ class Proxy {
       console.log("Resultado de filter");
       console.log(resultado);
       return resultado;
-      */let resultado = this.data.carrito.find(e => e.idPlato == id);
+      */
+      let resultado = this.data.carrito.find(e => e.idPlato == id);
       var index = this.data.carrito.indexOf(resultado);
       console.log("El índice encontrado es" + index);
       console.log("id buscado: " + id);
       if (index >= -1) {
-        this.data.carrito.splice(index, 1);
+        var nuevaLista = this.data.carrito.slice();
+        nuevaLista.splice(index, 1);
+        return nuevaLista;
       }
-      return this.data.carrito.filter((e)=>true);
+      //return this.data.carrito.filter((e)=>true);
       }
   }
   

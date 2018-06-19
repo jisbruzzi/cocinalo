@@ -32,6 +32,9 @@ var styles = theme => ({
   },
 });
 class ProductCard extends Component {
+  delete(id){
+    this.props.delete(id);
+  }
   render(){
         return (
             <div>
@@ -42,7 +45,7 @@ class ProductCard extends Component {
                     <Typography variant="subheading" align="left" color="textSecondary">
                     Cantidad: {this.props.itemCarrito.cantidad}
                     </Typography>
-                    <IconButton aria-label="delete" onClick={()=>{this.props.onDelete(this.props.itemCarrito.idPlato)}}>
+                    <IconButton aria-label="delete" onClick={this.delete.bind(this,this.props.itemCarrito.idPlato)}>
                                 <DeleteIcon/>
                     </IconButton>
                 </CardContent>

@@ -10,22 +10,22 @@ class Carrito extends Component {
     this.state = {
       platos: [],
     }
-    this.eliminarProducto=this.eliminarProducto.bind(this);
+    this.delete=this.delete.bind(this);
   }
   componentDidMount() {
       proxy.getCarrito().then((value)=>{this.setState({platos: value}); 
     });
   }
-  
-  eliminarProducto(id){
-    console.log("Contenido platos antes de borrar:");
-    console.log(this.state.platos);
-    let platosActualizados = proxy.quitarPlatoDeCarrito(id);
-    console.log("Platos actualizados");
-    console.log(platosActualizados);
-    this.setState({platos: platosActualizados});
-    console.log("Contenido state luego de borrar:");
-    console.log(this.state.platos);
+
+  delete(id){
+    this.setState(function(state) {
+      var nuevaLista = state.platos.slice();
+
+      let resultado = nuevaLista.find(e => e.idPlato == id);
+      var index = nuevaLista.indexOf(resultado);
+      nuevaLista.splice(index,1);
+      return {platos: nuevaLista};
+    });
   }
 
   render() {
@@ -33,7 +33,7 @@ class Carrito extends Component {
         <div>
           {this.state.platos.map(item =>
             <div key={item.idPlato}>
-               <ProductCard itemCarrito={item} onDelete={(id)=>{this.eliminarProducto(id)}}/>
+               <ProductCard itemCarrito={item} delete={this.delete}/>
             </div>
           )}
             <br />
