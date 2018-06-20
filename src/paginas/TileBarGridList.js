@@ -28,16 +28,12 @@ const styles = theme => ({
   },
 });
 
-function mostrarProducto (props, idProducto){
-    props.history.push(props.dirDestino+idProducto);
-    console.log(idProducto);
-}
 /*
 data es un array de objetos con:
 key: lo que disntingue este tile de los demás
 img:la imagen del tile
 title: el título del tile
-subtitle:el subtítulo del tile
+author:el subtítulo del tile
 
 las props obligatorias son:
 onClick(recibe el objeto que se armó)

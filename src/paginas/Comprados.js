@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import 'typeface-roboto'
-import TileBarGridListComprados from './TileBarGridListComprados';
+import TileBarGridList from './TileBarGridList';
 import proxy from '../Proxy';
 
 class Comprados extends Component {
@@ -10,13 +10,34 @@ class Comprados extends Component {
       compras: []
     }
   }
-  componentDidMount() {
+  componentDidMount(){
+    this.actualizarConsulta()
+  }
+  actualizarConsulta() {
       proxy.getCompras().then((value)=>{this.setState({compras: value})});
   }
+  mostrarProducto(platoListo){
+    this.props.history.push({
+      pathname:"/productocomprado",
+      state:{compra:platoListo.compra}
+    })
+  }
   render() {
+    let platosListos=this.state.compras.map((compra)=>{
+      return {
+        compra:compra,
+        key: compra.idCompra+"-"+compra.plato.img,
+        img:compra.plato.img,
+        title:"("+compra.cantidad+")"+compra.plato.title,
+        author:compra.plato.author
+      }
+    })
     return (
         <div>
-          <TileBarGridListComprados compras={this.state.compras}/>
+          <TileBarGridList
+            data={platosListos}
+            onClick={(p)=>this.mostrarProducto(p)}
+          />
         </div>
     )
 
