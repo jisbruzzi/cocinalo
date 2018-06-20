@@ -1,0 +1,13 @@
+Empanadas de queso
+autor: Narda Lepes
+tiempo: 35
+precio: 
+descripcion: 'Rellenas del mejor queso, son una gran opción. Rinde para 14 personas, dificultad: "no tan complicado"',
+estrellas: 
+tags: empanada, carne
+ingredientes: '15 tapas medianas para empanadas de horno o 25 tapas pequeñas.3 tazas de queso desmenuzado o rallado (use mozzarella si no puede conseguir un buen queso fresco).Media cebolla blanca, picada finamente. 1 huevo, la yema y la clara separadas, batidas ligeramente.2-3 cucharadas de azúcar demerara (tipo de azúcar que mantiene su forma cristalizada al horno)',
+receta: 'Mezcle el queso y la cebolla picada.Para formar las empanadas ponga una cucharada de la mezcla del queso y cebolla en el centro de las tapas de empanadas..Usando una brocha pastelera rocíe los bordes de las tapas con la clara de huevo (esto ayudara a sellar las empanadas para prevenir que el queso se derrame cuando se estén horneando).Doble las tapas y selle los bordes usando un tenedor.
+Pinte la parte superior de las empanadas con la yema de huevo, esto les dará un bonito color dorado cuando se horneen.Espolvoree la azúcar en la parte superior de las empanadas.Refrigere las empanadas por los menos durante una media hora, esto ayudara a que se sellen correctamente.Pre-caliente el horno a 400 F y hornee las empanadas durante 20-25 minutos o hasta que se empiecen a dorar.Sirva las empanadas calientes',
+
+Para receta:
+https://www.laylita.com/recetas/empanadas-de-queso-al-horno/

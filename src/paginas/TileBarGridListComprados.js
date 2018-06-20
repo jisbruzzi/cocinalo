@@ -28,26 +28,32 @@ const styles = theme => ({
   },
 });
 
-function mostrarProducto (props, idProducto){
-    props.history.push(props.dirDestino+idProducto);
-    console.log(idProducto);
+function mostrarProductoComprado (props, comprado){
+     props.history.push({
+        pathname: '/productocomprado',
+        state: { compra: comprado }
+      });
 }
 
-function TitlebarGridList(props) {
+function TitlebarGridListComprados(props) {
   const { classes } = props;
-
   return (
     <div className={classes.root}>
       <GridList cellHeight={180} className={classes.gridList}>
         {props.subheader && <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
           <ListSubheader component="div">{props.subheader}</ListSubheader>
         </GridListTile>}
-        {props.data.map(tile => (
-          <GridListTile key={tile.img}>
-            <img src={tile.img} alt={tile.title} onClick={()=>{mostrarProducto(props, tile.id)}}/>
+        {props.compras.map(compra => (
+          <GridListTile key={compra.idCompra}>
+            <img src={compra.plato.img} alt={compra.plato.title} onClick={()=>{mostrarProductoComprado(props, compra)}}/>
             <GridListTileBar
-              title={tile.title}
-              subtitle={<span>by: {tile.author}</span>}
+              title={'(' + compra.cantidad + ') ' + compra.plato.title}
+              subtitle={<span>by: {compra.plato.author}</span>}
+              actionIcon={
+                <IconButton className={classes.icon}>
+                  <InfoIcon />
+                </IconButton>
+              }
             />
           </GridListTile>
         ))}
@@ -56,8 +62,8 @@ function TitlebarGridList(props) {
   );
 }
 
-TitlebarGridList.propTypes = {
+TitlebarGridListComprados.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(withRouter(TitlebarGridList));
+export default withStyles(styles)(withRouter(TitlebarGridListComprados));

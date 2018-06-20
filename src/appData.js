@@ -46,7 +46,10 @@ import image45 from './img/Tentaciones/9.jpg';
 import image46 from './img/Tentaciones/10.jpg';
 import image47 from './img/Tentaciones/11.jpg';
 import image48 from './img/Tentaciones/12.jpg';
+import image49 from './img/Recomendados/13.jpg';
+import image50 from './img/Recomendados/14.jpg';
 import video1 from './img/Videos/nardalepes.jpg';
+import video2 from './img/Videos/empanadas.jpg';
 
   const appData = {
     // Por ahora hay un solo usuario super hardcodeado
@@ -59,7 +62,22 @@ import video1 from './img/Videos/nardalepes.jpg';
               tarjetaNumero: 'XXXX-XXXX-XXXX-8745',
     },
     favoritos: [9,16,19,29,34],
-    comprados: [4,6,39],
+    comprados: [{
+                  idCompra: 1,
+                  idPlato: 4,
+                  cantidad: 3,
+                },
+                {
+                  idCompra: 2,
+                  idPlato: 6,
+                  cantidad: 8,
+                },
+                { 
+                  idCompra: 3,
+                  idPlato: 39,
+                  cantidad: 2
+                 }],
+                 
     packsComprados: [2],
     carrito: [
               {
@@ -330,12 +348,12 @@ import video1 from './img/Videos/nardalepes.jpg';
                 title: 'Empanadas de carne',
                 author: 'Narda Lepes',
                 descripcion: 'Perfectamente condimentadas con pimentón. Rellenas de ternera tierna, son una gran opción. Rinde para 14 personas, dificultad: "no tan complicado".',
-                ingredientes: '',
-                receta: '',
+                ingredientes: 'Carne cortada a cuchillo.Papas en cubos pequeños.Cebolla de verdeo.Huevos duros.Sal, pimentón y comino',
+                receta: 'Hervir las papas y retirarlas de la olla sin tirar el agua.Colocar la carne cortada a cuchillo en el agua que quedó de las papas junto con un poco de sal. El agua debe estar hirviendo, y la carne solo debe estar unos minutos para blanquearse.Poner en un recipiente las papas, la carne y los huevos duros cortados.Incorporá a este relleno la cebolla de verdeo, previamente salteada.Condimentá con el pimentón y el comino. Medite con la sal.Una vez frío, armá las empanadas como siempre.Las empanadas originales son fritas, pero te recomendamos que optes por el horno para que sean más saludables',
                 tiempo: 100,
                 precio: 120,
                 estrellas: 3.4,
-                video: video1,
+                video: video2,
                 categoria: 'Los más comprados',
               },
               {
@@ -757,6 +775,31 @@ import video1 from './img/Videos/nardalepes.jpg';
                 estrellas: 3.5,
                 video: video1,
                 categoria: 'Tentaciones',
+              },
+              {
+                id: 49,
+                img: image49,
+                title: 'Empanadas de queso',
+                author: 'Narda Lepes',
+                descripcion: 'Rellenas del mejor queso, son una gran opción. Rinde para 14 personas, dificultad: "no tan complicado"',
+                ingredientes: '15 tapas medianas para empanadas de horno o 25 tapas pequeñas.3 tazas de queso desmenuzado o rallado (use mozzarella si no puede conseguir un buen queso fresco).Media cebolla blanca, picada finamente. 1 huevo, la yema y la clara separadas, batidas ligeramente.2-3 cucharadas de azúcar demerara (tipo de azúcar que mantiene su forma cristalizada al horno)',
+                receta: 'Mezcle el queso y la cebolla picada.Para formar las empanadas ponga una cucharada de la mezcla del queso y cebolla en el centro de las tapas de empanadas..Usando una brocha pastelera rocíe los bordes de las tapas con la clara de huevo (esto ayudara a sellar las empanadas para prevenir que el queso se derrame cuando se estén horneando).Doble las tapas y selle los bordes usando un tenedor.Pinte la parte superior de las empanadas con la yema de huevo, esto les dará un bonito color dorado cuando se horneen.Espolvoree la azúcar en la parte superior de las empanadas.Refrigere las empanadas por los menos durante una media hora, esto ayudara a que se sellen correctamente.Pre-caliente el horno a 400 F y hornee las empanadas durante 20-25 minutos o hasta que se empiecen a dorar.Sirva las empanadas calientes',                tiempo: 100,
+                precio: 180,
+                estrellas: 4.5,
+                video: video1,
+                categoria: 'Recomendados',
+              },
+              {
+                id: 50,
+                img: image50,
+                title: 'Paella',
+                author: 'Narda Lepes',
+                descripcion: 'Hay mil formas de preparar una paella ya que admite prácticamente cualquier ingrediente que le quieras añadir. Su elaboración requiere de cierta práctica para respetar los tiempos de cocción y no sobre-cocer la paella, dando lugar al temido arroz pasado, pero con nuestras recetas y consejos, te garantizamos que ese sabor está garantizado',                ingredientes: '15 tapas medianas para empanadas de horno o 25 tapas pequeñas.3 tazas de queso desmenuzado o rallado (use mozzarella si no puede conseguir un buen queso fresco).Media cebolla blanca, picada finamente. 1 huevo, la yema y la clara separadas, batidas ligeramente.2-3 cucharadas de azúcar demerara (tipo de azúcar que mantiene su forma cristalizada al horno)',
+                receta: 'Empezamos haciendo el sofrito. Para ello, freímos la cebolla bien picada en el aceite caliente. Removemos la cebolla con una cuchara de madera frecuentemente, para que no se queme, y lo dejamos hasta que comience a tomar color.En ese momento, añadimos el ajo bien picado y, antes de que empiece a tomar color, incorporamos los tomates también picados.Agregamos el azúcar (para neutralizar la acidez del tomate), sal a nuestro gusto, el pimentón y unas hebras de azafrán. Revolvemos todos los ingredientes y dejamos que se sofrían hasta que los tomates se reduzcan y comiencen a chisporrotear.Es el momento de cortar los calamares ya limpios. El cuerpo lo cortamos en aros y las patas las dejamos enteras. Añadimos el calamar y lo dejamos cocinar durante unos minutos.Incorporamos el arroz y lo distribuimos por toda la paellera para que los granos se adhieran a los ingredientes. Calentamos el caldo junto con el vino en un cazo aparte, y cuando esté caliente lo vertemos en la paella.Aumentamos la temperatura y añadimos más sal. Volvemos a remover todo para que el arroz quede bien cubierto por el caldo, y cuando llegue a ebullición, bajamos la temperatura y dejamos que se cueza todo a fuego lento de 18 a 20 minutos.Es importante que durante la cocción vayamos moviendo la paellera por toda la superficie de cocción, para que el arroz se cueza uniformemente.Tras 10 minutos de cocción, incorporamos las gambas cocidas por encima hasta que se pongan de color rosa, luego le damos la vuelta para que se hagan por el otro lado.',
+                precio: 100,
+                estrellas: 3.4,
+                video: video1,
+                categoria: 'Recomendados',
               }
             ],
   };

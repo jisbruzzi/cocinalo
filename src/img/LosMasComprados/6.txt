@@ -5,6 +5,7 @@ precio:
 descripcion: Perfectamente condimentado con pimentón y chile fresco. Rellenas de ternera tierna, son una gran opción. Rinde para 14 personas, dificultad: "no tan complicado".
 estrellas: 
 tags: empanadas, carne
-
+ingredientes: 'Carne cortada a cuchillo.Papas en cubos pequeños.Cebolla de verdeo.Huevos duros.Sal, pimentón y comino',
+receta: 'Hervir las papas y retirarlas de la olla sin tirar el agua.Colocar la carne cortada a cuchillo en el agua que quedó de las papas junto con un poco de sal. El agua debe estar hirviendo, y la carne solo debe estar unos minutos para blanquearse.Poner en un recipiente las papas, la carne y los huevos duros cortados.Incorporá a este relleno la cebolla de verdeo, previamente salteada.Condimentá con el pimentón y el comino. Medite con la sal.Una vez frío, armá las empanadas como siempre.Las empanadas originales son fritas, pero te recomendamos que optes por el horno para que sean más saludables',
 Para receta:
 https://www.jamieoliver.com/recipes/beef-recipes/beef-empanadas/

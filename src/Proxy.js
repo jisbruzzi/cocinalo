@@ -23,14 +23,69 @@ class Proxy {
       this._type = value;
     }
 
+    getUsuario() {
+      return new Promise((resolve, reject) => {
+        resolve(this.data.usuario);
+      });
+    }
+
     getPlatos() {
-        return new Promise(function(resolve, reject){
-              resolve(appdata.platos);
+        return new Promise((resolve, reject) => {
+              resolve(this.data.platos);
+        });
+    }
+
+    getPlatoById(id) {
+      return new Promise((resolve, reject) => { 
+        let elem = this.data.platos.find(e => e.id == id);
+        resolve(elem);
+      });
+    }
+
+    generarSiguienteIdEnCompras() {
+      let maxId = this.data.comprados.reduce(
+                (max, compra) => Math.max(max, compra.idCompra), 0);
+      return maxId + 1;
+    }
+    // TODO: Agregar tratamiento de CANTIDAD
+    agregarProductoAComprados(idPlato2, cantidad2) {
+      let resultado = this.data.comprados.find(c => c == idPlato2);
+      if(!resultado){
+        this.data.comprados.push({
+                idCompra: this.generarSiguienteIdEnCompras(),
+                idPlato: idPlato2,
+                cantidad: cantidad2
+        });
+      } else {
+        //resultado.cantidad += parseInt(cantidadPedida);
+      }
+    }
+
+    comprarCarrito(listaItemsCarrito) {
+      listaItemsCarrito.forEach( p =>
+        this.agregarProductoAComprados(p.idPlato, p.cantidad)
+      );
+      this.data.carrito = [];
+    }
+
+    getCarrito(){
+        return new Promise((resolve, reject) => {
+          function getPlatoById(listadoPlatos, id) {
+            return listadoPlatos.find(e => e.id == id);
+          }
+
+          let resultado = this.data.carrito.map((p)=>{return {
+                                                    idPlato: p.idPlato,
+                                                    cantidad: p.cantidad,
+                                                    datosPlato: getPlatoById(this.data.platos, p.idPlato)
+                                                  }});
+          resolve(resultado);
         });
     }
     notificarCambioCarrito(evento){
       this.notifCarrito=evento;
     }
+
     getPlatosConsulta(consulta){
       function shuffleArray(arr){
         return arr
@@ -133,7 +188,6 @@ class Proxy {
         let titulosMatch=atributoIncluye("title",busqueda)
         let autoresMatch=atributoIncluye("author",busqueda)
         let descripcionesMatch=atributoIncluye("descripcion",busqueda)
-
         
         
         if(busqueda.includes(" ")){//búsqueda para más de una palabra, esto va arriba de todo
@@ -147,11 +201,9 @@ class Proxy {
         let fraseAnterior=restoPalabras.join(" ")+" "
         let matchesEnteros=palabrasMatchean.map((p)=>fraseAnterior+p)
         ret=ret.concat(matchesEnteros)
-
         ret=ret.filter((item,pos,self)=>{
           return self.indexOf(item)==pos
         })
-
         resolve(ret.map((s)=>arreglar(s)))
         */
       })
@@ -169,15 +221,20 @@ class Proxy {
       });
     }
 
-    getPlatosComprados() {
-      return new Promise(function(resolve, reject) {
-        function idEnComprados(comprados, id) {
-          return comprados.filter(e => e == id).length != 0;
+    getCompras() {
+      return new Promise((resolve, reject) => {
+        function getPlatoByIdSincronico(platos, id) {
+          return platos.find(e => e.id == id);
         }
 
-        let ids = appdata.comprados;
-        let platosComprados = appdata.platos.filter(element => idEnComprados(ids, element.id));
-        resolve(platosComprados);
+        let comprados = this.data.comprados.map((c) =>
+                             { return {
+                                  idCompra: c.idCompra,
+                                  plato: getPlatoByIdSincronico(this.data.platos,c.idPlato),
+                                  cantidad: c.cantidad
+                              }});
+
+        resolve(comprados);
       });
     }
 
