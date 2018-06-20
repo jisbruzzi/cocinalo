@@ -28,6 +28,13 @@ class Proxy {
         });
     }
     getPlatosConsulta(consulta){
+      function shuffleArray(arr){
+        return arr
+        .map(a => [Math.random(), a])
+        .sort((a, b) => a[0] - b[0])
+        .map(a => a[1]);
+      }
+
       function parecidas(a,b){
         return(a.toUpperCase().includes(b.toUpperCase()))
       }
@@ -44,7 +51,7 @@ class Proxy {
       return new Promise(function(resolve,reject){
         let matchEntera=getPlatosConsultaRealmente(consulta)//frase entera
         let matchPalabra=consulta.split(" ").map(getPlatosConsultaRealmente).reduce((a,b)=>a.concat(b),[])//cada palabra
-        let ret=[].concat(matchEntera).concat(matchPalabra).concat(appdata.platos)
+        let ret=[].concat(matchEntera).concat(matchPalabra).concat(shuffleArray(appdata.platos))
         
         ret=ret.filter((item,pos,self)=>{
           return self.indexOf(item)==pos
@@ -189,6 +196,29 @@ class Proxy {
         this.data.carrito.splice(index, 1);
       }
       }
+
+      getPlatoById(id) {
+        return new Promise((resolve, reject) => { 
+          let elem = appdata.platos.find(e => e.id == id);
+          console.log("PROXY-ELEM:", elem)
+          resolve(elem);
+        });
+      }
+  
+      getCarrito(){
+          return new Promise(function(resolve, reject){
+            function getPlatoById(listadoPlatos, id) {
+              return listadoPlatos.find(e => e.id == id);
+            }
+            let resultado = appdata.carrito.map((p)=>{return {
+                                                      idPlato: p.idPlato,
+                                                      cantidad: p.cantidad,
+                                                      datosPlato: getPlatoById(appdata.platos, p.idPlato)
+                                                    }});
+            resolve(resultado);
+          });
+      }
+
   }
   
 export default new Proxy();
