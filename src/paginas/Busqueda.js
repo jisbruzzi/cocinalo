@@ -11,12 +11,8 @@ class Busqueda extends Component {
       platos: [],
       consultada:""
     }
-    console.log("#####################")
-    console.log(this.props)
   }
   componentDidMount() {
-    console.log("-----------------")
-    console.log(this.props)
     this.actualizarConsulta()  
   }
   actualizarConsulta(){
@@ -28,14 +24,13 @@ class Busqueda extends Component {
 
   }
   render() {
-    console.log("000000000000000000000000000000")
-    console.log(this.props)
     this.actualizarConsulta()
     return (
         <div>
           <TileBarGridList 
           data={this.state.platos}
           subheader={<p>Resultado de la búsqueda de <b>{this.props.match.params.query}</b></p>}
+          dirDestino="/producto/"
           />
         </div>
     );
