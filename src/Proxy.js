@@ -4,6 +4,7 @@ class Proxy {
     constructor() {
       this._type = 'Proxy';
       this.data = appdata;
+      this.notifCarrito=()=>{};
     }
   
     singletonMethod() {
@@ -26,6 +27,9 @@ class Proxy {
         return new Promise(function(resolve, reject){
               resolve(appdata.platos);
         });
+    }
+    notificarCambioCarrito(evento){
+      this.notifCarrito=evento;
     }
     getPlatosConsulta(consulta){
       function shuffleArray(arr){
@@ -187,6 +191,7 @@ class Proxy {
         } else {
           resultado.cantidad += parseInt(cantidadPedida);
         }
+        this.notifCarrito(this.data.carrito)
     }
 
     quitarPlatoDeCarrito(id){
