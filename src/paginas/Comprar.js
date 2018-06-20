@@ -43,22 +43,36 @@ class Comprar extends Component {
     //this.setState({producto: producto2});
     });
   }
-//         <p> Direccion: { this.state.usuario.direccion } </p>
+
+  agregarProductoAComprados(idProducto, cantidad) {
+    proxy.agregarProductoAComprados(idProducto, cantidad);
+    this.props.history.push('/home');
+  }
+
   render() {
     return (
         <div>
             <br/>
             <br/>
-            <h2> Datos del usuario</h2>
+            <h3> USUARIO</h3>
             <p> Nombre: { this.state.usuario.nombre } </p>
             <p> Apelido: { this.state.usuario.apellido } </p>
-            <Divider />
+            <p> Direccion: { this.state.usuario.direccion } </p>
             <p> Numero de tarjeta: { this.state.usuario.tarjetaNumero } </p>
-            <h2> Datos del producto </h2>
+
+            <Divider />
+            <h3> PRODUCTOS </h3>
             <p> Nombre: {this.state.plato.title} </p>
             <p> Cantidad: {this.props.location.state.cantidadPedida}</p>
             <br/>
-            <Button variant="contained" >
+
+            <Divider />
+            <h3> TOTAL </h3>
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={()=>{this.agregarProductoAComprados(this.state.plato.id, this.props.location.state.cantidadPedida)}}>
+              
               Confirmar compra
             </Button>
         </div>

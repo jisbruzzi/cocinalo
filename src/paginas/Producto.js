@@ -144,11 +144,11 @@ class Producto extends Component {
 
               </div>
 
-            <div className="boton">
-              <Button fullWidth variant="contained" color="primary" onClick={()=>{this.comprarProducto(this.state.currency, this.state.producto.id)}}>
+            
+            <Button fullWidth variant="contained" color="primary" onClick={()=>{this.comprarProducto(this.state.currency, this.state.producto.id)}}>
               Comprar
-              </Button>
-            </div>
+            </Button>
+            
             <Button fullWidth variant="contained" color="primary" onClick={()=>{this.handleSubmit(this.state.currency, this.state.producto.id)}}>
             Añadir al carrito
             </Button>

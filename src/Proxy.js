@@ -41,6 +41,16 @@ class Proxy {
       });
     }
 
+    // TODO: Agregar tratamiento de CANTIDAD
+    agregarProductoAComprados(idProducto, cantidad) {
+      let resultado = this.data.comprados.find(c => c == idProducto);
+      if(!resultado){
+        this.data.comprados.push(idProducto);
+      } else {
+        //resultado.cantidad += parseInt(cantidadPedida);
+      }
+    }
+
     getCarrito(){
         return new Promise(function(resolve, reject){
           function getPlatoById(listadoPlatos, id) {
