@@ -22,56 +22,35 @@ class Proxy {
       this._type = value;
     }
 
-    getUsuario() {
-      return new Promise(function(resolve, reject){
-        resolve(appdata.usuario);
-  });
-    }
     getPlatos() {
         return new Promise(function(resolve, reject){
               resolve(appdata.platos);
         });
     }
-
-    getPlatoById(id) {
-      return new Promise((resolve, reject) => { 
-        let elem = appdata.platos.find(e => e.id == id);
-        console.log("PROXY-ELEM:", elem)
-        resolve(elem);
-      });
-    }
-
-    getCarrito(){
-        return new Promise(function(resolve, reject){
-          function getPlatoById(listadoPlatos, id) {
-            return listadoPlatos.find(e => e.id == id);
-          }
-          let resultado = appdata.carrito.map((p)=>{return {
-                                                    idPlato: p.idPlato,
-                                                    cantidad: p.cantidad,
-                                                    datosPlato: getPlatoById(appdata.platos, p.idPlato)
-                                                  }});
-          resolve(resultado);
-        });
-    }
-
     getPlatosConsulta(consulta){
       function parecidas(a,b){
         return(a.toUpperCase().includes(b.toUpperCase()))
       }
-      return new Promise(function(resolve,reject){
+
+      function getPlatosConsultaRealmente(consulta){
         let matchTitulo=appdata.platos.filter((plato)=>parecidas(plato.title,consulta))
         let matchAutor=appdata.platos.filter((plato)=>parecidas(plato.author,consulta))
         let matchDescripcion=appdata.platos.filter((plato)=>parecidas(plato.descripcion,consulta))
         let ret=[].concat(matchTitulo).concat(matchAutor).concat(matchDescripcion)
+        return ret
+      }
+
+      return new Promise(function(resolve,reject){
+        let matchEntera=getPlatosConsultaRealmente(consulta)
+        let matchPalabra=consulta.split(" ").map(getPlatosConsultaRealmente).reduce((a,b)=>a.concat(b),[])
+        let ret=[].concat(matchEntera).concat(matchPalabra).concat(appdata.platos)
+        
         ret=ret.filter((item,pos,self)=>{
           return self.indexOf(item)==pos
         })
-
         resolve(ret)
       })
     }
-
     getSugerenciasCon(busqueda){
       return new Promise(function(resolve,reject){
         function arreglar(str){
@@ -116,50 +95,6 @@ class Proxy {
         resolve(ret.map((s)=>arreglar(s)))
       })
     }
-
-    getPlatosFavoritos() {
-      return new Promise(function(resolve, reject) {
-        function idEnFavoritos(favoritos, id) {
-          return favoritos.filter(e => e == id).length != 0;
-        }
-
-        let favIds = appdata.favoritos;
-        let platosFavoritos = appdata.platos.filter(element => idEnFavoritos(favIds, element.id));
-        resolve(platosFavoritos);
-      });
-    }
-
-    getPlatosComprados() {
-      return new Promise(function(resolve, reject) {
-        function idEnComprados(comprados, id) {
-          return comprados.filter(e => e == id).length != 0;
-        }
-
-        let ids = appdata.comprados;
-        let platosComprados = appdata.platos.filter(element => idEnComprados(ids, element.id));
-        resolve(platosComprados);
-      });
-    }
-
-    agregarPlatoACarrito(cantidadPedida, id){
-        let resultado = this.data.carrito.find(e => e.idPlato == id);
-        if(!resultado){
-          this.data.carrito.push({
-                                  idPlato: id,
-                                  cantidad: cantidadPedida,
-                                });
-        } else {
-          resultado.cantidad += parseInt(cantidadPedida);
-        }
-    }
-
-    quitarPlatoDeCarrito(id){
-      let resultado = this.data.carrito.find(e => e.idPlato == id);
-      var index = this.data.carrito.indexOf(resultado);
-      if (index >= -1) {
-        this.data.carrito.splice(index, 1);
-      }
-      }
   }
   
 export default new Proxy();
