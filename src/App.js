@@ -33,6 +33,7 @@ class App extends Component {
                 <Route path='/comprados' component={paginas.Comprados}></Route>
                 <Route path='/perfil' component={paginas.Perfil}></Route>
                 <Route path='/producto/:id' component={paginas.Producto}></Route>
+                <Route path='/productoComprado/:id' component={paginas.ProductoComprado}></Route>
                 <Route path='/comprar/:id' component={paginas.Comprar}></Route> 
                 <Route path='/carrito' component={paginas.Carrito}></Route>
                 <Route path='/home' component={paginas.Categorias}></Route>

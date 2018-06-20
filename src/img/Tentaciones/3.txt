@@ -5,6 +5,9 @@ precio:
 descripcion: Riquisimo y tentador postre vegetariano y sin gluten. Cualquier mezcla de ciruela pasa se mantendrá en un recipiente hermético por hasta un mes, ¡pruébalo con arroz con leche! Rinde para 12/14 porciones, dificultad: "no tan complicado".
 estrellas:
 tags: moussse, sin-gluten
+ingredientes: '350 g de chocolate negro (70%), más extra para servir.100 ml de crema doble.10 huevos.50 g de azúcar en polvo de oro.500 g de ciruelas secas.150 ml de whisky.100 ml de jugo de naranja sin azúcar fresco'
+receta: 'Prepara las ciruelas la noche anterior: combina las ciruelas pasas, el whisky y el jugo de naranja en un tazón y déjalo en remojo toda la noche. Al día siguiente, divida el chocolate y derrita en un recipiente colocado sobre una fuente de agua hirviendo, asegurándose de que el recipiente no toque el agua. Retire el recipiente del fuego y déjelo enfriar.',
+
 
 Para receta:
 https://www.jamieoliver.com/recipes/chocolate-recipes/chocolate-mousse-with-prunes/
