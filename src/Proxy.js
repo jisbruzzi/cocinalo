@@ -41,6 +41,12 @@ class Proxy {
       });
     }
 
+    getFavoritos() {
+      return new Promise(function(resolve, reject){
+        resolve(appdata.favoritos);
+      });
+    }
+
     getCarrito(){
         return new Promise(function(resolve, reject){
           function getPlatoById(listadoPlatos, id) {
@@ -127,6 +133,15 @@ class Proxy {
         let platosFavoritos = appdata.platos.filter(element => idEnFavoritos(favIds, element.id));
         resolve(platosFavoritos);
       });
+    }
+
+    agregarPlatoAFavoritos(idProducto) {
+      this.data.favoritos.push(idProducto);
+    }
+
+    quitarPlatoDeFavoritos(idProducto) {
+      let index = this.data.favoritos.indexOf(idProducto);
+      this.data.favoritos.splice(index, 1);
     }
 
     getPlatosComprados() {

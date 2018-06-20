@@ -66,6 +66,7 @@ function TitlebarGridList(props) {
             <GridListTileBar
               title={tile.title}
               subtitle={<span>by: {tile.author}</span>}
+              style={{backgroundColor: 'rgba(0,0,0,0.6)'}}
             />
           </GridListTile>
         ))}
