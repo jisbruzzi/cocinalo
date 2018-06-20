@@ -25,8 +25,9 @@ class Proxy {
     getUsuario() {
       return new Promise((resolve, reject) => {
         resolve(this.data.usuario);
-  });
+      });
     }
+
     getPlatos() {
         return new Promise((resolve, reject) => {
               resolve(this.data.platos);
@@ -82,46 +83,108 @@ class Proxy {
     }
 
     getPlatosConsulta(consulta){
+      function shuffleArray(arr){
+        return arr
+        .map(a => [Math.random(), a])
+        .sort((a, b) => a[0] - b[0])
+        .map(a => a[1]);
+      }
+
       function parecidas(a,b){
         return(a.toUpperCase().includes(b.toUpperCase()))
       }
-      return new Promise((resolve,reject) => {
-        let matchTitulo=this.data.platos.filter((plato)=>parecidas(plato.title,consulta))
-        let matchAutor=this.data.platos.filter((plato)=>parecidas(plato.author,consulta))
-        let matchDescripcion=this.data.platos.filter((plato)=>parecidas(plato.descripcion,consulta))
-        let ret=[].concat(matchTitulo).concat(matchAutor).concat(matchDescripcion)
+
+      function getPlatosConsultaRealmente(consulta){
+        let matchTitulo=appdata.platos.filter((plato)=>parecidas(plato.title,consulta))
+        let matchAutor=appdata.platos.filter((plato)=>parecidas(plato.author,consulta))
+        let matchDescripcion=appdata.platos.filter((plato)=>parecidas(plato.descripcion,consulta))
+        let matchCategoria=appdata.platos.filter((plato)=>parecidas(plato.categoria,consulta))
+        let ret=[].concat(matchTitulo,matchAutor,matchDescripcion,matchCategoria)
+        return ret
+      }
+
+      return new Promise(function(resolve,reject){
+        let matchEntera=getPlatosConsultaRealmente(consulta)//frase entera
+        let matchPalabra=consulta.split(" ").map(getPlatosConsultaRealmente).reduce((a,b)=>a.concat(b),[])//cada palabra
+        let ret=[].concat(matchEntera).concat(matchPalabra).concat(shuffleArray(appdata.platos))
+        
         ret=ret.filter((item,pos,self)=>{
           return self.indexOf(item)==pos
         })
-
         resolve(ret)
       })
     }
-
     getSugerenciasCon(busqueda){
-      return new Promise((resolve,reject) => {
+      return new Promise(function(resolve,reject){
         function arreglar(str){
           return str.toLocaleLowerCase().replace(".","").replace(",","").replace(";","")
         }
 
+        function atributoArreglado(atributo){
+          return appdata.platos
+            .map((p)=>arreglar(p[atributo]))
+        }
+
         busqueda=arreglar(busqueda)
         let palabra=""
-        let ret=[]
-        let platos=this.data.platos
-        
-        let titulosMatch=platos
-          .map((p)=>arreglar(p.title))
-          .filter((titulo)=>titulo.includes(busqueda))
-        let autoresMatch=platos
-          .map((p)=>arreglar(p.author))
-          .filter((author)=>author.includes(busqueda))
-        let descripcionesMatch=platos
-          .map((p)=>arreglar(p.descripcion))
-          .filter((descripcion)=>descripcion.includes(busqueda))
+        let platos=appdata.platos
 
+        
         let palabras=busqueda.split(" ")
         let restoPalabras=palabras.slice(0,palabras.length-1)
         let ultimaPalabra=palabras[palabras.length-1]
+        let rePalabraTerminada=new RegExp("("+busqueda+" [^ ]+)")
+        let rePalabraNoTerminada=new RegExp("("+busqueda+"[^ ]+)")
+
+        let restoFrase=restoPalabras.join(" ")
+
+        function sugeridorPalabraTerminada(texto){
+          let resultado=rePalabraTerminada.exec(texto)
+          if(resultado==null){
+            return null
+          }else{
+            return resultado[1]
+          }
+        }
+
+        function sugeridorPalabraNoTerminada(texto){
+          let resultado=rePalabraNoTerminada.exec(texto)
+          if(resultado==null){
+            return null
+          }else{
+            return resultado[1]
+          }
+        }
+
+        function sugerenciasAtributo(atributo,sugeridor){
+          return atributoArreglado(atributo).map(sugeridor).filter((s)=>s!=null)
+        }
+
+        function sugerenciasAtributoMultiples(atributo){
+          let sugTerminada=sugerenciasAtributo(atributo,sugeridorPalabraTerminada)
+          let sugNoTerminada=sugerenciasAtributo(atributo,sugeridorPalabraNoTerminada)
+          let sug=[].concat(sugTerminada,sugNoTerminada)
+          return sug
+        }
+
+        let sugTitulo=sugerenciasAtributoMultiples("title")
+        let sugAutor=sugerenciasAtributoMultiples("author")
+        let sugDescripcion=sugerenciasAtributoMultiples("descripcion")
+        let sugCategoria=sugerenciasAtributoMultiples("categoria")
+
+        let ret= [].concat(sugTitulo,sugAutor,sugDescripcion,sugCategoria)
+
+        ret=ret.filter((item,pos,self)=>{
+          return self.indexOf(item)==pos
+        })
+        resolve(ret.map(arreglar))
+
+        /*
+        
+        let titulosMatch=atributoIncluye("title",busqueda)
+        let autoresMatch=atributoIncluye("author",busqueda)
+        let descripcionesMatch=atributoIncluye("descripcion",busqueda)
+        
         
         if(busqueda.includes(" ")){//búsqueda para más de una palabra, esto va arriba de todo
           ret=ret.concat(titulosMatch).concat(autoresMatch)
@@ -134,23 +197,22 @@ class Proxy {
         let fraseAnterior=restoPalabras.join(" ")+" "
         let matchesEnteros=palabrasMatchean.map((p)=>fraseAnterior+p)
         ret=ret.concat(matchesEnteros)
-
         ret=ret.filter((item,pos,self)=>{
           return self.indexOf(item)==pos
         })
-
         resolve(ret.map((s)=>arreglar(s)))
+        */
       })
     }
 
     getPlatosFavoritos() {
-      return new Promise((resolve, reject) => {
+      return new Promise(function(resolve, reject) {
         function idEnFavoritos(favoritos, id) {
           return favoritos.filter(e => e == id).length != 0;
         }
 
-        let favIds = this.data.favoritos;
-        let platosFavoritos = this.data.platos.filter(element => idEnFavoritos(favIds, element.id));
+        let favIds = appdata.favoritos;
+        let platosFavoritos = appdata.platos.filter(element => idEnFavoritos(favIds, element.id));
         resolve(platosFavoritos);
       });
     }
@@ -191,6 +253,29 @@ class Proxy {
         this.data.carrito.splice(index, 1);
       }
       }
+
+      getPlatoById(id) {
+        return new Promise((resolve, reject) => { 
+          let elem = appdata.platos.find(e => e.id == id);
+          console.log("PROXY-ELEM:", elem)
+          resolve(elem);
+        });
+      }
+  
+      getCarrito(){
+          return new Promise(function(resolve, reject){
+            function getPlatoById(listadoPlatos, id) {
+              return listadoPlatos.find(e => e.id == id);
+            }
+            let resultado = appdata.carrito.map((p)=>{return {
+                                                      idPlato: p.idPlato,
+                                                      cantidad: p.cantidad,
+                                                      datosPlato: getPlatoById(appdata.platos, p.idPlato)
+                                                    }});
+            resolve(resultado);
+          });
+      }
+
   }
   
 export default new Proxy();

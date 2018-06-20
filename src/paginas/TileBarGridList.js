@@ -29,7 +29,7 @@ const styles = theme => ({
 });
 
 function mostrarProducto (props, idProducto){
-    props.history.push('/producto/'+idProducto);
+    props.history.push(props.dirDestino+idProducto);
     console.log(idProducto);
 }
 
@@ -48,11 +48,6 @@ function TitlebarGridList(props) {
             <GridListTileBar
               title={tile.title}
               subtitle={<span>by: {tile.author}</span>}
-              actionIcon={
-                <IconButton className={classes.icon}>
-                  <InfoIcon />
-                </IconButton>
-              }
             />
           </GridListTile>
         ))}

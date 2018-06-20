@@ -57,9 +57,16 @@ const cantidades = [
 class ProductoComprado extends Component {
   constructor(props) {
     super(props);
-    this.state = {compra: this.props.location.state.compra}
+    this.state = {
+      compra: this.props.location.state.compra,
+      ingredientes: []
+    }
   }
-
+ 
+  componentDidMount() {
+    this.setState({ingredientes: this.state.compra.plato.ingredientes.split(".")});
+  }
+  
   render() {
     const { classes } = this.props;
     return (
@@ -73,7 +80,7 @@ class ProductoComprado extends Component {
                   <div className='descripcion-producto'>
                     {this.state.compra.plato.descripcion}
                   </div>
-                <br />
+                  <br />
                   <StarRatings
                     starDimension='30px'
                     rating={this.state.compra.plato.estrellas}
@@ -89,10 +96,24 @@ class ProductoComprado extends Component {
                 <Divider />
 
                 <h3>Estado actual</h3>
-                En un rato pongo la barrita de progreso
+                <p>En un rato pongo la barrita de progreso</p>
+                
+                <Divider />
 
+                  <h3> Ingredientes </h3>
+                  <div className='ingredientes'>
+                        {this.state.ingredientes.map(item =>
+                            <p> {item} </p>
+                       )}
+                  </div>
 
+                  <br/>
+                  <img src={this.state.compra.plato.video} width='100%'/>
 
+                  <h3> Receta </h3>
+                  <div className='receta'>
+                    {this.state.compra.plato.receta}
+                  </div>
         </div>
 
     );
