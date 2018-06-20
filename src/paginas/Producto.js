@@ -23,6 +23,12 @@ const styles = theme => ({
   menu: {
     width: '95%',
   },
+  button: {
+    margin: theme.spacing.unit,
+  },
+  input: {
+    display: 'none',
+  },
 });
 
 const cantidades = [
@@ -139,11 +145,11 @@ class Producto extends Component {
               </div>
 
             <div className="boton">
-              <Button fullWidth variant="contained" onClick={()=>{this.comprarProducto(this.state.currency, this.state.producto.id)}}>
+              <Button fullWidth variant="contained" color="primary" onClick={()=>{this.comprarProducto(this.state.currency, this.state.producto.id)}}>
               Comprar
               </Button>
             </div>
-            <Button fullWidth variant="contained" onClick={()=>{this.handleSubmit(this.state.currency, this.state.producto.id)}}>
+            <Button fullWidth variant="contained" color="primary" onClick={()=>{this.handleSubmit(this.state.currency, this.state.producto.id)}}>
             Añadir al carrito
             </Button>
         </div>

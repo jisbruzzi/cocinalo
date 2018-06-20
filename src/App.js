@@ -24,8 +24,6 @@ class App extends Component {
         <BrowserRouter>
             <div>
               <AppBar />
-
-              
                 <Route path={`(.*)/buscador`} component={paginas.Buscador}/>
                 <Route path='/favoritos' component={paginas.Favoritos}></Route>
                 <Route path='/busqueda/:query' component={paginas.Busqueda}></Route>
@@ -39,9 +37,6 @@ class App extends Component {
                 <Route exact path='/' render={
                   ()=><Redirect to={"/home"}/>
                 }></Route>
-
-              
-
               <SimpleBottonNavigation />
             </div>
         </BrowserRouter>
