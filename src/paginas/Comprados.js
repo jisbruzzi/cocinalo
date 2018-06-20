@@ -16,7 +16,7 @@ class Comprados extends Component {
   render() {
     return (
         <div>
-          <TileBarGridList data={this.state.platos}/>
+          <TileBarGridList data={this.state.platos} dirDestino='/productoComprado/'/>
         </div>
     );
   }

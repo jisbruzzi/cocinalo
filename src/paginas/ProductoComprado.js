@@ -27,6 +27,7 @@ class ProductoComprado extends Component {
     this.state = {
       platos: [],
       producto: {},
+      ingredientes: [],
     }
   }
 
@@ -34,9 +35,15 @@ class ProductoComprado extends Component {
       proxy.getPlatos().then((value)=>{this.setState({platos: value}); 
       var producto2 = this.state.platos.find((e)=>{return e.id==this.props.match.params.id});
       this.setState({producto: producto2});
+      this.setState({ingredientes: this.state.producto.ingredientes.split(".")});
     });
   }
 
+  getArrayIngredientes(){
+    console.log(this.state.producto);
+    
+  }
+  
   render() {
     const { classes } = this.props;
     return (
@@ -61,15 +68,17 @@ class ProductoComprado extends Component {
                     name='rating'/>
 
                   <h3> Ingredientes </h3>
-                  <div className='descripcion-producto'>
-                    {this.state.producto.ingredientes}
+                  <div className='ingredientes'>
+                        {this.state.ingredientes.map(item =>
+                            <p> {item} </p>
+                       )}
                   </div>
 
                   <br/>
                   <img src={this.state.producto.video} width='100%'/>
 
                   <h3> Receta </h3>
-                  <div className='descripcion-producto'>
+                  <div className='receta'>
                     {this.state.producto.receta}
                   </div>
                 </div>

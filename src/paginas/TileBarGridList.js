@@ -47,7 +47,7 @@ const styles = theme => ({
  */
 
 function mostrarProducto (props, idProducto){
-    props.history.push('/productoComprado/'+idProducto);
+    props.history.push(props.dirDestino+idProducto);
     console.log(idProducto);
 }
 
