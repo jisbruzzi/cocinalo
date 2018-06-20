@@ -58,7 +58,22 @@ import image48 from './img/Tentaciones/12.jpg';
               tarjetaNumero: 'XXXX-XXXX-XXXX-8745',
     },
     favoritos: [9,16,19,29,34],
-    comprados: [4,6,39],
+    comprados: [{
+                  idCompra: 1,
+                  idPlato: 4,
+                  cantidad: 3,
+                },
+                {
+                  idCompra: 2,
+                  idPlato: 6,
+                  cantidad: 8,
+                },
+                { 
+                  idCompra: 3,
+                  idPlato: 39,
+                  cantidad: 2
+                 }],
+                 
     packsComprados: [2],
     carrito: [
               {

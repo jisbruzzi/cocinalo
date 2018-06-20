@@ -72,8 +72,8 @@ class Comprar extends Component {
 
   comprarCarrito(itemsCarrito) {
     proxy.comprarCarrito(itemsCarrito);
-    this.props.history.push('/home');
     this.borrarCarritoDeVista();
+    this.props.history.push('/home');
   }
 
   costoComprados() {

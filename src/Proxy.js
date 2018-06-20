@@ -23,29 +23,37 @@ class Proxy {
     }
 
     getUsuario() {
-      return new Promise(function(resolve, reject){
-        resolve(appdata.usuario);
+      return new Promise((resolve, reject) => {
+        resolve(this.data.usuario);
   });
     }
     getPlatos() {
-        return new Promise(function(resolve, reject){
-              resolve(appdata.platos);
+        return new Promise((resolve, reject) => {
+              resolve(this.data.platos);
         });
     }
 
     getPlatoById(id) {
       return new Promise((resolve, reject) => { 
-        let elem = appdata.platos.find(e => e.id == id);
-        console.log("PROXY-ELEM:", elem)
+        let elem = this.data.platos.find(e => e.id == id);
         resolve(elem);
       });
     }
 
+    generarSiguienteIdEnCompras() {
+      let maxId = this.data.comprados.reduce(
+                (max, compra) => Math.max(max, compra.idCompra), 0);
+      return maxId + 1;
+    }
     // TODO: Agregar tratamiento de CANTIDAD
-    agregarProductoAComprados(idProducto, cantidad) {
-      let resultado = this.data.comprados.find(c => c == idProducto);
+    agregarProductoAComprados(idPlato2, cantidad2) {
+      let resultado = this.data.comprados.find(c => c == idPlato2);
       if(!resultado){
-        this.data.comprados.push(idProducto);
+        this.data.comprados.push({
+                idCompra: this.generarSiguienteIdEnCompras(),
+                idPlato: idPlato2,
+                cantidad: cantidad2
+        });
       } else {
         //resultado.cantidad += parseInt(cantidadPedida);
       }
@@ -67,7 +75,7 @@ class Proxy {
           let resultado = this.data.carrito.map((p)=>{return {
                                                     idPlato: p.idPlato,
                                                     cantidad: p.cantidad,
-                                                    datosPlato: getPlatoById(appdata.platos, p.idPlato)
+                                                    datosPlato: getPlatoById(this.data.platos, p.idPlato)
                                                   }});
           resolve(resultado);
         });
@@ -77,10 +85,10 @@ class Proxy {
       function parecidas(a,b){
         return(a.toUpperCase().includes(b.toUpperCase()))
       }
-      return new Promise(function(resolve,reject){
-        let matchTitulo=appdata.platos.filter((plato)=>parecidas(plato.title,consulta))
-        let matchAutor=appdata.platos.filter((plato)=>parecidas(plato.author,consulta))
-        let matchDescripcion=appdata.platos.filter((plato)=>parecidas(plato.descripcion,consulta))
+      return new Promise((resolve,reject) => {
+        let matchTitulo=this.data.platos.filter((plato)=>parecidas(plato.title,consulta))
+        let matchAutor=this.data.platos.filter((plato)=>parecidas(plato.author,consulta))
+        let matchDescripcion=this.data.platos.filter((plato)=>parecidas(plato.descripcion,consulta))
         let ret=[].concat(matchTitulo).concat(matchAutor).concat(matchDescripcion)
         ret=ret.filter((item,pos,self)=>{
           return self.indexOf(item)==pos
@@ -91,7 +99,7 @@ class Proxy {
     }
 
     getSugerenciasCon(busqueda){
-      return new Promise(function(resolve,reject){
+      return new Promise((resolve,reject) => {
         function arreglar(str){
           return str.toLocaleLowerCase().replace(".","").replace(",","").replace(";","")
         }
@@ -99,7 +107,7 @@ class Proxy {
         busqueda=arreglar(busqueda)
         let palabra=""
         let ret=[]
-        let platos=appdata.platos
+        let platos=this.data.platos
         
         let titulosMatch=platos
           .map((p)=>arreglar(p.title))
@@ -136,26 +144,31 @@ class Proxy {
     }
 
     getPlatosFavoritos() {
-      return new Promise(function(resolve, reject) {
+      return new Promise((resolve, reject) => {
         function idEnFavoritos(favoritos, id) {
           return favoritos.filter(e => e == id).length != 0;
         }
 
-        let favIds = appdata.favoritos;
-        let platosFavoritos = appdata.platos.filter(element => idEnFavoritos(favIds, element.id));
+        let favIds = this.data.favoritos;
+        let platosFavoritos = this.data.platos.filter(element => idEnFavoritos(favIds, element.id));
         resolve(platosFavoritos);
       });
     }
 
-    getPlatosComprados() {
-      return new Promise(function(resolve, reject) {
-        function idEnComprados(comprados, id) {
-          return comprados.filter(e => e == id).length != 0;
+    getCompras() {
+      return new Promise((resolve, reject) => {
+        function getPlatoByIdSincronico(platos, id) {
+          return platos.find(e => e.id == id);
         }
 
-        let ids = appdata.comprados;
-        let platosComprados = appdata.platos.filter(element => idEnComprados(ids, element.id));
-        resolve(platosComprados);
+        let comprados = this.data.comprados.map((c) =>
+                             { return {
+                                  idCompra: c.idCompra,
+                                  plato: getPlatoByIdSincronico(this.data.platos,c.idPlato),
+                                  cantidad: c.cantidad
+                              }});
+
+        resolve(comprados);
       });
     }
 

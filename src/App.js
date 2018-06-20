@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 import SimpleBottonNavigation from './SimpleBottonNavigation';
 import { NavLink, Switch, Route, Redirect } from 'react-router-dom';
 import * as paginas from "./paginas";
-
+import ProductoComprado from "./paginas/ProductoComprado";
 
 
 //import tileData from './tileData.js';
@@ -33,6 +33,7 @@ class App extends Component {
                 <Route path='/producto/:id' component={paginas.Producto}></Route>
                 <Route path='/comprar' component={paginas.Comprar}></Route> 
                 <Route path='/carrito' component={paginas.Carrito}></Route>
+                <Route path='/productocomprado' component={ProductoComprado}></Route>
                 <Route path='/home' component={paginas.Categorias}></Route>
                 <Route exact path='/' render={
                   ()=><Redirect to={"/home"}/>
