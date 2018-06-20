@@ -20,17 +20,28 @@ class Busqueda extends Component {
     if(consulta!=this.state.consultada){
       proxy.getPlatosConsulta(consulta).then((value)=>{this.setState({platos: value,consultada:consulta})});
     }
-    
+  }
+  mostrarProducto(platoListo){
+    this.props.history.push("/producto/"+platoListo.id)
 
   }
   render() {
     this.actualizarConsulta()
+    let platosListos=this.state.platos.map((plato)=>{
+      return {
+        id:plato.id,
+        key:plato.img,
+        img:plato.img,
+        title:plato.title,
+        author:plato.author
+      }
+    })
     return (
         <div>
           <TileBarGridList 
-          data={this.state.platos}
+          data={platosListos}
           subheader={<p>Resultado de la búsqueda de <b>{this.props.match.params.query}</b></p>}
-          dirDestino="/producto/"
+          onClick={(p)=>this.mostrarProducto(p)}
           />
         </div>
     );

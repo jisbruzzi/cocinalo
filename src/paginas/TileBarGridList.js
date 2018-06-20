@@ -32,7 +32,19 @@ function mostrarProducto (props, idProducto){
     props.history.push(props.dirDestino+idProducto);
     console.log(idProducto);
 }
+/*
+data es un array de objetos con:
+key: lo que disntingue este tile de los demás
+img:la imagen del tile
+title: el título del tile
+subtitle:el subtítulo del tile
 
+las props obligatorias son:
+onClick(recibe el objeto que se armó)
+data
+subheader(opcional)
+
+*/
 function TitlebarGridList(props) {
   const { classes } = props;
 
@@ -40,11 +52,11 @@ function TitlebarGridList(props) {
     <div className={classes.root}>
       <GridList cellHeight={180} className={classes.gridList}>
         {props.subheader && <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-          <ListSubheader component="div">{props.subheader}</ListSubheader>
+          <ListSubheader component="div" disableSticky={true}>{props.subheader}</ListSubheader>
         </GridListTile>}
         {props.data.map(tile => (
-          <GridListTile key={tile.img}>
-            <img src={tile.img} alt={tile.title} onClick={()=>{mostrarProducto(props, tile.id)}}/>
+          <GridListTile key={tile.key}>
+            <img src={tile.img} alt={tile.title} onClick={()=>{props.onClick(tile)}}/>
             <GridListTileBar
               title={tile.title}
               subtitle={<span>by: {tile.author}</span>}
