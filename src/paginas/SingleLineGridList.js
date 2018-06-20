@@ -5,8 +5,8 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import IconButton from '@material-ui/core/IconButton';
-import StarBorderIcon from '@material-ui/icons/FavoriteBorder';
-import StarIcon from '@material-ui/icons/Favorite';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 import { withRouter } from 'react-router-dom';
 import proxy from '../Proxy';
 
@@ -88,17 +88,18 @@ class SingleLineGridList extends React.Component {
                 actionIcon={
                   <IconButton>
                     {enFavoritos(this.state.favoritos, tile.id)
-                      ? <StarIcon className={classes.title} style={{color: '#B71C1C', 
-                                                                        backgroundColor: '#FFFFFF',
-                                                                        border: 'solid #FFFFFF 1.3px', 
+                      ? <FavoriteIcon className={classes.title} style={{color: '#B71C1C', 
+                                                                        backgroundColor: 'rgba(255,255,255,0.8)',
+                                                                        border: 'solid rgba(255,255,255,0.2) 5px', 
                                                                         borderRadius: '50px'}}
                                                                     onClick={() => {
                                                                       proxy.quitarPlatoDeFavoritos(tile.id);
                                                                       this.props.history.push('/home/');
+                                                                      console.log("Click")
                                                                     }}/>
-                      : <StarBorderIcon className={classes.title} style={{color: '#B71C1C', 
-                                                                        backgroundColor: '#FFFFFF',
-                                                                        border: 'solid #FFFFFF 1.3px', 
+                      : <FavoriteBorderIcon className={classes.title} style={{color: '#B71C1C', 
+                                                                        backgroundColor: 'rgba(255,255,255,0.8)',
+                                                                        border: 'solid rgba(255,255,255,0.2) 5px', 
                                                                         borderRadius: '50px'}} 
                                                                   onClick={() => {
                                                                     proxy.agregarPlatoAFavoritos(tile.id);
