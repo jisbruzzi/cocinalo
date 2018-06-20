@@ -42,11 +42,18 @@ class Proxy {
       });
     }
 
+    getFavoritos() {
+      return new Promise(function(resolve, reject){
+        resolve(appdata.favoritos);
+      });
+    }
+
     generarSiguienteIdEnCompras() {
       let maxId = this.data.comprados.reduce(
                 (max, compra) => Math.max(max, compra.idCompra), 0);
       return maxId + 1;
     }
+  
     // TODO: Agregar tratamiento de CANTIDAD
     agregarProductoAComprados(idPlato2, cantidad2) {
       let resultado = this.data.comprados.find(c => c == idPlato2);
@@ -218,6 +225,26 @@ class Proxy {
         let favIds = appdata.favoritos;
         let platosFavoritos = appdata.platos.filter(element => idEnFavoritos(favIds, element.id));
         resolve(platosFavoritos);
+      });
+    }
+
+    agregarPlatoAFavoritos(idProducto) {
+      this.data.favoritos.push(idProducto);
+    }
+
+    quitarPlatoDeFavoritos(idProducto) {
+      let index = this.data.favoritos.indexOf(idProducto);
+      this.data.favoritos.splice(index, 1);
+    }
+
+    getPlatosComprados() {
+      return new Promise(function(resolve, reject) {
+        function idEnComprados(comprados, id) {
+          return comprados.filter(e => e == id).length != 0;
+        }
+        let ids = appdata.comprados;
+        let platosComprados = appdata.platos.filter(element => idEnComprados(ids, element.id));
+        resolve(platosComprados);
       });
     }
 
