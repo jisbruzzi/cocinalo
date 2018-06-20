@@ -161,9 +161,13 @@ class SimpleAppBar extends Component{
                                         <div className={"vcentered carrito "+clase+" "+this.state.claseAnimCarrito}>
                                             
                                                 <IconButton aria-label="carrito" onClick={()=>{this.props.history.push('/carrito')}}>
-                                                    <Badge badgeContent={this.state.cantidadPlatosCarrito>0 && this.state.cantidadPlatosCarrito} color="primary">
-                                                        <ShoppingCartIcon style={{width:"auto"}}/>
-                                                    </Badge>
+                                                    {(this.state.cantidadPlatosCarrito >0 && 
+                                                        <Badge badgeContent={this.state.cantidadPlatosCarrito} color="primary">
+                                                            <ShoppingCartIcon style={{width:"auto"}}/>
+                                                        </Badge>
+                                                        ) || <ShoppingCartIcon style={{width:"auto"}}/>
+                                                    }
+
                                                 
                                                 </IconButton>
                                             

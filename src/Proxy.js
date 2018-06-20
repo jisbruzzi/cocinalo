@@ -200,7 +200,8 @@ class Proxy {
       if (index >= -1) {
         this.data.carrito.splice(index, 1);
       }
-      }
+      this.notifCarrito(this.data.carrito)
+    }
 
       getPlatoById(id) {
         return new Promise((resolve, reject) => { 
