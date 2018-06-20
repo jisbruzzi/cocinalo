@@ -8,12 +8,12 @@ class Carrito extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      platos: [],
+      itemsCarrito: [],
     }
     this.delete=this.delete.bind(this);
   }
   componentDidMount() {
-      proxy.getCarrito().then((value)=>{this.setState({platos: value}); 
+      proxy.getCarrito().then((value)=>{this.setState({itemsCarrito: value}); 
     });
   }
 
@@ -23,26 +23,41 @@ class Carrito extends Component {
 
     //Borro elemento en la vista
     this.setState(function(state) {
-      var nuevaLista = state.platos.slice();
+      var nuevaLista = state.itemsCarrito.slice();
 
       let resultado = nuevaLista.find(e => e.idPlato == id);
       var index = nuevaLista.indexOf(resultado);
       nuevaLista.splice(index,1);
-      return {platos: nuevaLista};
+      return {itemsCarrito: nuevaLista};
+    });
+  }
+
+  comprarProductos(itemsCarrito){
+    this.props.history.push({
+      pathname: '/comprar',
+      state: { itemsCarrito: itemsCarrito }
     });
   }
 
   render() {
+    if (this.state.itemsCarrito.length == 0)
+    return (
+      <div>
+        <br />
+        <h3> CARRITO VACIO </h3>
+      </div>
+    )
+  else
     return (
         <div>
-          {this.state.platos.map(item =>
+          {this.state.itemsCarrito.map(item =>
             <div key={item.idPlato}>
                <ProductCard itemCarrito={item} delete={this.delete}/>
             </div>
           )}
             <br />
-            <Button variant="contained">
-            Confirmar compra
+            <Button variant="contained" onClick={()=>{this.comprarProductos(this.state.itemsCarrito)}}>
+            Comprar
             </Button>
         </div>
     );

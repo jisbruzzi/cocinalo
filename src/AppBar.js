@@ -9,7 +9,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import SearchIcon from '@material-ui/icons/Search';
 import CancelIcon from '@material-ui/icons/Cancel';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import { IconButton } from '@material-ui/core';
+import { IconButton, Badge } from '@material-ui/core';
 import { withRouter, Switch } from 'react-router-dom';
 import logo from './img/logo.png';
 
@@ -25,6 +25,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 
 import proxy from "./Proxy"
+
 
 function TextFieldBuscador(props){
     //return <IntegrationAutosuggest/>
@@ -54,9 +55,23 @@ class SimpleAppBar extends Component{
         super(props)
         this.state={
             value:"",
-            sugerencias:[]
+            sugerencias:[],
+            cantidadPlatosCarrito:0,
+            claseAnimCarrito:"sin-animacion"
         }
         this.inputBusqueda=null;
+        proxy.getCarrito().then((carrito)=>{
+            this.setState({cantidadPlatosCarrito:carrito.length})
+        })
+        proxy.notificarCambioCarrito((carrito)=>{
+            this.setState({
+                cantidadPlatosCarrito:carrito.length,
+                claseAnimCarrito:"con-animacion"
+            })
+            window.setTimeout(()=>{
+                this.setState({claseAnimCarrito:"sin-animacion"})
+            },2000)
+        })
     }
 
     actualizarSugerencias(value){
@@ -143,9 +158,20 @@ class SimpleAppBar extends Component{
                                     </div></div>
     
                                     <div className={"cancelar-carrito "+clase}>
-                                        <div className={"vcentered carrito "+clase}><IconButton aria-label="carrito" onClick={()=>{this.props.history.push('/carrito')}}>
-                                            <ShoppingCartIcon/>
-                                        </IconButton></div>
+                                        <div className={"vcentered carrito "+clase+" "+this.state.claseAnimCarrito}>
+                                            
+                                                <IconButton aria-label="carrito" onClick={()=>{this.props.history.push('/carrito')}}>
+                                                    {(this.state.cantidadPlatosCarrito >0 && 
+                                                        <Badge badgeContent={this.state.cantidadPlatosCarrito} color="primary">
+                                                            <ShoppingCartIcon style={{width:"auto"}}/>
+                                                        </Badge>
+                                                        ) || <ShoppingCartIcon style={{width:"auto"}}/>
+                                                    }
+
+                                                
+                                                </IconButton>
+                                            
+                                        </div>
     
                                         <div className={"vcentered cancelar "+clase}><IconButton aria-label="carrito" onClick={()=>{
                                             if(this.inputBusqueda){

@@ -41,9 +41,14 @@ class ProductCard extends Component {
             <Card className={this.props.classes.card}>
                 <div className={this.props.classes.details}>
                 <CardContent className={this.props.classes.content}>
-                    <Typography variant="subheading" align="left">{this.props.itemCarrito.datosPlato.title}</Typography>
+                    <Typography variant="subheading" align="left">
+                      {this.props.itemCarrito.datosPlato.title}
+                    </Typography>
                     <Typography variant="subheading" align="left" color="textSecondary">
-                    Cantidad: {this.props.itemCarrito.cantidad}
+                      Precio unitario: AR$ {this.props.itemCarrito.datosPlato.precio}
+                    </Typography>
+                    <Typography variant="subheading" align="left" color="textSecondary">
+                      Cantidad: {this.props.itemCarrito.cantidad}
                     </Typography>
                     <IconButton aria-label="delete" onClick={this.delete.bind(this,this.props.itemCarrito.idPlato)}>
                                 <DeleteIcon/>

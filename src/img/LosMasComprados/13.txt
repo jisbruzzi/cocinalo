@@ -1,0 +1,10 @@
+Guacamole
+autor: 
+tiempo: 15 min
+precio: 90
+descripcion: 
+estrellas: 4
+tags: guacamole, palta
+
+Para receta:
+

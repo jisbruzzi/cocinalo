@@ -1,24 +1,25 @@
 import React, { Component } from 'react';
 import 'typeface-roboto'
-import TileBarGridList from './TileBarGridList';
+import TileBarGridListComprados from './TileBarGridListComprados';
 import proxy from '../Proxy';
 
 class Comprados extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      platos: []
+      compras: []
     }
   }
   componentDidMount() {
-      proxy.getPlatosComprados().then((value)=>{this.setState({platos: value})});
+      proxy.getCompras().then((value)=>{this.setState({compras: value})});
   }
   render() {
     return (
         <div>
-          <TileBarGridList data={this.state.platos} dirDestino='/productoComprado/'/>
+          <TileBarGridListComprados compras={this.state.compras}/>
         </div>
-    );
+    )
+
   }
 }
 
