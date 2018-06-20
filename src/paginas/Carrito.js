@@ -32,14 +32,22 @@ class Carrito extends Component {
     });
   }
 
-  comprarProducto(itemsCarrito){
+  comprarProductos(itemsCarrito){
     this.props.history.push({
       pathname: '/comprar',
       state: { itemsCarrito: itemsCarrito }
     });
-}
+  }
 
   render() {
+    if (this.state.itemsCarrito.length == 0)
+    return (
+      <div>
+        <br />
+        <h3> CARRITO VACIO </h3>
+      </div>
+    )
+  else
     return (
         <div>
           {this.state.itemsCarrito.map(item =>
@@ -49,7 +57,7 @@ class Carrito extends Component {
           )}
             <br />
             <Button variant="contained" onClick={()=>{this.comprarProductos(this.state.itemsCarrito)}}>
-            Confirmar compra
+            Comprar
             </Button>
         </div>
     );

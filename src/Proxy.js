@@ -51,12 +51,20 @@ class Proxy {
       }
     }
 
+    comprarCarrito(listaItemsCarrito) {
+      listaItemsCarrito.forEach( p =>
+        this.agregarProductoAComprados(p.idPlato, p.cantidad)
+      );
+      this.data.carrito = [];
+    }
+
     getCarrito(){
-        return new Promise(function(resolve, reject){
+        return new Promise((resolve, reject) => {
           function getPlatoById(listadoPlatos, id) {
             return listadoPlatos.find(e => e.id == id);
           }
-          let resultado = appdata.carrito.map((p)=>{return {
+
+          let resultado = this.data.carrito.map((p)=>{return {
                                                     idPlato: p.idPlato,
                                                     cantidad: p.cantidad,
                                                     datosPlato: getPlatoById(appdata.platos, p.idPlato)
