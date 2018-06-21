@@ -75,9 +75,12 @@ class ProductoComprado extends Component {
     return (
       <div className= "Producto">
               {/* <img src={this.state.compra.plato.img} width='100%'/> */}
+              
               <h3>Estado del envío</h3>
+                <p><i>(16 minutos para entrega)</i></p>
                 <HorizontalNonLinearAlternativeLabelStepper />
                 
+
                 <Card className={classes.card}>
                   <CardContent>
                     <div className='info'>
