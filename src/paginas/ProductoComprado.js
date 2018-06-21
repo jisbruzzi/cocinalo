@@ -111,7 +111,7 @@ class ProductoComprado extends Component {
               
               <h3>Estado del envío</h3>
                 
-                <HorizontalNonLinearAlternativeLabelStepper activeStep = {this.estadoActivo(this.state.compra.timestampCompra)}/>
+              <HorizontalNonLinearAlternativeLabelStepper activeStep = {this.estadoActivo(this.state.compra.timestampCompra)}/>
                 <p><i>{this.leyenda(this.state.compra.timestampCompra)}</i></p>
 
                 <Card className={classes.card}>

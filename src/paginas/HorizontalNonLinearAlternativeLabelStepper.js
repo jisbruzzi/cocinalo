@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 
 const styles = theme => ({
   root: {
-    width: '90%',
+    width: '100%',
   },
   button: {
     marginRight: theme.spacing.unit,
@@ -17,7 +17,7 @@ const styles = theme => ({
     marginRight: theme.spacing.unit,
   },
   completed: {
-    display: 'inline-block',
+    display: 'inline-block'
   },
   instructions: {
     marginTop: theme.spacing.unit,
@@ -61,7 +61,7 @@ class HorizontalNonLinearAlternativeLabelStepper extends React.Component {
 
     return (
       <div className={classes.root}>
-        <Stepper alternativeLabel nonLinear activeStep={activeStep}>
+        <Stepper style = {{'background-color': 'transparent'}} alternativeLabel nonLinear activeStep={activeStep}>
           {steps.map((label, index) => {
             return (
               <Step key={label}>

@@ -53,14 +53,16 @@ class Carrito extends Component {
       return (
         <div>
           {this.state.itemsCarrito.map(item =>
-            <div key={item.idPlato}>
+            <div key={item.idPlato} style={{'margin': '7px' }} >
                <ProductCard itemCarrito={item} delete={this.delete}/>
             </div>
           )}
             <br />
-            <Button variant="contained" onClick={()=>{this.comprarProductos(this.state.itemsCarrito)}}>
+            <Button variant="contained" color="primary" onClick={()=>{this.comprarProductos(this.state.itemsCarrito)}}>
               Comprar carrito
             </Button>
+            <br />
+            <br />
         </div>
       );
   }
