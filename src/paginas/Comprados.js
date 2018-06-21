@@ -32,6 +32,14 @@ class Comprados extends Component {
         author:compra.plato.author
       }
     })
+    if (this.state.compras.length == 0) {
+      return (
+        <div>
+          <br />
+          <h3> NO HAY COMPRAS </h3>
+        </div>
+      )}
+      else
     return (
         <div>
           <TileBarGridList

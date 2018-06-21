@@ -62,7 +62,8 @@ import video2 from './img/Videos/empanadas.jpg';
               tarjetaNumero: 'XXXX-XXXX-XXXX-8745',
     },
     favoritos: [9,16,19,29,34],
-    comprados: [{
+    comprados: [
+                /*{
                   idCompra: 1,
                   idPlato: 4,
                   cantidad: 3,
@@ -76,7 +77,8 @@ import video2 from './img/Videos/empanadas.jpg';
                   idCompra: 3,
                   idPlato: 39,
                   cantidad: 2
-                 }],
+                 }*/
+                ],
                  
     packsComprados: [2],
     carrito: [

@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import 'typeface-roboto';
-import { Button } from '@material-ui/core';
 import { withRouter } from 'react-router-dom';
-import proxy from '../Proxy';
 import StarRatings from 'react-star-ratings';
-import TextField from '@material-ui/core/TextField';
-import MenuItem from '@material-ui/core/MenuItem';
 import Divider from '@material-ui/core/Divider';
+import HorizontalNonLinearAlternativeLabelStepper from './HorizontalNonLinearAlternativeLabelStepper'
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 
 import { withStyles } from '@material-ui/core/styles';
 
@@ -28,6 +27,10 @@ const styles = theme => ({
   },
   input: {
     display: 'none',
+  },
+  card: {
+    marginLeft: '10px',
+    marginRight: '10px'
   },
 });
 
@@ -72,31 +75,30 @@ class ProductoComprado extends Component {
     return (
       <div className= "Producto">
               {/* <img src={this.state.compra.plato.img} width='100%'/> */}
-              
-              
-                <div className='info'>
-          
-                  <h2> {this.state.compra.plato.title} </h2>
-                  <div className='descripcion-producto'>
-                    {this.state.compra.plato.descripcion}
-                  </div>
-                  <br />
-                  <StarRatings
-                    starDimension='30px'
-                    rating={this.state.compra.plato.estrellas}
-                    starRatedColor="blue"
-                    
-                    numberOfStars={5}
-                    name='rating'/>
+              <h3>Estado del envío</h3>
+                <HorizontalNonLinearAlternativeLabelStepper />
+                
+                <Card className={classes.card}>
+                  <CardContent>
+                    <div className='info'>
+                      <h2> {this.state.compra.plato.title} </h2>
+                      <div className='descripcion-producto'>
+                        {this.state.compra.plato.descripcion}
+                      </div>
+                      <br />
+                      <StarRatings
+                        starDimension='30px'
+                        rating={this.state.compra.plato.estrellas}
+                        starRatedColor="blue"
+                        
+                        numberOfStars={5}
+                        name='rating'/>
+                    </div>
 
-                </div>
+                    <p>Cantidad: {this.state.compra.cantidad}</p>
+                  </CardContent>
+                </Card>
                 <br />
-                <Divider />
-                <p>Cantidad: {this.state.compra.cantidad}</p>
-                <Divider />
-
-                <h3>Estado actual</h3>
-                <p>En un rato pongo la barrita de progreso</p>
                 
                 <Divider />
 
