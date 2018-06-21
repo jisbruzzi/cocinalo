@@ -5,6 +5,8 @@ precio:
 descripcion: Preciosas patas de pollo con limón y papas nuevas trituradas, todo cocinado en una bandeja: es una cena sencilla y satisfactoria, y los sabores herbales traerán un poco de sol a la mesa. Para 4 personas, dificultad: "no tan complicado".
 estrellas: 
 tags: pollo
+ingredientes: '1 limón.4 patas de pollo de corral.1 kg de papas nuevas.4 ramitas de romero fresco.1 manojo de tomillo fresco.2 hojas frescas de laurel.aceite de oliva.100 g de aceitunas verdes sin hueso',
+receta: 'Precalentar el horno a 180ºC.Cortar el limón longitudinalmente en cuartos y colocar en una lata grande para asar con las patas de pollo, patatas nuevas y todas las hierbas. Mezcle en 1 a 2 cucharadas de aceite, sazone bien y tueste durante 45 minutos.Retire la bandeja del horno. Cuidadosamente exprime las rodajas de limón asadas sobre todo, aplastando algunas de las papas para que revienten - esto te da un área de superficie más grande para que absorban mucho sabor y se vuelvan agradables y crujientes.Agregue las aceitunas, revuelva todo y tueste por otros 15 minutos, o hasta que el pollo esté cocido y las papas estén doradas.Retirar del horno y servir: esto es delicioso con un puñado de berros en el costado.',
 
 Para receta:
 https://www.jamieoliver.com/recipes/chicken-recipes/mediterranean-chicken-n-chips/

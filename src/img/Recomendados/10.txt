@@ -5,6 +5,8 @@ precio:
 descripcion: Delicioso sushi con aguacate y salsa de lima. Para 24 piezas, dificultad: "no tan complicado".
 estrellas: 
 tags: sushi
+ingredientes: '80 g de arroz de sushi.1/2 una pequeña cabeza de brócoli.1 gran puñado de col rizada.1 aguacate maduro.salsa de soja baja en sal.1 cucharadita de pasta de wasabi.2 limas.1 cucharada de miel líquida.1 cm de jengibre.120 g de salmón ahumado en caliente, de fuentes sostenibles.50 g de brotes de guisantes o 20 g de berro',
+receta: 'Cocine el arroz de acuerdo con las instrucciones del paquete.Corte el brócoli en florecillas, luego cocine a vapor con la col rizada en un recipiente de vapor sobre el arroz hasta que esté tierno. Refresque bajo agua corriente fría.Transfiere el arroz y las verduras a tu lonchera.Divida a la mitad y destone el aguacate, luego use un tenedor para machacar la carne en su piel. Agregue un poco de salsa de soja, la pasta de wasabi y el jugo de 1 lima.Mantenga el aguacate enriquecido en su piel y úselo como un recipiente. Cubra con clingfilm (si está alimentando a un amigo en el trabajo, simplemente junte las mitades), y póngalo en su lonchera.Para un aderezo, vierta 1 cucharada de salsa de soya en un tarro de mermelada, agregue el jugo de la lima restante y la miel. Pelar y rallar en el jengibre.Ponga el salmón sobre el arroz y las verduras y espolvoree los brotes de guisantes o el berro en la parte superior.Mantenga su lonchera, el aderezo y el aguacate refrigerados hasta que esté listo para comer, luego agite el aderezo y vierta sobre el arroz y el salmón, mezcle para cubrir y disfrute, con el aguacate al lado.',
 
 Para receta:
 https://www.jamieoliver.com/recipes/vegetables-recipes/asparagus-sushi/

@@ -5,6 +5,8 @@ precio:
 descripcion: Con queso y jamón. El sándwich tostado se transforma con rellenos súper sabrosos. Para una persona, dificultad: "súper fácil".
 estrellas: 
 tags: tostada
+ingredientes: '2 rebanadas de pan blanco, alrededor de 1cm de grosor.mantequilla sin sal.15 g de queso Comte.15 g de Westcombe o queso Cheddar artesanal.2 rebanadas de jamón asado de mayor bienestar.1/2 cucharada de vinagre de vino blanco.1 cucharada de aceite de colza.pimienta negra recién molida.sal marina.1 manzana pequeña para comer.1 puñado de hojas de ensalada mixtas, como frisse, berros',
+receta: 'Ligeramente unte mantequilla con las rebanadas de pan, luego coloque el lado con mantequilla hacia abajo en una tabla de cortar. Rebane y coloque los quesos sobre un pedazo de pan, cubra con el jamón y luego coloque el segundo pedazo de pan encima, con la mantequilla hacia arriba. Coloque en un fabricante de tostadas precalentadas, sujete la tapa hacia abajo y tueste de 4 a 5 minutos, o hasta que esté dorado y crujiente.Mientras tanto, agregue el vinagre y el aceite a un tarro de mermelada limpio con una pizca de sal y pimienta, levante la tapa y agite para combinar. Cortar la manzana en cerillas, quitar el núcleo, luego mezcle con las hojas de ensalada y el aderezo. Sirva la tostada dorada con la ensalada fresca al costado y dóblela.',
 
 Para receta:
 https://www.jamieoliver.com/recipes/bread-recipes/anglo-french-toastie/

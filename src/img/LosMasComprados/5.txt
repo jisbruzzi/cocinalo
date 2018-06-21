@@ -1,0 +1,12 @@
+Chocotorta
+autor: 'Maru Botana'
+tiempo: 30 min
+precio: 130
+descripcion: 'Delicioso postre, simple y rápido de hacer. Se logra utilizando chocolinas y una mezcla de dulce de leche y queso crema. Para compartir... o no, dificultad "súper fácil".',
+estrellas: 4.2
+tags: chocotorta
+ingredientes: '500 gr de queso crema.500 gr de dulce de leche repostero.Cacao dulce c/n.Leche c/n.300 gr de chocolate semiamargo.300 ml de crema de leche.500 gr de galletas de chocolate',
+receta: 'Batir el dulce de leche con el queso crema hasta integrar.Preparar la chocolatada donde mojaremos nuestras galletas.Hacer una capa de galletas mojadas en chocolatada.Por encima colocar una capa de relleno.Hacer esto 3 veces más.Enfriar.Hacer la ganache: llevar la crema a primer hervor.Verterla sobre un bol con chocolate picado.Dejar reposar 5 minutos.Integrar la mezcla batiendo.Verterla sobre la torta.Enfriar 2 horas.',
+
+Para receta:
+https://es.tastemade.com/videos/chocotorta
