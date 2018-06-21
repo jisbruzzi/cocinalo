@@ -66,9 +66,10 @@ class Producto extends Component {
     }
   }
   componentDidMount() {
-      proxy.getPlatos().then((value)=>{this.setState({platos: value}); 
-      var producto2 = this.state.platos.find((e)=>{return e.id==this.props.match.params.id});
-      this.setState({producto: producto2});
+      proxy.getPlatos().then((platos)=>{
+        this.setState({platos: platos}); 
+        var producto = platos.find((e)=>{return e.id==this.props.match.params.id});
+        this.setState({producto: producto});
     });
   }
 

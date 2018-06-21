@@ -22,6 +22,11 @@ class Busqueda extends Component {
     }
   }
   mostrarProducto(platoListo){
+    console.log("VOY A MOSTRAR UN PRODUCTO")
+    console.log(platoListo)
+    if(platoListo.id==undefined){
+      throw new DOMException("PELOTUDO")
+    }
     this.props.history.push("/producto/"+platoListo.id)
 
   }
@@ -41,7 +46,7 @@ class Busqueda extends Component {
           <TileBarGridList 
           data={platosListos}
           subheader={<p>Resultado de la búsqueda de <b>{this.props.match.params.query}</b></p>}
-          onClick={(p)=>this.mostrarProducto(p)}
+          onClickData={(p)=>this.mostrarProducto(p)}
           />
         </div>
     );

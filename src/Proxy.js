@@ -229,12 +229,20 @@ class Proxy {
     }
 
     agregarPlatoAFavoritos(idProducto) {
-      this.data.favoritos.push(idProducto);
+      return new Promise((resolve,reject)=>{
+        this.data.favoritos.push(idProducto);
+        resolve()
+      })
+      
     }
 
     quitarPlatoDeFavoritos(idProducto) {
-      let index = this.data.favoritos.indexOf(idProducto);
-      this.data.favoritos.splice(index, 1);
+      return new Promise((resolve,reject)=>{
+        let index = this.data.favoritos.indexOf(idProducto);
+        this.data.favoritos.splice(index, 1);
+        resolve()
+      })
+      
     }
 
     getPlatosComprados() {

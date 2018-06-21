@@ -76,6 +76,16 @@ import video2 from './img/Videos/empanadas.jpg';
                   idCompra: 3,
                   idPlato: 39,
                   cantidad: 2
+                 },
+                 { 
+                  idCompra: 4,
+                  idPlato: 7,
+                  cantidad: 5
+                 },
+                 { 
+                  idCompra: 5,
+                  idPlato: 16,
+                  cantidad: 2
                  }],
                  
     packsComprados: [2],
