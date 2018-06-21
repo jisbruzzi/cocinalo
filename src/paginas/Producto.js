@@ -104,7 +104,7 @@ class Producto extends Component {
               <img src={this.state.producto.img} width='100%'/>
               
               
-                <div className='info'>
+                <div style={{marginRight: '1.5em', marginLeft: '1.5em'}} className='info'>
           
                   <h2> {this.state.producto.title} </h2>
                   <div className='descripcion-producto'>
@@ -115,7 +115,7 @@ class Producto extends Component {
                   <StarRatings
                     starDimension='30px'
                     rating={this.state.producto.estrellas}
-                    starRatedColor="blue"
+                    starRatedColor="#FFAB00"
                     
                     numberOfStars={5}
                     name='rating'/>
@@ -134,7 +134,7 @@ class Producto extends Component {
                 <Typography variant="subheading" align="left" color="textSecondary">
                       Precio unitario: AR$ {this.state.producto.precio}
                 </Typography>
-                <div className="boton">
+                <div style={{marginRight: '1.5em', marginLeft: '1.5em'}} className="boton">
                 <TextField
                     id="select-currency-native"
                     select

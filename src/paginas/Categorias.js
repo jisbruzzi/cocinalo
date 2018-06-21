@@ -39,6 +39,16 @@ class Categorias extends Component {
     let tents=<SingleLineGridList scrollData={this.state.platos.filter(elemento => elemento.categoria == "Tentaciones")} />
     return (
         <div>
+            {/*
+            <p style={{marginTop: '1.7em', marginBottom: '1em', fontSize: '20px'}}>Recomendados</p>
+            <SingleLineGridList scrollData={this.state.platos.filter(elemento => elemento.categoria == "Recomendados")} />
+            <p style={{marginTop: '1.7em', marginBottom: '1em', fontSize: '20px'}} >Los más comprados</p>
+            <SingleLineGridList scrollData={this.state.platos.filter(elemento => elemento.categoria == "Los más comprados")} />
+            <p style={{marginTop: '1.7em', marginBottom: '1em', fontSize: '20px'}}>Veggie</p>
+            <SingleLineGridList scrollData={this.state.platos.filter(elemento => elemento.categoria == "Veggie")} />
+            <p style={{marginTop: '1.7em', marginBottom: '1em', fontSize: '20px'}}>Tentaciones</p>
+            <SingleLineGridList  scrollData={this.state.platos.filter(elemento => elemento.categoria == "Tentaciones")} />
+            */}
             {enCarta("Recomendados para vos",recoms)}
             {enCarta("Los más comprados",masComps)}
             {enCarta("Veggie",veggie)}
