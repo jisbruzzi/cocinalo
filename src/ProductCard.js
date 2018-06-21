@@ -20,16 +20,17 @@ var styles = theme => ({
     flexDirection: 'column',
   },
   content: {
-    flex: '1 0 auto',
+    width: '70%',
+    textAlign: 'left'
   },
   cover: {
-    width: 151,
-    height: 151,
+    width: '210px',
+    height: '210px',
   },
   playIcon: {
-    height: 38,
-    width: 38,
-  },
+    height: 100,
+    width: 100,
+  }
 });
 class ProductCard extends Component {
   delete(id){
@@ -39,22 +40,20 @@ class ProductCard extends Component {
         return (
             <div>
             <Card className={this.props.classes.card}>
-                <div className={this.props.classes.details}>
                 <CardContent className={this.props.classes.content}>
-                    <Typography variant="subheading" align="left">
-                      {this.props.itemCarrito.datosPlato.title}
+                    <Typography style={{'margin-bottom': '5px' }} variant="subheading" align="left">
+                      <b>{this.props.itemCarrito.datosPlato.title}</b>
                     </Typography>
                     <Typography variant="subheading" align="left" color="textSecondary">
-                      Precio unitario: AR$ {this.props.itemCarrito.datosPlato.precio}
+                      <i>Precio unitario: AR$ {this.props.itemCarrito.datosPlato.precio}</i>
                     </Typography>
                     <Typography variant="subheading" align="left" color="textSecondary">
-                      Cantidad: {this.props.itemCarrito.cantidad}
+                      <i>Cantidad: {this.props.itemCarrito.cantidad}</i>
                     </Typography>
-                    <IconButton aria-label="delete" onClick={this.delete.bind(this,this.props.itemCarrito.idPlato)}>
-                                <DeleteIcon/>
+                    <IconButton style={{'width': '15px' }} aria-label="delete" onClick={this.delete.bind(this,this.props.itemCarrito.idPlato)}>
+                        <DeleteIcon/>
                     </IconButton>
                 </CardContent>
-                </div>
                 <CardMedia
                 className={this.props.classes.cover}
                 image={this.props.itemCarrito.datosPlato.img}
