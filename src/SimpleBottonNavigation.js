@@ -44,11 +44,11 @@ class SimpleBottomNavigation extends React.Component {
         className={classes.root}
         style={{position:"fixed", bottom:"0", width:"100%"}}>
 
-        <BottomNavigationAction value="/" label="Home" icon={<HomeIcon />} />
-        <BottomNavigationAction value="/favoritos" label="Favoritos" icon={<FavoriteIcon />} />
-        <BottomNavigationAction value="/packs" label="Packs" icon={<RedeemIcon />} />
-        <BottomNavigationAction value="/comprados" label="Comprados" icon={<RestaurantIcon />} />
-        <BottomNavigationAction value="/perfil" label="Perfil" icon={<AccountCircleIcon />} />
+        <BottomNavigationAction style={{marginRight: '-15px'}} value="/" label="Home" icon={<HomeIcon />} />
+        <BottomNavigationAction style={{marginRight: '-15px'}} value="/favoritos" label="Favoritos" icon={<FavoriteIcon />} />
+        <BottomNavigationAction style={{marginRight: '-15px'}} value="/packs" label="Packs" icon={<RedeemIcon />} />
+        <BottomNavigationAction style={{marginRight: '-15px'}} value="/comprados" label="Comprados" icon={<RestaurantIcon />} />
+        <BottomNavigationAction style={{padding: '0'}} value="/perfil" label="Perfil" icon={<AccountCircleIcon />} />
         
 
       </BottomNavigation>

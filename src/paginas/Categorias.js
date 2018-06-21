@@ -17,14 +17,14 @@ class Categorias extends Component {
   render() {
     return (
         <div>
-            <p><b>Recomendados</b></p>
+            <p style={{marginTop: '1.7em', marginBottom: '1em', fontSize: '20px'}}>Recomendados</p>
             <SingleLineGridList scrollData={this.state.platos.filter(elemento => elemento.categoria == "Recomendados")} />
-            <p><b>Los más comprados</b></p>
+            <p style={{marginTop: '1.7em', marginBottom: '1em', fontSize: '20px'}} >Los más comprados</p>
             <SingleLineGridList scrollData={this.state.platos.filter(elemento => elemento.categoria == "Los más comprados")} />
-            <p><b>Veggie</b></p>
+            <p style={{marginTop: '1.7em', marginBottom: '1em', fontSize: '20px'}}>Veggie</p>
             <SingleLineGridList scrollData={this.state.platos.filter(elemento => elemento.categoria == "Veggie")} />
-            <p><b>Tentaciones</b></p>
-            <SingleLineGridList scrollData={this.state.platos.filter(elemento => elemento.categoria == "Tentaciones")} />
+            <p style={{marginTop: '1.7em', marginBottom: '1em', fontSize: '20px'}}>Tentaciones</p>
+            <SingleLineGridList  scrollData={this.state.platos.filter(elemento => elemento.categoria == "Tentaciones")} />
         </div>
     );
   }

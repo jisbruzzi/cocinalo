@@ -3,7 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import 'typeface-roboto'
+import 'typeface-roboto';
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {main: '#00BFA5', contrastText: '#ffffff'},
+  },
+});
+
+ReactDOM.render(
+    <MuiThemeProvider theme={theme}>
+        <App />
+    </MuiThemeProvider>
+    , document.getElementById('root'));
 registerServiceWorker();
