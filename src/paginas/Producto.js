@@ -7,7 +7,7 @@ import proxy from '../Proxy';
 import StarRatings from 'react-star-ratings';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
-
+import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
@@ -62,6 +62,7 @@ class Producto extends Component {
     this.state = {
       platos: [],
       producto: {},
+      ingredientes: [],
       currency: 1
     }
   }
@@ -69,6 +70,7 @@ class Producto extends Component {
       proxy.getPlatos().then((value)=>{this.setState({platos: value}); 
       var producto2 = this.state.platos.find((e)=>{return e.id==this.props.match.params.id});
       this.setState({producto: producto2});
+      this.setState({ingredientes: this.state.producto.ingredientes.split(".")});
     });
   }
 
@@ -118,7 +120,17 @@ class Producto extends Component {
                     name='rating'/>
 
                 </div>
+                <h3> Ingredientes </h3>
+                <div className='ingredientes'>
+                      {this.state.ingredientes.map(item =>
+                          <p> {item} </p>
+                      )}
+                </div>
 
+                <br/>
+                <Typography variant="subheading" align="left" color="textSecondary">
+                      Precio unitario: AR$ {this.state.producto.precio}
+                </Typography>
                 <div className="boton">
                 <TextField
                     id="select-currency-native"
