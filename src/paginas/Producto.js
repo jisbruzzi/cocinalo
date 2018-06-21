@@ -120,8 +120,9 @@ class Producto extends Component {
                   name='rating'/>
 
               </div>
-              <h3> Ingredientes </h3>
-              <div className='ingredientes'>
+              
+              <div style={{marginRight: '1.5em', marginLeft: '1.5em'}} className='ingredientes'>
+                    <h3> Ingredientes </h3>
                     <Typography variant="subheading" align="left" style={{fontFamily: 'Patua One'}}>
                       {this.state.ingredientes.map(item =>
                           <ul> <li>{item} </li></ul>
