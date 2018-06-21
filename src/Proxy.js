@@ -74,6 +74,7 @@ class Proxy {
       );
       if (esCarrito)
         this.data.carrito = [];
+      this.notifCarrito(this.data.carrito)
     }
 
     getCarrito(){
