@@ -9,7 +9,7 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import { withRouter } from 'react-router-dom';
 import proxy from '../Proxy';
-
+import TileProducto from "./TileProducto"
 /*import tileData from './tileData.js';
 */
 const styles = theme => ({
@@ -51,9 +51,6 @@ const styles = theme => ({
  *   },
  * ];
  */
-function mostrarProducto(props, idProducto){
-  props.history.push('/producto/' + idProducto);
-}
 
 function enFavoritos(favoritos, idProducto){
   return favoritos.filter(e => e == idProducto).length != 0;
@@ -69,48 +66,26 @@ class SingleLineGridList extends React.Component {
   componentDidMount() {
       proxy.getFavoritos().then((value)=>{this.setState({favoritos: value})});
   }
+  mostrarProducto(tile){
+    this.props.history.push('/producto/' + tile.id);
+  }
   
   render () {
     const { classes } = this.props;
+    let tiles=this.props.scrollData.map((tile)=>{
+      return{
+        key:tile.img,
+        img:tile.img,
+        title:tile.title,
+        author:tile.author
+      }
+    })
     return (
       <div className={classes.root}>
         <GridList className={classes.gridList} cols={2.5}>
-          {this.props.scrollData.map(tile => (
-            <GridListTile key={tile.img}>
-              <img src={tile.img} alt={tile.title} onClick={()=>{mostrarProducto(this.props, tile.id)}}/>
-              <GridListTileBar
-                //title={tile.title}
-                classes={{
-                  root: classes.titleBar,
-                  title: classes.title,
-                }}
-                titlePosition='top'
-                actionIcon={
-                  <IconButton>
-                    {enFavoritos(this.state.favoritos, tile.id)
-                      ? <FavoriteIcon className={classes.title} style={{color: '#B71C1C', 
-                                                                        backgroundColor: 'rgba(255,255,255,0.8)',
-                                                                        border: 'solid rgba(255,255,255,0.2) 5px', 
-                                                                        borderRadius: '50px'}}
-                                                                    onClick={() => {
-                                                                      proxy.quitarPlatoDeFavoritos(tile.id);
-                                                                      this.props.history.push('/home/');
-                                                                      console.log("Click")
-                                                                    }}/>
-                      : <FavoriteBorderIcon className={classes.title} style={{color: '#B71C1C', 
-                                                                        backgroundColor: 'rgba(255,255,255,0.8)',
-                                                                        border: 'solid rgba(255,255,255,0.2) 5px', 
-                                                                        borderRadius: '50px'}} 
-                                                                  onClick={() => {
-                                                                    proxy.agregarPlatoAFavoritos(tile.id);
-                                                                    this.props.history.push('/home/');
-                                                                  }}/>
-                    }
-                  </IconButton>
-                }
-              />
-            </GridListTile>
-          ))}
+          {this.props.scrollData.map(tile => 
+            <TileProducto key={tile.key} tile={tile} onClickData={(p)=>this.mostrarProducto(p)}/>
+          )}
         </GridList>
       </div>
     );

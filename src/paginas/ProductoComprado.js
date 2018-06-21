@@ -6,7 +6,7 @@ import Divider from '@material-ui/core/Divider';
 import HorizontalNonLinearAlternativeLabelStepper from './HorizontalNonLinearAlternativeLabelStepper'
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-
+import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
@@ -75,9 +75,12 @@ class ProductoComprado extends Component {
     return (
       <div className= "Producto">
               {/* <img src={this.state.compra.plato.img} width='100%'/> */}
+              
               <h3>Estado del envío</h3>
+                <p><i>(16 minutos para entrega)</i></p>
                 <HorizontalNonLinearAlternativeLabelStepper />
                 
+
                 <Card className={classes.card}>
                   <CardContent>
                     <div className='info'>
@@ -104,9 +107,11 @@ class ProductoComprado extends Component {
 
                   <h3> Ingredientes </h3>
                   <div className='ingredientes'>
+                      <Typography variant="subheading" align="left">
                         {this.state.ingredientes.map(item =>
-                            <p> {item} </p>
-                       )}
+                            <ul> <li>{item} </li></ul>
+                        )}
+                      </Typography>
                   </div>
 
                   <br/>

@@ -44,7 +44,7 @@ class Comprados extends Component {
         <div>
           <TileBarGridList
             data={platosListos}
-            onClick={(p)=>this.mostrarProducto(p)}
+            onClickData={(p)=>this.mostrarProducto(p)}
           />
         </div>
     )
