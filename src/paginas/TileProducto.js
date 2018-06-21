@@ -67,7 +67,7 @@ class TileProducto extends React.Component{
                 titleWrap:classes.titleWrap
             }}
             titlePosition="bottom"
-              title={<p style={{fontFamily: 'Patua One', fontSize: '14px'}}>{simpleClamp(tile.title)}</p>}
+              title={<span style={{fontFamily: 'Patua One', fontSize: '14px'}}>{simpleClamp(tile.title)}</span>}
               subtitle={<span>by: {tile.author}</span>}
               style={{
                   background: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 20%, rgba(0,0,0,0.9) 100%)',

@@ -102,7 +102,7 @@ class Comprar extends Component {
     return (
         <div className = {this.props.classes.contenedor}>
 
-            <div style={{'margin-top': '10px', 'margin-bottom': '26px', fontFamily: 'Roboto'}} > <b style={{fontFamily:'Patua One'}}>Nombre:</b> { this.state.usuario.nombre + ' ' + this.state.usuario.apellido } </div>
+            <div style={{'margin-top': '10px', 'margin-bottom': '26px'}}> <b>Nombre:</b> <span style={{marginLeft: '0.8em', fontFamily: 'Roboto'}}>{ this.state.usuario.nombre + ' ' + this.state.usuario.apellido } </span></div>
             <p> <b>Dirección</b>:
               <TextField
               id="direccion"
