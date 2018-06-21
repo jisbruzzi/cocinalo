@@ -5,6 +5,8 @@ precio:
 descripcion: �Por qu� guardar un asado para cuando venga la familia? Esta versi�n mini es genial cualquier d�a de la semana. Para una persona, dificultad: "super facil".
 estrellas: 
 tags: pechuga, pollo
+ingredientes: '1 pechuga de pollo de mayor bienestar.8 palitos de espárragos, recortados.6 tomates cherry.2 ramitas de romero.1 pizca de sal marina.1 pizca de pimienta negra recién molida.aceite de oliva.vino blanco.vinagre balsámico',
+receta: 'Precalentar el horno a 200 ° C / 400 ° F / gas 6. Ponga 1 pechuga de pollo, con su piel puesta, en un recipiente. Agregue 8 palos recortados de espárragos, 6 tomates cherry a la mitad y las hojas de 1 ramita de romero fresco más una ramita completa de romero también. Mezcle todo junto con una pizca de sal marina y pimienta negra recién molida y un chorrito de aceite de oliva. Coloque las verduras en una bandeja de papel de aluminio y coloque la ramita de pollo y romero encima. Sazonar bien Agregue un poco de vino blanco y cocine en el medio del horno de 25 a 35 minutos. Servir rociado con vinagre balsámico',
 
 Para receta:
 https://www.jamieoliver.com/recipes/chicken-recipes/roasted-chicken-breast-with-cherry-tomatoes-and-asparagus/

@@ -5,6 +5,8 @@ precio:
 descripcion: Con espinaca, nueces y salvia crujiente. Con su delicioso relleno de tres quesos, este canel�n de vegetales dorados y burbujeantes es un verdadero placer. Para 8 porciones, dificultad: "super facil".
 estrellas: 
 tags: pasta
+ingredientes: '1 puñado de queso parmesano, rallado.250 g bañeras mascarpone.100 g de queso Taleggio rallado.2 limones, cáscara y jugo de. 1 puñado de nueces picadas.180 g de espinaca baby, picada.sal marina.pimienta negra recién molida.20 g de salvia fresca.2 perillas de mantequilla.12 hojas frescas de lasaña',
+receta: 'Pruebe estos simples canelones: son geniales como alternativa vegetariana.Precalentar el horno a 190ºC / 375ºF / gas 5.Mezcle la mitad del parmesano, el mascarpone, el taleggio, la ralladura de limón y el jugo, y las nueces.Ponga 1/4 de la mezcla a un lado, luego combine la mezcla de queso restante con la espinaca y sazone al gusto. Freír las hojas de salvia en mantequilla caliente y desmenuce 1/2 en la mezcla de queso y espinacas, guardando el resto para la parte superior.Ponga una buena cucharada de la mezcla de queso y espinacas a lo largo de uno de los bordes más largos de cada hoja de lasaña y enrolle.Póngalos en un plato de horno plano, salpique con la mezcla de queso sobrante, rocíe ¼ de un vaso de agua y espolvoree con el parmesano restante y las hojas crujientes de salvia. Cubra con papel de aluminio y hornee en el horno precalentado durante 20 minutos',
 
 Para receta:
 https://www.jamieoliver.com/recipes/pasta-recipes/baked-cannelloni/
