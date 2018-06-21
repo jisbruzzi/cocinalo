@@ -49,6 +49,26 @@ const cantidades = [
   {
     value: 5,
     label: '5 UNIDADES',
+  },
+  {
+    value: 6,
+    label: '6 UNIDADES',
+  },
+  {
+    value: 7,
+    label: '7 UNIDADES',
+  },
+  {
+    value: 8,
+    label: '8 UNIDADES',
+  },
+  {
+    value: 9,
+    label: '9 UNIDADES',
+  },
+  {
+    value: 10,
+    label: '10 UNIDADES',
   }
 ];
 
