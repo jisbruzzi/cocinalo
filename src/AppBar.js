@@ -104,7 +104,7 @@ class SimpleAppBar extends Component{
                         <div className="toolbar vcentered">
                                     
                             <div className={"vcentered logo "+clase}>
-                                <img src={logo} height="33" width="140"/>
+                                <img src={logo} height="37" width="150"/>
                             </div>
                             <div className={"vacio "+clase}>
                             </div>

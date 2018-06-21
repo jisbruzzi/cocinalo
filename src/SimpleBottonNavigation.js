@@ -48,7 +48,7 @@ class SimpleBottomNavigation extends React.Component {
         <BottomNavigationAction style={{marginRight: '-15px'}} value="/favoritos" label="Favoritos" icon={<FavoriteIcon />} />
         <BottomNavigationAction style={{marginRight: '-15px'}} value="/packs" label="Packs" icon={<RedeemIcon />} />
         <BottomNavigationAction style={{marginRight: '-15px'}} value="/comprados" label="Comprados" icon={<RestaurantIcon />} />
-        <BottomNavigationAction style={{padding: '0'}} value="/perfil" label="Perfil" icon={<AccountCircleIcon />} />
+        <BottomNavigationAction value="/perfil" label="Perfil" icon={<AccountCircleIcon />} />
         
 
       </BottomNavigation>

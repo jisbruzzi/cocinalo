@@ -20,7 +20,7 @@
     transition:flex 300ms ease-out;
   }
   .logo img{
-    width:100%;
+    width:130%;
   }
   .logo.grande {
     flex:0;

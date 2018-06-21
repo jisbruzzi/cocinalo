@@ -82,7 +82,7 @@ class SingleLineGridList extends React.Component {
     })
     return (
       <div className={classes.root}>
-        <GridList className={classes.gridList} cols={2.5}>
+        <GridList className={classes.gridList} cols={2.2}>
           {this.props.scrollData.map(tile => 
             <TileProducto key={tile.key} tile={tile} onClickData={(p)=>this.mostrarProducto(p)}/>
           )}
