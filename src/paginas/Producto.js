@@ -75,7 +75,9 @@ class Producto extends Component {
   comprarProducto(cant, idProducto){
         this.props.history.push({
           pathname: '/comprar',
-          state: { itemsCarrito: [{idPlato: idProducto, cantidad: cant, datosPlato: this.state.producto }] }
+          state: { 
+            itemsCarrito: [{idPlato: idProducto, cantidad: cant, datosPlato: this.state.producto }],
+            esCarrito: false }
         });
   }
 

@@ -35,7 +35,9 @@ class Carrito extends Component {
   comprarProductos(itemsCarrito){
     this.props.history.push({
       pathname: '/comprar',
-      state: { itemsCarrito: itemsCarrito }
+      state: {
+        itemsCarrito: itemsCarrito,
+        esCarrito: true }
     });
   }
 

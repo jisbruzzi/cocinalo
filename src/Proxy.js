@@ -60,11 +60,12 @@ class Proxy {
       }
     }
 
-    comprarCarrito(listaItemsCarrito) {
+    comprarCarrito(listaItemsCarrito, esCarrito) {
       listaItemsCarrito.forEach( p =>
         this.agregarProductoAComprados(p.idPlato, p.cantidad)
       );
-      this.data.carrito = [];
+      if (esCarrito)
+        this.data.carrito = [];
     }
 
     getCarrito(){
