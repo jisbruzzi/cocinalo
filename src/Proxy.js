@@ -61,8 +61,10 @@ class Proxy {
         this.data.comprados.push({
                 idCompra: this.generarSiguienteIdEnCompras(),
                 idPlato: idPlato2,
-                cantidad: cantidad2
+                cantidad: cantidad2,
+                timestampCompra: new Date()
         });
+
       } else {
         //resultado.cantidad += parseInt(cantidadPedida);
       }
@@ -72,8 +74,10 @@ class Proxy {
       listaItemsCarrito.forEach( p =>
         this.agregarProductoAComprados(p.idPlato, p.cantidad)
       );
-      if (esCarrito)
+      if (esCarrito) {
         this.data.carrito = [];
+        this.notifCarrito(this.data.carrito)
+      }
     }
 
     getCarrito(){
@@ -247,12 +251,12 @@ class Proxy {
     }
 
     getPlatosComprados() {
-      return new Promise(function(resolve, reject) {
+      return new Promise((resolve, reject) => {
         function idEnComprados(comprados, id) {
           return comprados.filter(e => e == id).length != 0;
         }
         let ids = appdata.comprados;
-        let platosComprados = appdata.platos.filter(element => idEnComprados(ids, element.id));
+        let platosComprados = this.data.platos.filter(element => idEnComprados(ids, element.id));
         resolve(platosComprados);
       });
     }
@@ -267,7 +271,8 @@ class Proxy {
                              { return {
                                   idCompra: c.idCompra,
                                   plato: getPlatoByIdSincronico(this.data.platos,c.idPlato),
-                                  cantidad: c.cantidad
+                                  cantidad: c.cantidad,
+                                  timestampCompra: c.timestampCompra
                               }});
 
         resolve(comprados);

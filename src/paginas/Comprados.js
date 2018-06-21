@@ -28,7 +28,7 @@ class Comprados extends Component {
         compra:compra,
         key: compra.idCompra+"-"+compra.plato.img,
         img:compra.plato.img,
-        title:"("+compra.cantidad+")"+compra.plato.title,
+        title:"("+compra.cantidad+") "+compra.plato.title,
         author:compra.plato.author
       }
     })
