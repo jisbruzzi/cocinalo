@@ -122,9 +122,11 @@ class Producto extends Component {
                 </div>
                 <h3> Ingredientes </h3>
                 <div className='ingredientes'>
-                      {this.state.ingredientes.map(item =>
-                          <p> {item} </p>
-                      )}
+                      <Typography variant="subheading" align="left">
+                        {this.state.ingredientes.map(item =>
+                            <ul> <li>{item} </li></ul>
+                        )}
+                      </Typography>
                 </div>
 
                 <br/>
