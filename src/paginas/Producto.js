@@ -118,18 +118,21 @@ class Producto extends Component {
 
               </div>
               
-              <div style={{marginRight: '1.5em', marginLeft: '1.5em'}} className='ingredientes'>
-                    <h3> Ingredientes </h3>
-                    <Typography variant="subheading" align="left" style={{fontFamily: 'Patua One'}}>
-                      {this.state.ingredientes.map(item =>
-                          <ul> <li>{item} </li></ul>
-                      )}
-                    </Typography>
+              <h3> Ingredientes </h3>
+                  <div className='ingredientes' style={{'margin':'15px'}}>
+                      <Typography variant="subheading" align="left" style={{fontFamily: 'Patua One','text-align':'justify'}}>
+                        {this.state.ingredientes.map(item =>
+                            <li>{item} </li>
+                        )}
+                      </Typography>
               </div>
-
+              <Typography variant="subheading" align="left" color="textSecondary" style={{fontFamily: 'Patua One','margin':'15px'}}> 
+                    Tiempo de preparación: {this.state.producto.tiempo} minutos.
+              </Typography>
+              
               <div style={{marginRight: '1.5em', marginLeft: '1.5em'}} className="boton">
                 <br/>
-                <Typography variant="subheading" align="left" color="textSecondary" style={{fontFamily: 'Patua One'}}>
+                <Typography variant="subheading" align="left" color="inherit" style={{fontFamily: 'Patua One'}}>
                       Precio unitario: AR$ {this.state.producto.precio}
                 </Typography>
                 <TextField

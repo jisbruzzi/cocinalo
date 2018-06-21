@@ -140,14 +140,16 @@ class ProductoComprado extends Component {
                 <br />
                 
                   <h3> Ingredientes </h3>
-                  <div className='ingredientes'>
-                      <Typography variant="subheading" align="left">
+                  <div className='ingredientes' style={{'margin':'15px'}}>
+                      <Typography variant="subheading" align="left" style={{fontFamily: 'Patua One','text-align':'justify'}}>
                         {this.state.ingredientes.map(item =>
-                            <ul> <li>{item} </li></ul>
+                            <li>{item} </li>
                         )}
                       </Typography>
                   </div>
-
+                  <Typography variant="subheading" align="left" color="textSecondary" style={{fontFamily: 'Patua One','margin':'15px'}}>
+                      Tiempo de preparación: {this.state.compra.plato.tiempo} minutos.
+                  </Typography>
                   <br/>
                   <img src={this.state.compra.plato.video} width='100%'/>
                   <br />
