@@ -25,7 +25,7 @@ class Categorias extends Component {
                 <CardContent style={{
                   paddingLeft:0,
                   paddingRight:0,
-                  paddingBottom:"8px",
+                  paddingBottom:"16px",
                   paddingTop:"8px",
                 }}>
                 {elem}
