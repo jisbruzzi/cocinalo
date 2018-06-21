@@ -92,7 +92,7 @@ class ProductoComprado extends Component {
                       <StarRatings
                         starDimension='30px'
                         rating={this.state.compra.plato.estrellas}
-                        starRatedColor="blue"
+                        starRatedColor="#FFAB00"
                         
                         numberOfStars={5}
                         name='rating'/>

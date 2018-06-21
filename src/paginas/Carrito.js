@@ -43,14 +43,14 @@ class Carrito extends Component {
 
   render() {
     if (this.state.itemsCarrito.length == 0)
-    return (
-      <div>
-        <br />
-        <h3> CARRITO VACIO </h3>
-      </div>
-    )
-  else
-    return (
+      return (
+        <div>
+          <br />
+          <h3> CARRITO VACIO </h3>
+        </div>
+      )
+    else
+      return (
         <div>
           {this.state.itemsCarrito.map(item =>
             <div key={item.idPlato}>
@@ -59,10 +59,10 @@ class Carrito extends Component {
           )}
             <br />
             <Button variant="contained" onClick={()=>{this.comprarProductos(this.state.itemsCarrito)}}>
-            Comprar carrito
+              Comprar carrito
             </Button>
         </div>
-    );
+      );
   }
 }
 

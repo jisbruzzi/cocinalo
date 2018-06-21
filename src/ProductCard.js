@@ -41,10 +41,10 @@ class ProductCard extends Component {
             <div>
             <Card className={this.props.classes.card}>
                 <CardContent className={this.props.classes.content}>
-                    <Typography style={{'margin-bottom': '5px' }} variant="subheading" align="left">
-                      <b>{this.props.itemCarrito.datosPlato.title}</b>
+                    <Typography style={{'margin-bottom': '5px' }} variant="subheading" align="left" style={{fontFamily: 'Patua One'}}>
+                      {this.props.itemCarrito.datosPlato.title}
                     </Typography>
-                    <Typography variant="subheading" align="left" color="textSecondary">
+                    <Typography variant="subheading" align="left" color="textSecondary" >
                       <i>Precio unitario: AR$ {this.props.itemCarrito.datosPlato.precio}</i>
                     </Typography>
                     <Typography variant="subheading" align="left" color="textSecondary">

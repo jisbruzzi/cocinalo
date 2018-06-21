@@ -102,39 +102,38 @@ class Producto extends Component {
     return (
       <div className= "Producto">
               <img src={this.state.producto.img} width='100%'/>
-              
-              
-                <div style={{marginRight: '1.5em', marginLeft: '1.5em'}} className='info'>
-          
-                  <h2> {this.state.producto.title} </h2>
-                  <div className='descripcion-producto'>
-                    {this.state.producto.descripcion}
-                  </div>
 
-                  <p> Cantidad de estrellas: </p>
-                  <StarRatings
-                    starDimension='30px'
-                    rating={this.state.producto.estrellas}
-                    starRatedColor="#FFAB00"
-                    
-                    numberOfStars={5}
-                    name='rating'/>
-
-                </div>
-                <h3> Ingredientes </h3>
-                <div className='ingredientes'>
-                      <Typography variant="subheading" align="left">
-                        {this.state.ingredientes.map(item =>
-                            <ul> <li>{item} </li></ul>
-                        )}
-                      </Typography>
+              <div style={{marginRight: '1.5em', marginLeft: '1.5em'}} className='info'>
+        
+                <h2> {this.state.producto.title} </h2>
+                <div className='descripcion-producto'>
+                  {this.state.producto.descripcion}
                 </div>
 
+                <p> Cantidad de estrellas: </p>
+                <StarRatings
+                  starDimension='30px'
+                  rating={this.state.producto.estrellas}
+                  starRatedColor="#FFAB00"
+                  
+                  numberOfStars={5}
+                  name='rating'/>
+
+              </div>
+              <h3> Ingredientes </h3>
+              <div className='ingredientes'>
+                    <Typography variant="subheading" align="left" style={{fontFamily: 'Patua One'}}>
+                      {this.state.ingredientes.map(item =>
+                          <ul> <li>{item} </li></ul>
+                      )}
+                    </Typography>
+              </div>
+
+              <div style={{marginRight: '1.5em', marginLeft: '1.5em'}} className="boton">
                 <br/>
-                <Typography variant="subheading" align="left" color="textSecondary">
+                <Typography variant="subheading" align="left" color="textSecondary" style={{fontFamily: 'Patua One'}}>
                       Precio unitario: AR$ {this.state.producto.precio}
                 </Typography>
-                <div style={{marginRight: '1.5em', marginLeft: '1.5em'}} className="boton">
                 <TextField
                     id="select-currency-native"
                     select
