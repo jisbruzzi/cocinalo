@@ -52,8 +52,8 @@ function TitlebarGridList(props) {
   const { classes } = props;
 
   return (
-    <div className={classes.root}>
-      <GridList cellHeight={200} cols={2} className={classes.gridList}>
+    <div className={classes.root} style={{backgroundColor:"rgba(0,0,0,0)", height:"100%"}}>
+      <GridList cellHeight={200} cols={2} className={classes.gridList} style={{backgroundColor:"rgba(0,0,0,0)"}}>
         {props.subheader && <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
           <ListSubheader component="div" disableSticky={true}>{props.subheader}</ListSubheader>
         </GridListTile>}
