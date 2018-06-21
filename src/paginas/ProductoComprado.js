@@ -69,6 +69,39 @@ class ProductoComprado extends Component {
   componentDidMount() {
     this.setState({ingredientes: this.state.compra.plato.ingredientes.split(".")});
   }
+
+  formatearFecha(timestamp) {
+    return timestamp.getDate() + '/' + timestamp.getMonth() + '/' + timestamp.getFullYear();
+  }
+
+  segundosParaEntrega(timestamp) {
+    const DEMORA_ENTREGA_SEGUNDOS = 28;
+    let tSegundosCompra = Math.floor(timestamp.getTime() / 1000);
+    let tSegundosActual = Math.floor(Date.now() / 1000)
+    let tSegundosDesdeCompra = tSegundosActual - tSegundosCompra;
+    let tSegudosParaEntrega = DEMORA_ENTREGA_SEGUNDOS - tSegundosDesdeCompra;
+    return (tSegudosParaEntrega >= 0) ? tSegudosParaEntrega : 0;
+  }
+
+  leyenda(timestamp) {
+    let segundos = this.segundosParaEntrega(timestamp);
+    if (segundos > 7)
+      return segundos - 7 + " minutos para entrega";
+    return 'Producto entregado!'
+  }
+
+  estadoActivo(timestamp) {
+    let segundos = this.segundosParaEntrega(timestamp);
+    
+    if (0 <= segundos && segundos <= 7)
+      return 3;
+    else if (7 < segundos && segundos <= 14)
+      return 2;
+    else if (14 < segundos && segundos <= 21)
+      return 1;  
+    if (21 < segundos)
+      return 0;
+  }
   
   render() {
     const { classes } = this.props;
@@ -77,9 +110,9 @@ class ProductoComprado extends Component {
               {/* <img src={this.state.compra.plato.img} width='100%'/> */}
               
               <h3>Estado del envío</h3>
-                <p><i>(16 minutos para entrega)</i></p>
-                <HorizontalNonLinearAlternativeLabelStepper />
                 
+                <HorizontalNonLinearAlternativeLabelStepper activeStep = {this.estadoActivo(this.state.compra.timestampCompra)}/>
+                <p><i>{this.leyenda(this.state.compra.timestampCompra)}</i></p>
 
                 <Card className={classes.card}>
                   <CardContent>
@@ -99,12 +132,11 @@ class ProductoComprado extends Component {
                     </div>
 
                     <p>Cantidad: {this.state.compra.cantidad}</p>
+                    <p>Fecha de compra: {this.formatearFecha(this.state.compra.timestampCompra)} </p>
                   </CardContent>
                 </Card>
                 <br />
                 
-                <Divider />
-
                   <h3> Ingredientes </h3>
                   <div className='ingredientes'>
                       <Typography variant="subheading" align="left">

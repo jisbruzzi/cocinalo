@@ -7,7 +7,7 @@ import SimpleBottonNavigation from './SimpleBottonNavigation';
 import { NavLink, Switch, Route, Redirect } from 'react-router-dom';
 import * as paginas from "./paginas";
 import ProductoComprado from "./paginas/ProductoComprado";
-
+import ScrollToTop from "./ScrollToTop";
 
 //import tileData from './tileData.js';
 
@@ -22,8 +22,10 @@ class App extends Component {
         <br/>
         <br/>
         <BrowserRouter>
+          <ScrollToTop>
             <div>
               <AppBar />
+                <Redirect from="/" to='/home'/>
                 <Route path={`(.*)/buscador`} component={paginas.Buscador}/>
                 <Route path='/favoritos' component={paginas.Favoritos}></Route>
                 <Route path='/busqueda/:query' component={paginas.Busqueda}></Route>
@@ -46,6 +48,7 @@ class App extends Component {
                 }></Route>
               <SimpleBottonNavigation />
             </div>
+          </ScrollToTop>
         </BrowserRouter>
 
 
