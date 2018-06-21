@@ -62,12 +62,14 @@ class ProductoComprado extends Component {
     super(props);
     this.state = {
       compra: this.props.location.state.compra,
-      ingredientes: []
+      ingredientes: [],
+      receta: []
     }
   }
  
   componentDidMount() {
     this.setState({ingredientes: this.state.compra.plato.ingredientes.split(".")});
+    this.setState({receta: this.state.compra.plato.receta.split(".")});
   }
 
   formatearFecha(timestamp) {
@@ -148,11 +150,20 @@ class ProductoComprado extends Component {
 
                   <br/>
                   <img src={this.state.compra.plato.video} width='100%'/>
-
-                  <h3> Receta </h3>
-                  <div className='receta'>
-                    {this.state.compra.plato.receta}
-                  </div>
+                  <br />
+                  <br />
+                  <Card className={classes.card}>
+                    <CardContent>      
+                      <h3> Receta </h3>
+                      <div className='receta' style={{'margin':'5px'}}>
+                          <Typography variant="subheading" align="left" style={{'text-align':'justify'}} >
+                            {this.state.receta.map(item =>
+                                <li> {item} </li>
+                            )}
+                          </Typography>
+                      </div>
+                    </CardContent>
+                  </Card> 
         </div>
 
     );
