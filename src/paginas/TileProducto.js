@@ -5,6 +5,7 @@ import proxy from "../Proxy"
 import IconButton from '@material-ui/core/IconButton';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import { withStyles } from '@material-ui/core/styles';
 /**
  * Props obligatorias:
  * tile 
@@ -49,14 +50,38 @@ class TileProducto extends React.Component{
                     this.actualizarEstadoFavoriteo()
                 )
             }}/>
-
-        
+            console.log("===============")
+            console.log(classes.titleWrap)
+            function simpleClamp(texto){
+                let palabras=tile.title.split(" ");
+                if(palabras.length>5){
+                    return palabras.slice(0,5).join(" ")+" ..."
+                }else{
+                    return texto
+                }
+            }
         return <GridListTile key={tile.key} {...this.props}>
             <img src={tile.img} alt={tile.title} onClick={()=>{this.props.onClickData(tile)}}/>
-            <GridListTileBar
-              title={tile.title}
+            <GridListTileBar classes={{
+                title:classes.title,
+                titleWrap:classes.titleWrap
+            }}
+            titlePosition="bottom"
+              title={simpleClamp(tile.title)}
               subtitle={<span>by: {tile.author}</span>}
-              style={{backgroundColor: 'rgba(0,0,0,0.6)'}}
+              style={{
+                  background: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 20%, rgba(0,0,0,0.9) 100%)',
+                  height:"fit-content",
+                  minHeight:"40%",
+                  padding:"5px"
+
+                }}
+            />
+            
+            <GridListTileBar
+                titlePosition="top"
+              style={{backgroundColor: 'rgba(0,0,0,0)'}}
+              
               actionIcon={
                 <IconButton>
                   {this.state.enFavoritos? enFavoritos : noEnFavoritos}
@@ -67,4 +92,42 @@ class TileProducto extends React.Component{
     }
 }
 
-export default TileProducto
+
+const styles={
+    
+    title:{
+        lineClamp:2,
+        wordWrap:"normal",
+        textOverflow:"ellipsis",
+        boxOrient:"vertical",
+        overflow:"hidden",
+        whiteSpace:"normal"
+        //whiteSpace:"normal",
+        /*
+        wordWrap:"break-word",
+        textOverflow:"ellipsis",
+        overflow:"hidden",
+        lineHeight:"1rem",
+        maxHeight:"3rem"
+        */
+    },
+    
+   
+    
+    titleWrap:{
+        height:"fit-content",
+        minHeight:"40%"
+    }
+    /*
+    title:{
+        lineHeight:"40%",
+        //fontSize:"40%",
+        maxHeight:"100%",
+        whiteSpace:"normal",
+        textOverflow:"ellipsis",
+        overflow:"hidden",
+
+    }*/
+}
+
+export default withStyles(styles)(TileProducto)
