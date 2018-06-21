@@ -56,7 +56,8 @@ class Comprar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      itemsCarrito: this.props.location.state.itemsCarrito, 
+      itemsCarrito: this.props.location.state.itemsCarrito,
+      esCarrito: this.props.location.state.esCarrito,
       usuario: {}
     }
   }
@@ -71,7 +72,7 @@ class Comprar extends Component {
   }
 
   comprarCarrito(itemsCarrito) {
-    proxy.comprarCarrito(itemsCarrito);
+    proxy.comprarCarrito(itemsCarrito, this.state.esCarrito);
     this.borrarCarritoDeVista();
     this.props.history.push('/home');
   }
