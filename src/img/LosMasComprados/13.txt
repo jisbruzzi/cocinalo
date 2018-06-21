@@ -5,6 +5,8 @@ precio: 90
 descripcion: 
 estrellas: 4
 tags: guacamole, palta
+ingredientes: '3 aguacates maduros medianos.1 cebolla mediana (si puede ser, dulce).El zumo de una lima recién exprimida.Un pimiento jalapeño.Un chile serrano.Cilantro fresco recién picado.Un poco de sal (a discreción)'.
+receta: 'Quitar el hueso del aguacate y le sacarlr la pulpa con una cuchara.Machacar la pulpa con un tenedor hasta dejarla com una masa cremosa, pero con cierta consistencia, como si se tratase de un puré.Agregar el zumo de lima recién exprimida para evitar que el aguacate se oxide y adquiera un color oscuro.Pelar la cebolla y picar la mitad en trozos muy finos, algo que podemos hacer o con un cuchillo muy afilado o con una mandolina. Incorporar la cebolla al aguacate que tenemos en el plato ya triturado.Picar el jalapeño muy fino, procurando quitarle las pepitas si no queremos que pique demasiado, lo incorporaremos al resto de ingredientes junto a un pellizco de sal y a unas hojas de cilantro fresco recién picado.Con el tenedor remover todos los ingredientes para que poco a poco se vayan mezclando todos los ingredientes y encontrando el equilibrio entre todos ellos.Ahora ya estará listo para consumir con cualquiera de las elaboraciones de la gastronomía mexicana que hayamos hecho, desde unos sencillos nachos hasta un plato de pollo o carne picante.'
 
 Para receta:
-
+http://guacamolecasero.com/
