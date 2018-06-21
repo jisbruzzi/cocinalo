@@ -36,6 +36,11 @@ class ProductCard extends Component {
   delete(id){
     this.props.delete(id);
   }
+
+  irADetalle(id) {
+    this.props.history.push('/producto/' + id);
+  }
+  
   render(){
         return (
             <div>
@@ -55,9 +60,9 @@ class ProductCard extends Component {
                     </IconButton>
                 </CardContent>
                 <CardMedia
-                className={this.props.classes.cover}
-                image={this.props.itemCarrito.datosPlato.img}
-                />
+                  /*onClick={()=>this.irADetalle(this.props.itemCarrito.idPlato)}*/
+                  className={this.props.classes.cover}
+                  image={this.props.itemCarrito.datosPlato.img}/>
             </Card>
             </div>
         );
