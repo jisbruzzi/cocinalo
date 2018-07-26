@@ -15,3 +15,9 @@ Pero el cambio es posible. El teléfono hizo posible que personas muy distantes 
 Todos estos inventos causaron una revolución, dejaron una huella en la cultura. Pero ninguna de ellas habría sido posible de no haber hombres de negocios que las apoyen.
 
 Nosotros vinimos a proponerles más que una oportunidad de negocio. Vinimos a proponerles la oportunidad de cambiar la sociedad, de dejar una huella permanente en la cultura.
+
+Cocinalo es más que una oportunidad de negocio, es más que un producto o un servício, Cocinalo es un cambio. **Cocinalo es una propuesta.**
+
+La premisa que trae Cocinalo es sencilla: _Vos podés cocinar_. No importa qué sabés, qué no sabés ni cuánto tiempo tenés: _Vos podés cocinar_.
+
+Cocinalo propone _que nos acostumbremos a la comida casera_, que _recuperemos la cocina_, que recuperemos esta manera de acariciar, la manera de acariciar de mi abuela; y que tambièn mis nietos puedan vivirla.
