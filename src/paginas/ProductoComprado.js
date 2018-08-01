@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import VideoPlayer from 'react-simple-video-player';
 import 'typeface-roboto';
 import { withRouter } from 'react-router-dom';
 import StarRatings from 'react-star-ratings';
@@ -151,7 +152,7 @@ class ProductoComprado extends Component {
                       Tiempo de preparación: {this.state.compra.plato.tiempo} minutos.
                   </Typography>
                   <br/>
-                  <img src={this.state.compra.plato.video} width='100%'/>
+                  <VideoPlayer url={this.state.compra.plato.video}  autosize />
                   <br />
                   <br />
                   <Card className={classes.card}>

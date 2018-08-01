@@ -20,6 +20,7 @@ import RestaurantIcon from '@material-ui/icons/Restaurant';
 import RedeemIcon from '@material-ui/icons/Redeem';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import Divider from '@material-ui/core/Divider';
+import Switch from '@material-ui/core/Switch';
 
 const styles = theme => ({
   container: {
@@ -44,7 +45,7 @@ const styles = theme => ({
     alignSelf: 'left',
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
-    width: '95%'
+    width: '95%', 
   },
 });
 
@@ -55,7 +56,10 @@ class Perfil extends Component {
     super(props);
     this.state = {
       usuario: {},
+      vegetariano: false,
+      celiaco: false,
     }
+    this.actualizarEstadoSwitches()
   }
   componentDidMount() {
       proxy.getUsuario().then((usuario)=>{
@@ -63,6 +67,15 @@ class Perfil extends Component {
     });
   }
 
+    actualizarEstadoSwitches(){
+        proxy.getSwitch('vegetariano').then((esVegetariano)=>{this.setState({vegetariano:esVegetariano})})
+        proxy.getSwitch('celiaco').then((esCeliaco)=>{this.setState({celiaco:esCeliaco})})
+    }
+
+  handleChange = name => event => {
+    this.setState({ [name]: event.target.checked });
+    proxy.setSwitch([name], event.target.checked);
+  };
 
   render() {
     const { classes } = this.props;
@@ -106,25 +119,23 @@ class Perfil extends Component {
                 }}>
               <div className={classes.iconos}>
                       <Typography variant="subheading" align="left" style={{fontFamily: 'Patua One','text-align':'left'}}>
-                  	    Favoritos
+                  	    Vegetariano
+                        <Switch
+                          checked={this.state.vegetariano}
+                          onChange={this.handleChange('vegetariano')}
+                          value="vegetariano"
+                          />
                       </Typography>
                       <br/>
                       <Divider light />
                       <br/>
                       <Typography variant="subheading" align="left" style={{fontFamily: 'Patua One','text-align':'left'}}>
-                  	    Packs
-                      </Typography>
-                      <br/>
-                      <Divider light />
-                      <br/>
-                      <Typography variant="subheading" align="left" style={{fontFamily: 'Patua One','text-align':'left'}}>
-                  	    Compras
-                      </Typography>
-                      <br/>
-                      <Divider light />
-                      <br/>
-                      <Typography variant="subheading" align="left" style={{fontFamily: 'Patua One','text-align':'left'}}>
-                  	    Configuracion
+                  	    Celiaco
+                        <Switch
+                          checked={this.state.celiaco}
+                          onChange={this.handleChange('celiaco')}
+                          value="celiaco"
+                          />
                       </Typography>
                </div>
                 </CardContent>

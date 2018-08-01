@@ -400,6 +400,29 @@ class Proxy {
           });
       }
 
+      getSwitch(tipo) {
+        return new Promise((resolve, reject) => { 
+          let elem;
+          if(tipo === 'vegetariano'){
+            elem = appdata.vegetariano;
+          } else {
+            elem = appdata.celiano;
+          }
+          resolve(elem);
+        });
+      }
+
+      setSwitch(tipo, booleano) {
+        return new Promise((resolve,reject)=>{
+          if(tipo === 'vegetariano'){
+            appdata.vegetariano = booleano;
+          } else {
+            appdata.celiaco = booleano;
+          }
+        resolve()
+      }) 
+    }
+
   }
   
 export default new Proxy();

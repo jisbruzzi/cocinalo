@@ -49,8 +49,7 @@ import image48 from './img/Tentaciones/12.jpg';
 import image49 from './img/Recomendados/13.jpg';
 import image50 from './img/Recomendados/14.jpg';
 import image51 from './img/LosMasComprados/13.jpg';
-import video1 from './img/Videos/nardalepes.jpg';
-import video2 from './img/Videos/empanadas.jpg';
+import video1 from './img/Videos/video1.mp4';
 import imagePerfil from './img/perfil.jpg';
   const appData = {
     // Por ahora hay un solo usuario super hardcodeado
@@ -64,6 +63,8 @@ import imagePerfil from './img/perfil.jpg';
               tarjetaNumero: 'XXXX-XXXX-XXXX-8745',
 		          img: imagePerfil,
     },
+    vegetariano: false,
+    celiaco: false,
     favoritos: [9,16,18,19,49,29,34],
     comprados: [
                 /*{
@@ -406,7 +407,7 @@ import imagePerfil from './img/perfil.jpg';
                 tiempo: 100,
                 precio: 120,
                 estrellas: 3.4,
-                video: video2,
+                video: video1,
                 categoria: 'Los más comprados',
                 pack: 2,
               },
