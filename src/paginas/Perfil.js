@@ -59,22 +59,32 @@ class Perfil extends Component {
       vegetariano: false,
       celiaco: false,
     }
-    this.actualizarEstadoSwitches()
   }
+
+  componentWillMount() {
+      proxy.getSwitchVegetariano().then((valor)=>{
+        this.setState({vegetariano: valor});
+    });
+      proxy.getSwitchCeliaco().then((valor)=>{
+        this.setState({celiaco: valor});
+    });
+  }
+
   componentDidMount() {
       proxy.getUsuario().then((usuario)=>{
         this.setState({usuario: usuario});
     });
   }
 
-    actualizarEstadoSwitches(){
-        proxy.getSwitch('vegetariano').then((esVegetariano)=>{this.setState({vegetariano:esVegetariano})})
-        proxy.getSwitch('celiaco').then((esCeliaco)=>{this.setState({celiaco:esCeliaco})})
-    }
-
-  handleChange = name => event => {
+  handleChangeVegetariano = name => event => {
+  console.log("Estoy aca: "+ this.state.vegetariano);
     this.setState({ [name]: event.target.checked });
-    proxy.setSwitch([name], event.target.checked);
+    proxy.setSwitchVegetariano(!this.state.vegetariano);
+  };
+
+  handleChangeCeliaco = name => event => {
+    this.setState({ [name]: event.target.checked });
+    proxy.setSwitchCeliaco(!this.state.celiaco);
   };
 
   render() {
@@ -122,7 +132,7 @@ class Perfil extends Component {
                   	    Vegetariano
                         <Switch
                           checked={this.state.vegetariano}
-                          onChange={this.handleChange('vegetariano')}
+                          onChange={this.handleChangeVegetariano('vegetariano')}
                           value="vegetariano"
                           />
                       </Typography>
@@ -133,7 +143,7 @@ class Perfil extends Component {
                   	    Celiaco
                         <Switch
                           checked={this.state.celiaco}
-                          onChange={this.handleChange('celiaco')}
+                          onChange={this.handleChangeCeliaco('celiaco')}
                           value="celiaco"
                           />
                       </Typography>

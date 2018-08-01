@@ -154,6 +154,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.3,
                 video: video1,
                 categoria: 'Recomendados',
+		restricciones: ['vegetariano', 'celiaco'],
                 pack: 2,
               },
               {
@@ -169,6 +170,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.5,
                 video: video1,               
                 categoria: 'Recomendados',
+		restricciones: ['celiaco'],
                 pack: 2,
               },
               {
@@ -184,6 +186,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.0,
                 video: video1,                
                 categoria: 'Recomendados',
+		restricciones: [],
                 pack: 2,
               },
               {
@@ -199,6 +202,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.6,
                 video: video1,               
                 categoria: 'Recomendados',
+		restricciones: ['vegetariano'],
                 pack: 2,
               },
               {
@@ -214,6 +218,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.7,
                 video: video1,                
                 categoria: 'Recomendados',
+		restricciones: [],
                 pack: 2,
               },
               {
@@ -229,6 +234,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.3,
                 video: video1,                
                 categoria: 'Recomendados',
+		restricciones: [],
                 pack: 1,
               },
               {
@@ -244,6 +250,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.2,
                 video: video1,                
                 categoria: 'Recomendados',
+		restricciones: ['vegetariano', 'celiaco'],
                 pack: 2,
               },
               {
@@ -259,6 +266,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.9,
                 video: video1,               
                 categoria: 'Recomendados',
+		restricciones: ['celiaco'],
                 pack: 3,
               },
               {
@@ -274,6 +282,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.0,
                 video: video1,               
                 categoria: 'Recomendados',
+		restricciones: [],
                 pack: 2,
               },
               {
@@ -289,6 +298,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.7,
                 video: video1,
                 categoria: 'Recomendados',
+		restricciones: ['celiaco'],
                 pack: 3,
               },
               {
@@ -304,6 +314,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.2,
                 video: video1,
                 categoria: 'Recomendados',
+		restricciones: ['celiaco'],
                 pack: 2,
               },
               {
@@ -319,6 +330,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.5,
                 video: video1,
                 categoria: 'Recomendados',
+		restricciones: ['celiaco'],
                 pack: 3,
               },
               {
@@ -334,6 +346,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.5,
                 video: video1,
                 categoria: 'Los más comprados',
+		restricciones: [],
                 pack: 2,
               },
               {
@@ -349,6 +362,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.3,
                 video: video1,
                 categoria: 'Los más comprados',
+		restricciones: ['vegetariano', 'celiaco'],
                 pack: 1,
               },
               {
@@ -364,6 +378,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.3,
                 video: video1,
                 categoria: 'Los más comprados',
+		restricciones: ['vegetariano'],
                 pack: 2,
               },
               {
@@ -379,6 +394,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.2,
                 video: video1,
                 categoria: 'Los más comprados',
+		restricciones: [],
                 pack: 2,
               },
               {
@@ -394,6 +410,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.8,
                 video: video1,
                 categoria: 'Los más comprados',
+		restricciones: [],
                 pack: 2,
               },
               {
@@ -409,6 +426,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.4,
                 video: video1,
                 categoria: 'Los más comprados',
+		restricciones: [],
                 pack: 2,
               },
               {
@@ -424,6 +442,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.5,
                 video: video1,
                 categoria: 'Los más comprados',
+		restricciones: ['vegetariano', 'celiaco'],
                 pack: 1,
               },
               {
@@ -439,6 +458,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.3,
                 video: video1,
                 categoria: 'Los más comprados',
+		restricciones: ['vegetariano', 'celiaco'],
                 pack: 1,
               },
               {
@@ -454,6 +474,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.4,
                 video: video1,
                 categoria: 'Los más comprados',
+		restricciones: ['vegetariano'],
                 pack: 2,
               },
               {
@@ -469,6 +490,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.2,
                 video: video1,
                 categoria: 'Los más comprados',
+		restricciones: [],
                 pack: 2,
               },
               {
@@ -484,6 +506,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 2.5,
                 video: video1,
                 categoria: 'Los más comprados',
+		restricciones: ['vegetariano'],
                 pack: 2,
               },
               {
@@ -499,6 +522,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.8,
                 video: video1,
                 categoria: 'Los más comprados',
+		restricciones: ['celiaco'],
                 pack: 2,
               },
               {
@@ -514,6 +538,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.1,
                 video: video1,
                 categoria: 'Veggie',
+		restricciones: ['vegetariano', 'celiaco'],
                 pack: 2,
               },
               {
@@ -529,6 +554,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.8,
                 video: video1,
                 categoria: 'Veggie',
+		restricciones: ['vegetariano'],
                 pack: 0,
               },
               {
@@ -544,6 +570,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.4,
                 video: video1,
                 categoria: 'Veggie',
+		restricciones: ['vegetariano', 'celiaco'],
                 pack: 2,
               },
               {
@@ -559,6 +586,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.6,
                 video: video1,
                 categoria: 'Veggie',
+		restricciones: ['vegetariano'],
                 pack: 0,
               },
               {
@@ -574,6 +602,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.2,
                 video: video1,
                 categoria: 'Veggie',
+		restricciones: ['vegetariano'],
                 pack: 0,
               },
               {
@@ -589,6 +618,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.3,
                 video: video1,
                 categoria: 'Veggie',
+		restricciones: ['vegetariano'],
                 pack: 0,
               },
               {
@@ -604,6 +634,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.7,
                 video: video1,
                 categoria: 'Veggie',
+		restricciones: ['vegetariano'],
                 pack: 0,
               },
               {
@@ -619,6 +650,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.2,
                 video: video1,
                 categoria: 'Veggie',
+		restricciones: ['vegetariano', 'celiaco'],
                 pack: 0,
               },
               {
@@ -634,6 +666,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.5,
                 video: video1,
                 categoria: 'Veggie',
+		restricciones: ['vegetariano', 'celiaco'],
                 pack: 0,
               },
               {
@@ -649,6 +682,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.9,
                 video: video1,
                 categoria: 'Veggie',
+		restricciones: ['vegetariano', 'celiaco'],
                 pack: 0,
               },
               {
@@ -664,6 +698,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.3,
                 video: video1,
                 categoria: 'Veggie',
+		restricciones: ['vegetariano', 'celiaco'],
                 pack: 0,
               },
               {
@@ -679,6 +714,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.6,
                 video: video1,
                 categoria: 'Veggie',
+		restricciones: ['vegetariano'],
                 pack: 0,
               },
               {
@@ -694,6 +730,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.8,
                 video: video1,
                 categoria: 'Tentaciones',
+		restricciones: ['vegetariano', 'celiaco'],
                 pack: 1,
               },
               {
@@ -709,6 +746,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.0,
                 video: video1,
                 categoria: 'Tentaciones',
+		restricciones: ['vegetariano'],
                 pack: 3,
               },
               {
@@ -724,6 +762,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.7,
                 video: video1,
                 categoria: 'Tentaciones',
+		restricciones: ['vegetariano', 'celiaco'],
                 pack: 1,
               },
               {
@@ -739,6 +778,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.5,
                 video: video1,
                 categoria: 'Tentaciones',
+		restricciones: ['vegetariano', 'celiaco'],
                 pack: 3,
               },
               {
@@ -754,6 +794,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.2,
                 video: video1,
                 categoria: 'Tentaciones',
+		restricciones: ['vegetariano', 'celiaco'],
                 pack: 1,
               },
               {
@@ -769,6 +810,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.7,
                 video: video1,
                 categoria: 'Tentaciones',
+		restricciones: ['vegetariano'],
                 pack: 2,
               },
               {
@@ -784,6 +826,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.5,
                 video: video1,
                 categoria: 'Tentaciones',
+		restricciones: ['vegetariano'],
                 pack: 3,
               },
               {
@@ -799,12 +842,13 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.4,
                 video: video1,
                 categoria: 'Tentaciones',
+		restricciones: ['vegetariano', 'celiaco'],
                 pack: 3,
               },
               {
                 id: 45,
                 img: image45,
-                title: 'Tarta de manzana',
+                title: 'Apple Crumble',
                 author: 'Maru Botana',
                 descripcion: 'Esta versión es ligeramente especiada y absolutamente deliciosa ahogada en natillas. Para 6 porciones, dificultad: "no tan complicado".',
                 ingredientes: '140 g de manteca sin sal, (fría).275 g de harina común.1 limón.1 yema de huevo grande de gallinas camperas.3 manzanas bramley.6 manzanas braeburn.5 fechas medjool.4 cucharadas de azúcar suave mascabado ligero.¼ cucharadita de canela molida.1 pizca de clavo de olor molido.1 huevo grande de gallinas camperas.1 cucharadita de leche.1 cucharada de azúcar demerara',
@@ -814,6 +858,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.2,
                 video: video1,
                 categoria: 'Tentaciones',
+		restricciones: ['vegetariano'],
                 pack: 3,
               },
               {
@@ -829,6 +874,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.3,
                 video: video1,
                 categoria: 'Tentaciones',
+		restricciones: ['vegetariano'],
                 pack: 1,
               },
               {
@@ -844,6 +890,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.4,
                 video: video1,
                 categoria: 'Tentaciones',
+		restricciones: ['vegetariano', 'celiaco'],
                 pack: 1,
               },
               {
@@ -859,6 +906,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.5,
                 video: video1,
                 categoria: 'Tentaciones',
+		restricciones: ['vegetariano'],
                 pack: 3,
               },
               {
@@ -874,6 +922,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.5,
                 video: video1,
                 categoria: 'Recomendados',
+		restricciones: ['vegetariano'],
                 pack: 2,
               },
               {
@@ -888,6 +937,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.4,
                 video: video1,
                 categoria: 'Recomendados',
+		restricciones: ['celiaco'],
                 pack: 1,
               },
               {
@@ -902,6 +952,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.2,
                 video: video1,
                 categoria: 'LosMasComprados',
+		restricciones: ['vegetariano', 'celiaco'],
                 pack: 3,
               }
             ],

@@ -400,28 +400,27 @@ class Proxy {
           });
       }
 
-      getSwitch(tipo) {
+      getSwitchVegetariano(tipo) {
         return new Promise((resolve, reject) => { 
-          let elem;
-          if(tipo === 'vegetariano'){
-            elem = appdata.vegetariano;
-          } else {
-            elem = appdata.celiano;
-          }
-          resolve(elem);
+          console.log("El valor del booleano es: "+appdata.vegetariano);
+          resolve(appdata.vegetariano);
         });
       }
 
-      setSwitch(tipo, booleano) {
-        return new Promise((resolve,reject)=>{
-          if(tipo === 'vegetariano'){
+      getSwitchCeliaco(tipo) {
+        return new Promise((resolve, reject) => {
+          console.log("El valor del booleano es: "+appdata.celiaco);
+          resolve(appdata.celiaco);
+        });
+      }
+
+      setSwitchVegetariano(booleano) {
             appdata.vegetariano = booleano;
-          } else {
+      }
+
+      setSwitchCeliaco(booleano) {
             appdata.celiaco = booleano;
-          }
-        resolve()
-      }) 
-    }
+      }
 
   }
   

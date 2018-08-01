@@ -10,9 +10,21 @@ class Categorias extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      platos: []
+      platos: [],
+	    vegetariano: false,
+	    celiaco: false,
     }
   }
+
+  componentWillMount() {
+      proxy.getSwitchVegetariano().then((valor)=>{
+        this.setState({vegetariano: valor});
+    });
+      proxy.getSwitchCeliaco().then((valor)=>{
+        this.setState({celiaco: valor});
+    });
+  }
+
   componentDidMount() {
       proxy.getPlatos().then((value)=>{this.setState({platos: value})});
   }
@@ -33,10 +45,10 @@ class Categorias extends Component {
               </Card>
   
     }
-    let recoms=<SingleLineGridList style={{zIndex:99}} scrollData={this.state.platos.filter(elemento => elemento.categoria == "Recomendados")} />
-    let masComps=<SingleLineGridList scrollData={this.state.platos.filter(elemento => elemento.categoria == "Los más comprados")} />
-    let veggie=<SingleLineGridList scrollData={this.state.platos.filter(elemento => elemento.categoria == "Veggie")} />
-    let tents=<SingleLineGridList scrollData={this.state.platos.filter(elemento => elemento.categoria == "Tentaciones")} />
+    let recoms=<SingleLineGridList style={{zIndex:99}} scrollData={this.state.platos.filter(elemento => elemento.categoria == "Recomendados").filter(elemento=> (!this.state.vegetariano ||  elemento.restricciones.includes('vegetariano'))).filter(elemento=> (!this.state.celiaco ||  elemento.restricciones.includes('celiaco')))} />
+    let masComps=<SingleLineGridList scrollData={this.state.platos.filter(elemento => elemento.categoria == "Los más comprados").filter(elemento=> (!this.state.vegetariano ||  elemento.restricciones.includes('vegetariano'))).filter(elemento=> (!this.state.celiaco ||  elemento.restricciones.includes('celiaco')))} />
+    let veggie=<SingleLineGridList scrollData={this.state.platos.filter(elemento => elemento.categoria == "Veggie").filter(elemento=> (!this.state.vegetariano ||  elemento.restricciones.includes('vegetariano'))).filter(elemento=> (!this.state.celiaco ||  elemento.restricciones.includes('celiaco')))} />
+    let tents=<SingleLineGridList scrollData={this.state.platos.filter(elemento => elemento.categoria == "Tentaciones").filter(elemento=> (!this.state.vegetariano ||  elemento.restricciones.includes('vegetariano'))).filter(elemento=> (!this.state.celiaco ||  elemento.restricciones.includes('celiaco')))} />
     return (
         <div>
 
