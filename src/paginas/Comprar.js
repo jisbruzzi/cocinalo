@@ -10,6 +10,8 @@ import CompradosCard from './CompradosCard'
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
+import cloneDeep from 'lodash/cloneDeep';
+
 //table
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -57,6 +59,7 @@ class Comprar extends Component {
     super(props);
     this.state = {
       itemsCarrito: this.props.location.state.itemsCarrito,
+      packsComprados: this.props.location.state.packsComprados,
       esCarrito: this.props.location.state.esCarrito,
       usuario: {}
     }
@@ -72,14 +75,70 @@ class Comprar extends Component {
   }
 
   comprarCarrito(itemsCarrito) {
-    proxy.comprarCarrito(itemsCarrito, this.state.esCarrito);
-    this.borrarCarritoDeVista();
-    this.props.history.push('/home');
+    proxy.comprarCarrito(itemsCarrito, this.state.packsComprados,this.state.esCarrito).then(()=>{
+      this.borrarCarritoDeVista();
+      this.props.history.push('/home');
+    })
+  }
+
+  descuentoPackComprado(idPack){
+    var descuento = 0;
+    var packsComprados = cloneDeep(this.props.location.state.packsComprados);
+    if (!packsComprados){
+      return 0;
+    }
+    var i;
+    for (i = 0; i < this.props.location.state.itemsCarrito.length; i++){
+        var item = this.props.location.state.itemsCarrito[i];
+        if (!item.datosPlato){
+          return 0;
+        }
+        let packComprado = packsComprados.find(e => e.id == item.datosPlato.pack);
+        let packAComprarar = packsComprados.find(e => e.id == idPack);
+        if(!packAComprarar || !packComprado || item.datosPlato.pack != idPack ){
+          continue;
+        } else {
+            if(packComprado.cantidad >= item.cantidad){
+              descuento += item.cantidad * item.datosPlato.precio
+            } else {
+                 descuento += packComprado.cantidad * item.datosPlato.precio;
+              }
+        } 
+    }
+    return descuento;
   }
 
   costoComprados() {
-    return this.props.location.state.itemsCarrito.reduce(
-      (total, elem) => total + elem.cantidad * elem.datosPlato.precio, 0)
+    var costo = 0;
+    var packsComprados = cloneDeep(this.props.location.state.packsComprados);
+    if (!packsComprados){
+      return this.props.location.state.itemsCarrito.reduce(
+      (total, elem) => total + elem.cantidad * elem.datosPlato.precio, 0);
+    }
+    var i;
+    for (i = 0; i < this.props.location.state.itemsCarrito.length; i++){
+        var item = this.props.location.state.itemsCarrito[i];
+        if (!item.datosPlato){
+          return 0;
+        }
+        let packComprado = packsComprados.find(e => e.id == item.datosPlato.pack);
+        if(!packComprado){
+          costo += item.cantidad * item.datosPlato.precio;
+        } else {
+            if(packComprado.cantidad >= item.cantidad){
+              packComprado.cantidad -= item.cantidad;
+              if(packComprado.cantidad === 0) {
+                var index = packsComprados.indexOf(packComprado);
+		            packsComprados.splice(index, 1);
+              }
+            } else {
+                 costo += (item.cantidad - packComprado.cantidad) * item.datosPlato.precio;
+                var index = packsComprados.indexOf(packComprado);
+		            packsComprados.splice(index, 1);
+              }
+        } 
+    }
+    return costo;
   }
 
   handleChangeDireccion = () => event => {
@@ -138,6 +197,17 @@ class Comprar extends Component {
                       {item.datosPlato.title}
                     </TableCell>
                     <TableCell padding='none' numeric>{item.datosPlato.precio * item.cantidad}</TableCell>
+                  </TableRow>
+                );
+              })}
+              {this.state.packsComprados.map(item => {
+                return (
+                  <TableRow key={item.id}>
+                    <TableCell padding='none' numeric>1</TableCell>
+                    <TableCell component="th" scope="row">
+                      {item.nombre}
+                    </TableCell>
+                    <TableCell padding='none' numeric>{"-"+this.descuentoPackComprado(item.id)}</TableCell>
                   </TableRow>
                 );
               })}

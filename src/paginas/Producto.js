@@ -81,6 +81,7 @@ class Producto extends Component {
       platos: [],
       producto: {},
       ingredientes: [],
+      packsComprados:[],
       currency: 1
     }
   }
@@ -91,13 +92,15 @@ class Producto extends Component {
         this.setState({producto: producto});
         this.setState({ingredientes: producto.ingredientes.split(".")});
     });
+      proxy.getPacksComprados().then((value)=>{this.setState({packsComprados: value})});
   }
 
-  comprarProducto(cant, idProducto){
+  comprarProducto(cant, idProducto, packsComprados){
         this.props.history.push({
           pathname: '/comprar',
           state: { 
             itemsCarrito: [{idPlato: idProducto, cantidad: cant, datosPlato: this.state.producto }],
+            packsComprados: packsComprados,
             esCarrito: false }
         });
   }
@@ -182,7 +185,7 @@ class Producto extends Component {
               </div>
 
             
-            <Button style={{'margin': '5px 0px'}} fullWidth variant="contained" color="primary" onClick={()=>{this.comprarProducto(this.state.currency, this.state.producto.id)}}>
+            <Button style={{'margin': '5px 0px'}} fullWidth variant="contained" color="primary" onClick={()=>{this.comprarProducto(this.state.currency, this.state.producto.id, this.state.packsComprados)}}>
               Comprar
             </Button>
             

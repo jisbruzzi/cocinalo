@@ -67,7 +67,7 @@ class Packs extends React.Component {
                   paddingBottom:"16px",
                   paddingTop:"8px",
                 }}>
-                <SingleLineGridList style={{zIndex:99}} scrollData={this.state.platos.filter(elemento => elemento.pack === pack.nombre)} />
+                <SingleLineGridList style={{zIndex:99}} scrollData={this.state.platos.filter(elemento => elemento.pack === pack.id)} />
                 </CardContent>
                 { (!packComprado) && <Button style={{'margin': '5px 0px'}} fullWidth variant="contained" color="primary"                    
                     onClick={()=>{this.handleSubmit(0)}}>

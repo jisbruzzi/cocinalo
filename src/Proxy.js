@@ -88,25 +88,20 @@ class Proxy {
       }
     }
 
-    agregarPackAPacksComprados(id) {
-		let packComprado = this.data.packsComprados.find(e => e.id == id);
-      if(!packComprado){
-        this.data.packsComprados.push({
-                id: id,
-                cantidad: 30
-        });
-      }
-    }
-
     quitarPackDePacksComprados(id) {
-		  var packComprado = this.data.packsComprados.find(e => e.id == id);
-      var index = this.data.packsComprados.indexOf(packComprado);
-      if (packComprado) {
-		    this.data.packsComprados.splice(index, 1)
-      }
+      return new Promise((resolve,reject)=>{
+		    var packComprado = this.data.packsComprados.find(e => e.id == id);
+        var index = this.data.packsComprados.indexOf(packComprado);
+        if (packComprado) {
+		      this.data.packsComprados.splice(index, 1)
+        }
+        resolve()
+      })
+
     }
 
-    comprarCarrito(listaItemsCarrito, esCarrito) {
+  comprarCarrito(listaItemsCarrito, packsComprados, esCarrito) {
+    return new Promise((resolve,reject)=>{
       listaItemsCarrito.forEach( p =>
         this.agregarProductoAComprados(p.idPlato, p.cantidad)
       );
@@ -114,12 +109,48 @@ class Proxy {
         this.data.carrito = [];
         this.notifCarrito(this.data.carrito);
       }
-    }
+      if (packsComprados){
+        var i;
+        for (i = 0; i < listaItemsCarrito.length; i++){
+          var item = listaItemsCarrito[i];
+          if (item.datosPlato){
+            let packComprado = packsComprados.find(e => e.id == item.datosPlato.pack);
+            if(packComprado){
+              if(packComprado.cantidad > item.cantidad) {
+                packComprado.cantidad -= item.cantidad;
+              } else {       
+                  var index = packsComprados.indexOf(packComprado);
+		              packsComprados.splice(index, 1);
+              }
+            }
+          } 
+        }
+      }
+      resolve()
+    })
+  }
 
-    comprarPack(listaItemsCarrito) {
-      listaItemsCarrito.forEach( p =>
-        this.agregarPackAPacksComprados(p.idPlato, p.cantidad)
-      );
+
+
+
+
+
+
+
+
+
+    comprarPack(pack) {
+      return new Promise((resolve,reject)=>{
+        let packComprado = this.data.packsComprados.find(e => e.id == pack.id);
+        if(!packComprado){
+          this.data.packsComprados.push({
+            id: pack.id,
+            nombre: pack.nombre,
+            cantidad: 30
+          });
+        }
+        resolve()
+      })
     }
 
     getCarrito(){

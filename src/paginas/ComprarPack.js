@@ -71,9 +71,13 @@ class ComprarPack extends Component {
   }
 
   comprarPack(itemsCarrito) {
-    proxy.comprarPack(itemsCarrito);
-    this.borrarCarritoDeVista();
-    this.props.history.push('/packs');
+    let item = itemsCarrito[0];
+    if (item) {
+	    proxy.comprarPack(item.datosPack).then(()=>{
+        this.borrarCarritoDeVista();
+        this.props.history.push('/packs');
+        })
+    }
   }
 
   costoComprados() {

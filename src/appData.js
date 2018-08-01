@@ -119,18 +119,22 @@ import imagePerfil from './img/perfil.jpg';
 	    /*
             {
               id: 0,
+              nombre,
               cantidad: 30,
             },
             {
               id: 1,
+              nombre,
               cantidad: 30,
             },
             {
               id: 2,
+              nombre,
               cantidad: 30,
             },
             {
               id: 3,
+              nombre,
               cantidad: 30,
             }
 	    */
@@ -149,7 +153,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.3,
                 video: video1,
                 categoria: 'Recomendados',
-                pack: '-',
+                pack: 2,
               },
               {
                 id: 2,
@@ -164,7 +168,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.5,
                 video: video1,               
                 categoria: 'Recomendados',
-                pack: 'Pack Clasico',
+                pack: 2,
               },
               {
                 id: 3,
@@ -179,7 +183,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.0,
                 video: video1,                
                 categoria: 'Recomendados',
-                pack: 'Pack Clasico',
+                pack: 2,
               },
               {
                 id: 4,
@@ -194,7 +198,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.6,
                 video: video1,               
                 categoria: 'Recomendados',
-                pack: '-',
+                pack: 2,
               },
               {
                 id: 5,
@@ -209,7 +213,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.7,
                 video: video1,                
                 categoria: 'Recomendados',
-                pack: 'Pack Clasico',
+                pack: 2,
               },
               {
                 id: 6,
@@ -224,7 +228,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.3,
                 video: video1,                
                 categoria: 'Recomendados',
-                pack: 'Pack Celiaco',
+                pack: 1,
               },
               {
                 id: 7,
@@ -239,7 +243,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.2,
                 video: video1,                
                 categoria: 'Recomendados',
-                pack: 'Pack Clasico',
+                pack: 2,
               },
               {
                 id: 8,
@@ -254,7 +258,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.9,
                 video: video1,               
                 categoria: 'Recomendados',
-                pack: 'Pack Gourmet',
+                pack: 3,
               },
               {
                 id: 9,
@@ -269,7 +273,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.0,
                 video: video1,               
                 categoria: 'Recomendados',
-                pack: '-',
+                pack: 2,
               },
               {
                 id: 10,
@@ -284,7 +288,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.7,
                 video: video1,
                 categoria: 'Recomendados',
-                pack: 'Pack Gourmet',
+                pack: 3,
               },
               {
                 id: 11,
@@ -299,7 +303,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.2,
                 video: video1,
                 categoria: 'Recomendados',
-                pack: 'Pack Clasico',
+                pack: 2,
               },
               {
                 id: 12,
@@ -314,7 +318,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.5,
                 video: video1,
                 categoria: 'Recomendados',
-                pack: 'Pack Gourmet',
+                pack: 3,
               },
               {
                 id: 13,
@@ -329,7 +333,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.5,
                 video: video1,
                 categoria: 'Los más comprados',
-                pack: '-',
+                pack: 2,
               },
               {
                 id: 14,
@@ -344,7 +348,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.3,
                 video: video1,
                 categoria: 'Los más comprados',
-                pack: 'Pack Celiaco',
+                pack: 1,
               },
               {
                 id: 15,
@@ -359,7 +363,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.3,
                 video: video1,
                 categoria: 'Los más comprados',
-                pack: 'Pack Clasico',
+                pack: 2,
               },
               {
                 id: 16,
@@ -374,7 +378,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.2,
                 video: video1,
                 categoria: 'Los más comprados',
-                pack: '-',
+                pack: 2,
               },
               {
                 id: 17,
@@ -389,7 +393,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.8,
                 video: video1,
                 categoria: 'Los más comprados',
-                pack: 'Pack Clasico',
+                pack: 2,
               },
               {
                 id: 18,
@@ -404,7 +408,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.4,
                 video: video2,
                 categoria: 'Los más comprados',
-                pack: 'Pack Clasico',
+                pack: 2,
               },
               {
                 id: 19,
@@ -419,7 +423,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.5,
                 video: video1,
                 categoria: 'Los más comprados',
-                pack: 'Pack Celiaco',
+                pack: 1,
               },
               {
                 id: 20,
@@ -434,7 +438,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.3,
                 video: video1,
                 categoria: 'Los más comprados',
-                pack: 'Pack Celiaco',
+                pack: 1,
               },
               {
                 id: 21,
@@ -449,7 +453,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.4,
                 video: video1,
                 categoria: 'Los más comprados',
-                pack: 'Pack Clasico',
+                pack: 2,
               },
               {
                 id: 22,
@@ -464,7 +468,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.2,
                 video: video1,
                 categoria: 'Los más comprados',
-                pack: '-',
+                pack: 2,
               },
               {
                 id: 23,
@@ -479,7 +483,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 2.5,
                 video: video1,
                 categoria: 'Los más comprados',
-                pack: '-',
+                pack: 2,
               },
               {
                 id: 24,
@@ -494,7 +498,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.8,
                 video: video1,
                 categoria: 'Los más comprados',
-                pack: 'Pack Clasico',
+                pack: 2,
               },
               {
                 id: 25,
@@ -509,7 +513,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.1,
                 video: video1,
                 categoria: 'Veggie',
-                pack: '-',
+                pack: 2,
               },
               {
                 id: 26,
@@ -524,7 +528,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.8,
                 video: video1,
                 categoria: 'Veggie',
-                pack: 'Pack Vegetariano',
+                pack: 0,
               },
               {
                 id: 27,
@@ -539,7 +543,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.4,
                 video: video1,
                 categoria: 'Veggie',
-                pack: '-',
+                pack: 2,
               },
               {
                 id: 28,
@@ -554,7 +558,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.6,
                 video: video1,
                 categoria: 'Veggie',
-                pack: 'Pack Vegetariano',
+                pack: 0,
               },
               {
                 id: 29,
@@ -569,7 +573,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.2,
                 video: video1,
                 categoria: 'Veggie',
-                pack: 'Pack Vegetariano',
+                pack: 0,
               },
               {
                 id: 30,
@@ -584,7 +588,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.3,
                 video: video1,
                 categoria: 'Veggie',
-                pack: 'Pack Vegetariano',
+                pack: 0,
               },
               {
                 id: 31,
@@ -599,7 +603,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.7,
                 video: video1,
                 categoria: 'Veggie',
-                pack: 'Pack Vegetariano',
+                pack: 0,
               },
               {
                 id: 32,
@@ -614,7 +618,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.2,
                 video: video1,
                 categoria: 'Veggie',
-                pack: 'Pack Vegetariano',
+                pack: 0,
               },
               {
                 id: 33,
@@ -629,7 +633,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.5,
                 video: video1,
                 categoria: 'Veggie',
-                pack: 'Pack Vegetariano',
+                pack: 0,
               },
               {
                 id: 34,
@@ -644,7 +648,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.9,
                 video: video1,
                 categoria: 'Veggie',
-                pack: 'Pack Vegetariano',
+                pack: 0,
               },
               {
                 id: 35,
@@ -659,7 +663,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.3,
                 video: video1,
                 categoria: 'Veggie',
-                pack: 'Pack Vegetariano',
+                pack: 0,
               },
               {
                 id: 36,
@@ -674,7 +678,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.6,
                 video: video1,
                 categoria: 'Veggie',
-                pack: 'Pack Vegetariano',
+                pack: 0,
               },
               {
                 id: 37,
@@ -689,7 +693,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.8,
                 video: video1,
                 categoria: 'Tentaciones',
-                pack: 'Pack Celiaco',
+                pack: 1,
               },
               {
                 id: 38,
@@ -704,7 +708,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.0,
                 video: video1,
                 categoria: 'Tentaciones',
-                pack: 'Pack Gourmet',
+                pack: 3,
               },
               {
                 id: 39,
@@ -719,7 +723,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.7,
                 video: video1,
                 categoria: 'Tentaciones',
-                pack: 'Pack Celiaco',
+                pack: 1,
               },
               {
                 id: 40,
@@ -734,7 +738,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.5,
                 video: video1,
                 categoria: 'Tentaciones',
-                pack: 'Pack Gourmet',
+                pack: 3,
               },
               {
                 id: 41,
@@ -749,7 +753,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.2,
                 video: video1,
                 categoria: 'Tentaciones',
-                pack: 'Pack Celiaco',
+                pack: 1,
               },
               {
                 id: 42,
@@ -764,7 +768,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.7,
                 video: video1,
                 categoria: 'Tentaciones',
-                pack: '-',
+                pack: 2,
               },
               {
                 id: 43,
@@ -779,7 +783,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.5,
                 video: video1,
                 categoria: 'Tentaciones',
-                pack: 'Pack Gourmet',
+                pack: 3,
               },
               {
                 id: 44,
@@ -794,7 +798,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.4,
                 video: video1,
                 categoria: 'Tentaciones',
-                pack: 'Pack Gourmet',
+                pack: 3,
               },
               {
                 id: 45,
@@ -809,7 +813,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.2,
                 video: video1,
                 categoria: 'Tentaciones',
-                pack: 'Pack Gourmet',
+                pack: 3,
               },
               {
                 id: 46,
@@ -824,7 +828,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.3,
                 video: video1,
                 categoria: 'Tentaciones',
-                pack: 'Pack Celiaco',
+                pack: 1,
               },
               {
                 id: 47,
@@ -839,7 +843,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.4,
                 video: video1,
                 categoria: 'Tentaciones',
-                pack: 'Pack Celiaco',
+                pack: 1,
               },
               {
                 id: 48,
@@ -854,7 +858,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.5,
                 video: video1,
                 categoria: 'Tentaciones',
-                pack: 'Pack Gourmet',
+                pack: 3,
               },
               {
                 id: 49,
@@ -869,7 +873,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.5,
                 video: video1,
                 categoria: 'Recomendados',
-                pack: '-',
+                pack: 2,
               },
               {
                 id: 50,
@@ -883,7 +887,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 3.4,
                 video: video1,
                 categoria: 'Recomendados',
-                pack: 'Pack Celiaco',
+                pack: 1,
               },
               {
                 id: 51,
@@ -897,7 +901,7 @@ import imagePerfil from './img/perfil.jpg';
                 estrellas: 4.2,
                 video: video1,
                 categoria: 'LosMasComprados',
-                pack: 'Pack Gourmet',
+                pack: 3,
               }
             ],
   };

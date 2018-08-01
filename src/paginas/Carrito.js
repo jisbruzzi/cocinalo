@@ -9,12 +9,13 @@ class Carrito extends Component {
     super(props);
     this.state = {
       itemsCarrito: [],
+      packsComprados: [],
     }
     this.delete=this.delete.bind(this);
   }
   componentDidMount() {
-      proxy.getCarrito().then((value)=>{this.setState({itemsCarrito: value}); 
-    });
+      proxy.getCarrito().then((value)=>{this.setState({itemsCarrito: value})});
+      proxy.getPacksComprados().then((value)=>{this.setState({packsComprados: value})});
   }
 
   delete(id){
@@ -32,11 +33,12 @@ class Carrito extends Component {
     });
   }
 
-  comprarProductos(itemsCarrito){
+  comprarProductos(itemsCarrito, packsComprados){
     this.props.history.push({
       pathname: '/comprar',
       state: {
         itemsCarrito: itemsCarrito,
+        packsComprados: packsComprados,
         esCarrito: true }
     });
   }
@@ -58,7 +60,7 @@ class Carrito extends Component {
             </div>
           )}
             <br />
-            <Button variant="contained" color="primary" onClick={()=>{this.comprarProductos(this.state.itemsCarrito)}}>
+            <Button variant="contained" color="primary" onClick={()=>{this.comprarProductos(this.state.itemsCarrito, this.state.packsComprados)}}>
               Comprar carrito
             </Button>
             <br />
