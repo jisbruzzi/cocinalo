@@ -26,10 +26,8 @@ class SimpleBottomNavigation extends React.Component {
   };
 
   handleChange = (event, value) => {
-    if (value != "/packs" && value != "/perfil")  {
       this.setState({ value });
       this.props.history.push(value);
-    }
   };
 
   render() {

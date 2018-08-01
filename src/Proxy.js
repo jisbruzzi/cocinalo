@@ -48,6 +48,24 @@ class Proxy {
       });
     }
 
+    getPacks() {
+      return new Promise((resolve, reject) => {
+        resolve(this.data.packs);
+      });
+    }
+
+    getPacksComprados() {
+      return new Promise((resolve, reject) => {
+        resolve(this.data.packsComprados);
+      });
+    }
+
+    /*generarSiguienteIdEnPacksComprados() {
+      let maxId = this.data.packs.reduce(
+                (max, pack) => Math.max(max, pack.idPackComprado), 0);
+      return maxId + 1;
+    }*/
+
     generarSiguienteIdEnCompras() {
       let maxId = this.data.comprados.reduce(
                 (max, compra) => Math.max(max, compra.idCompra), 0);
@@ -70,6 +88,24 @@ class Proxy {
       }
     }
 
+    agregarPackAPacksComprados(id) {
+		let packComprado = this.data.packsComprados.find(e => e.id == id);
+      if(!packComprado){
+        this.data.packsComprados.push({
+                id: id,
+                cantidad: 30
+        });
+      }
+    }
+
+    quitarPackDePacksComprados(id) {
+		  var packComprado = this.data.packsComprados.find(e => e.id == id);
+      var index = this.data.packsComprados.indexOf(packComprado);
+      if (packComprado) {
+		    this.data.packsComprados.splice(index, 1)
+      }
+    }
+
     comprarCarrito(listaItemsCarrito, esCarrito) {
       listaItemsCarrito.forEach( p =>
         this.agregarProductoAComprados(p.idPlato, p.cantidad)
@@ -78,6 +114,12 @@ class Proxy {
         this.data.carrito = [];
         this.notifCarrito(this.data.carrito);
       }
+    }
+
+    comprarPack(listaItemsCarrito) {
+      listaItemsCarrito.forEach( p =>
+        this.agregarPackAPacksComprados(p.idPlato, p.cantidad)
+      );
     }
 
     getCarrito(){
@@ -115,7 +157,8 @@ class Proxy {
         let matchAutor=appdata.platos.filter((plato)=>parecidas(plato.author,consulta))
         let matchDescripcion=appdata.platos.filter((plato)=>parecidas(plato.descripcion,consulta))
         let matchCategoria=appdata.platos.filter((plato)=>parecidas(plato.categoria,consulta))
-        let ret=[].concat(matchTitulo,matchAutor,matchDescripcion,matchCategoria)
+        let matchPack=appdata.platos.filter((plato)=>parecidas(plato.pack,consulta))
+        let ret=[].concat(matchTitulo,matchAutor,matchDescripcion,matchCategoria,matchPack)
         return ret
       }
 
@@ -187,8 +230,9 @@ class Proxy {
         let sugAutor=sugerenciasAtributoMultiples("author")
         let sugDescripcion=sugerenciasAtributoMultiples("descripcion")
         let sugCategoria=sugerenciasAtributoMultiples("categoria")
+        let sugPack=sugerenciasAtributoMultiples("pack")
 
-        let ret= [].concat(sugTitulo,sugAutor,sugDescripcion,sugCategoria)
+        let ret= [].concat(sugTitulo,sugAutor,sugDescripcion,sugCategoria,sugPack)
 
         ret=ret.filter((item,pos,self)=>{
           return self.indexOf(item)==pos
@@ -249,6 +293,8 @@ class Proxy {
       })
       
     }
+
+
 
     getPlatosComprados() {
       return new Promise((resolve, reject) => {

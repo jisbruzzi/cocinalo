@@ -51,16 +51,18 @@ import image50 from './img/Recomendados/14.jpg';
 import image51 from './img/LosMasComprados/13.jpg';
 import video1 from './img/Videos/nardalepes.jpg';
 import video2 from './img/Videos/empanadas.jpg';
-
+import imagePerfil from './img/perfil.jpg';
   const appData = {
     // Por ahora hay un solo usuario super hardcodeado
     // con sus datos, favoritos, platos comprados y packs comprados.
     usuario: {
               username: 'Pepenacho',
+              mail: 'pepenacho@gmail.com',
               nombre: 'José',
               apellido: 'Sbruzzi',
-              direccion: 'Paseo Colón 850',
+              direccion: 'Paseo Colon 850, CABA, Argentina',
               tarjetaNumero: 'XXXX-XXXX-XXXX-8745',
+		          img: imagePerfil,
     },
     favoritos: [9,16,18,19,49,29,34],
     comprados: [
@@ -81,7 +83,6 @@ import video2 from './img/Videos/empanadas.jpg';
                  }*/
                 ],
                  
-    packsComprados: [2],
     carrito: [
               /*{
                 idPlato: 5,
@@ -93,18 +94,46 @@ import video2 from './img/Videos/empanadas.jpg';
               }*/
             ],
     packs: [
+                        {
+                        id: 0,
+                        nombre: 'Pack Vegetariano',
+	                precio:1400
+                        },
+                        {
+                        id: 1,
+                        nombre: 'Pack Celiaco',
+	                precio:1400
+                        },
+                        {
+                        id: 2,
+                        nombre: 'Pack Clasico',
+	                precio:1200
+                        },
+                        {
+                        id: 3,
+                        nombre: 'Pack Gourmet',
+	                precio:1500
+                        }
+                    ],
+    packsComprados: [
+	    /*
+            {
+              id: 0,
+              cantidad: 30,
+            },
             {
               id: 1,
-              platos: [2,3],
+              cantidad: 30,
             },
             {
               id: 2,
-              platos: [1,4],
+              cantidad: 30,
             },
             {
               id: 3,
-              platos: [5,6,3],
+              cantidad: 30,
             }
+	    */
            ],
     platos: [
               {
@@ -120,6 +149,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 4.3,
                 video: video1,
                 categoria: 'Recomendados',
+                pack: '-',
               },
               {
                 id: 2,
@@ -134,6 +164,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.5,
                 video: video1,               
                 categoria: 'Recomendados',
+                pack: 'Pack Clasico',
               },
               {
                 id: 3,
@@ -148,6 +179,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 4.0,
                 video: video1,                
                 categoria: 'Recomendados',
+                pack: 'Pack Clasico',
               },
               {
                 id: 4,
@@ -162,6 +194,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.6,
                 video: video1,               
                 categoria: 'Recomendados',
+                pack: '-',
               },
               {
                 id: 5,
@@ -176,6 +209,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.7,
                 video: video1,                
                 categoria: 'Recomendados',
+                pack: 'Pack Clasico',
               },
               {
                 id: 6,
@@ -190,6 +224,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.3,
                 video: video1,                
                 categoria: 'Recomendados',
+                pack: 'Pack Celiaco',
               },
               {
                 id: 7,
@@ -204,6 +239,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 4.2,
                 video: video1,                
                 categoria: 'Recomendados',
+                pack: 'Pack Clasico',
               },
               {
                 id: 8,
@@ -218,6 +254,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.9,
                 video: video1,               
                 categoria: 'Recomendados',
+                pack: 'Pack Gourmet',
               },
               {
                 id: 9,
@@ -232,6 +269,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 4.0,
                 video: video1,               
                 categoria: 'Recomendados',
+                pack: '-',
               },
               {
                 id: 10,
@@ -246,6 +284,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.7,
                 video: video1,
                 categoria: 'Recomendados',
+                pack: 'Pack Gourmet',
               },
               {
                 id: 11,
@@ -260,6 +299,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.2,
                 video: video1,
                 categoria: 'Recomendados',
+                pack: 'Pack Clasico',
               },
               {
                 id: 12,
@@ -274,6 +314,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.5,
                 video: video1,
                 categoria: 'Recomendados',
+                pack: 'Pack Gourmet',
               },
               {
                 id: 13,
@@ -288,6 +329,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.5,
                 video: video1,
                 categoria: 'Los más comprados',
+                pack: '-',
               },
               {
                 id: 14,
@@ -302,6 +344,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 4.3,
                 video: video1,
                 categoria: 'Los más comprados',
+                pack: 'Pack Celiaco',
               },
               {
                 id: 15,
@@ -316,6 +359,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 4.3,
                 video: video1,
                 categoria: 'Los más comprados',
+                pack: 'Pack Clasico',
               },
               {
                 id: 16,
@@ -330,6 +374,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 4.2,
                 video: video1,
                 categoria: 'Los más comprados',
+                pack: '-',
               },
               {
                 id: 17,
@@ -344,6 +389,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.8,
                 video: video1,
                 categoria: 'Los más comprados',
+                pack: 'Pack Clasico',
               },
               {
                 id: 18,
@@ -358,6 +404,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.4,
                 video: video2,
                 categoria: 'Los más comprados',
+                pack: 'Pack Clasico',
               },
               {
                 id: 19,
@@ -372,6 +419,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.5,
                 video: video1,
                 categoria: 'Los más comprados',
+                pack: 'Pack Celiaco',
               },
               {
                 id: 20,
@@ -386,6 +434,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.3,
                 video: video1,
                 categoria: 'Los más comprados',
+                pack: 'Pack Celiaco',
               },
               {
                 id: 21,
@@ -400,6 +449,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.4,
                 video: video1,
                 categoria: 'Los más comprados',
+                pack: 'Pack Clasico',
               },
               {
                 id: 22,
@@ -414,6 +464,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 4.2,
                 video: video1,
                 categoria: 'Los más comprados',
+                pack: '-',
               },
               {
                 id: 23,
@@ -428,6 +479,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 2.5,
                 video: video1,
                 categoria: 'Los más comprados',
+                pack: '-',
               },
               {
                 id: 24,
@@ -442,6 +494,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.8,
                 video: video1,
                 categoria: 'Los más comprados',
+                pack: 'Pack Clasico',
               },
               {
                 id: 25,
@@ -456,6 +509,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.1,
                 video: video1,
                 categoria: 'Veggie',
+                pack: '-',
               },
               {
                 id: 26,
@@ -470,6 +524,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.8,
                 video: video1,
                 categoria: 'Veggie',
+                pack: 'Pack Vegetariano',
               },
               {
                 id: 27,
@@ -484,6 +539,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.4,
                 video: video1,
                 categoria: 'Veggie',
+                pack: '-',
               },
               {
                 id: 28,
@@ -498,6 +554,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.6,
                 video: video1,
                 categoria: 'Veggie',
+                pack: 'Pack Vegetariano',
               },
               {
                 id: 29,
@@ -512,6 +569,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 4.2,
                 video: video1,
                 categoria: 'Veggie',
+                pack: 'Pack Vegetariano',
               },
               {
                 id: 30,
@@ -526,6 +584,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 4.3,
                 video: video1,
                 categoria: 'Veggie',
+                pack: 'Pack Vegetariano',
               },
               {
                 id: 31,
@@ -540,6 +599,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.7,
                 video: video1,
                 categoria: 'Veggie',
+                pack: 'Pack Vegetariano',
               },
               {
                 id: 32,
@@ -554,6 +614,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.2,
                 video: video1,
                 categoria: 'Veggie',
+                pack: 'Pack Vegetariano',
               },
               {
                 id: 33,
@@ -568,6 +629,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.5,
                 video: video1,
                 categoria: 'Veggie',
+                pack: 'Pack Vegetariano',
               },
               {
                 id: 34,
@@ -582,6 +644,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.9,
                 video: video1,
                 categoria: 'Veggie',
+                pack: 'Pack Vegetariano',
               },
               {
                 id: 35,
@@ -596,6 +659,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.3,
                 video: video1,
                 categoria: 'Veggie',
+                pack: 'Pack Vegetariano',
               },
               {
                 id: 36,
@@ -610,6 +674,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.6,
                 video: video1,
                 categoria: 'Veggie',
+                pack: 'Pack Vegetariano',
               },
               {
                 id: 37,
@@ -624,6 +689,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.8,
                 video: video1,
                 categoria: 'Tentaciones',
+                pack: 'Pack Celiaco',
               },
               {
                 id: 38,
@@ -638,6 +704,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 4.0,
                 video: video1,
                 categoria: 'Tentaciones',
+                pack: 'Pack Gourmet',
               },
               {
                 id: 39,
@@ -652,6 +719,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.7,
                 video: video1,
                 categoria: 'Tentaciones',
+                pack: 'Pack Celiaco',
               },
               {
                 id: 40,
@@ -666,6 +734,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.5,
                 video: video1,
                 categoria: 'Tentaciones',
+                pack: 'Pack Gourmet',
               },
               {
                 id: 41,
@@ -680,6 +749,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.2,
                 video: video1,
                 categoria: 'Tentaciones',
+                pack: 'Pack Celiaco',
               },
               {
                 id: 42,
@@ -694,6 +764,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.7,
                 video: video1,
                 categoria: 'Tentaciones',
+                pack: '-',
               },
               {
                 id: 43,
@@ -708,6 +779,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.5,
                 video: video1,
                 categoria: 'Tentaciones',
+                pack: 'Pack Gourmet',
               },
               {
                 id: 44,
@@ -722,6 +794,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.4,
                 video: video1,
                 categoria: 'Tentaciones',
+                pack: 'Pack Gourmet',
               },
               {
                 id: 45,
@@ -736,6 +809,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.2,
                 video: video1,
                 categoria: 'Tentaciones',
+                pack: 'Pack Gourmet',
               },
               {
                 id: 46,
@@ -750,6 +824,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.3,
                 video: video1,
                 categoria: 'Tentaciones',
+                pack: 'Pack Celiaco',
               },
               {
                 id: 47,
@@ -764,6 +839,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 4.4,
                 video: video1,
                 categoria: 'Tentaciones',
+                pack: 'Pack Celiaco',
               },
               {
                 id: 48,
@@ -778,6 +854,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.5,
                 video: video1,
                 categoria: 'Tentaciones',
+                pack: 'Pack Gourmet',
               },
               {
                 id: 49,
@@ -792,6 +869,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 4.5,
                 video: video1,
                 categoria: 'Recomendados',
+                pack: '-',
               },
               {
                 id: 50,
@@ -805,6 +883,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 3.4,
                 video: video1,
                 categoria: 'Recomendados',
+                pack: 'Pack Celiaco',
               },
               {
                 id: 51,
@@ -818,6 +897,7 @@ import video2 from './img/Videos/empanadas.jpg';
                 estrellas: 4.2,
                 video: video1,
                 categoria: 'LosMasComprados',
+                pack: 'Pack Gourmet',
               }
             ],
   };

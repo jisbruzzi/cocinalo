@@ -36,6 +36,7 @@ class App extends Component {
 
                 {/* VER CUALES SIRVEN */}
                 <Route path='/comprar' component={paginas.Comprar}></Route> 
+                <Route path='/comprarPack' component={paginas.ComprarPack}></Route> 
                 <Route path='/productoComprado/:id' component={paginas.ProductoComprado}></Route>
                 <Route path='/comprar/:id' component={paginas.Comprar}></Route> 
                 {/* FIN VER CUALES SIRVEN */}
