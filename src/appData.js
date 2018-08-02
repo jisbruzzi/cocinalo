@@ -42,7 +42,7 @@ import image41 from './img/Tentaciones/5.jpg';
 import image42 from './img/Tentaciones/6.jpg';
 import image43 from './img/Tentaciones/7.jpg';
 import image44 from './img/Tentaciones/8.jpg';
-import image45 from './img/Tentaciones/9.jpg';
+import image45 from './img/Recomendados/15.jpg';
 import image46 from './img/Tentaciones/10.jpg';
 import image47 from './img/Tentaciones/11.jpg';
 import image48 from './img/Tentaciones/12.jpg';
@@ -98,22 +98,22 @@ import imagePerfil from './img/perfil.jpg';
                         {
                         id: 0,
                         nombre: 'Pack Vegetariano',
-	                precio:1400
+	                precio:850
                         },
                         {
                         id: 1,
                         nombre: 'Pack Celiaco',
-	                precio:1400
+	                precio:840
                         },
                         {
                         id: 2,
                         nombre: 'Pack Clasico',
-	                precio:1200
+	                precio:850
                         },
                         {
                         id: 3,
                         nombre: 'Pack Gourmet',
-	                precio:1500
+	                precio:880
                         }
                     ],
     packsComprados: [
@@ -849,15 +849,15 @@ import imagePerfil from './img/perfil.jpg';
                 id: 45,
                 img: image45,
                 title: 'Apple Crumble',
-                author: 'Maru Botana',
+                author: 'Bayoona Kitchen',
                 descripcion: 'Esta versión es ligeramente especiada y absolutamente deliciosa ahogada en natillas. Para 6 porciones, dificultad: "no tan complicado".',
-                ingredientes: '140 g de manteca sin sal, (fría).275 g de harina común.1 limón.1 yema de huevo grande de gallinas camperas.3 manzanas bramley.6 manzanas braeburn.5 fechas medjool.4 cucharadas de azúcar suave mascabado ligero.¼ cucharadita de canela molida.1 pizca de clavo de olor molido.1 huevo grande de gallinas camperas.1 cucharadita de leche.1 cucharada de azúcar demerara',
-                receta: 'Para la masa, corte la mantequilla y coloque en el tazón de un procesador de alimentos con la harina y ¼ de una cucharadita de sal marina, luego pulse hasta que la mezcla se asemeje a pan rallado grueso.Rallar finamente la ralladura de limón y reservar para después, luego exprimir 1 cucharada de jugo de limón, agregar la yema de huevo y 2 cucharadas de agua fría, y pulsar para combinar. Si la mezcla todavía se ve seca, siga agregando agua y pulsando hasta que la masa se una.Divida la masa en dos, forme discos de igual tamaño, envuélvalos en film transparente y relájese en la nevera durante 1 hora para reafirmarlos.Para el relleno, pele y base las manzanas, córtelas en trozos de 1 cm y colóquelas en una cacerola. Espolvorea sobre la ralladura de limón reservada y exprime el resto del jugo.Cortar finamente las fechas, eliminando los hoyos, luego incorporar el azúcar y las especias. Cocine a fuego lento a fuego medio-bajo durante 6 a 8 minutos, o hasta que las manzanas estén casi tiernas. Dejar de lado para enfriar.Precalentar el horno a 200ºC / 400ºF.Ruede uno de los discos de hojaldre hasta 5 mm de grosor sobre una superficie limpia y enharinada y úselo para revestir un molde para pastel de 20 cm, empujando la masa en los bordes. Recorte los bordes, dejando un voladizo de 2,5 cm alrededor del plato. Coloque una cuchara en el relleno del pastel enfriado, y ajústelo con fuerza.Haga rodar el segundo disco de pastelería hasta 5 mm de grosor, cepille los bordes con agua y colóquelo sobre el pastel, presionando los bordes para sellar. Doble el saliente y engarce con los dedos.Para el glaseado, bata todos los ingredientes juntos en un tazón pequeño, luego cepille todo el pastel. Si tiene algunos cortes de masa, puede hacer decoraciones adicionales para la parte superior, sellando con glaseado adicional.Con un cuchillo afilado, haga incisiones en la parte superior del pastel para permitir que salga el vapor durante la cocción. Espolvorea con azúcar demerara extra.Hornee el pastel durante 35 a 40 minutos, o hasta que la masa esté dorada y firme. Delicioso servido caliente, con crema o amargas de flan',
+                ingredientes: 'Crumble:.180 g de azucar.180 g de manteca.una pizca de sal.330 g de harina.1 cda de canela.Relleno de manzanas:.200 g de azucar. 50 g de manteca. 1kg de manzanas verdes. 50 cc de agua. 1 cda de canela. 1 tira de piel de limon',
+                receta: 'Relleno de manzanas:. Pele y corte en doceavos las manzanas. En una sartén caliente coloque la manteca, una vez derretida agregue las manzanas junto con el azúcar, la canela, la piel de limón (sin la parte blanca) y el agua, cocine a fuego máximo hasta que las manzanas estén tiernas. Una vez cocidas coloque sobre una fuente, retire la rama de canela y deje enfriar.Crumble:.Coloque en un bowl el azúcar junto con la manteca, la harina, canela y la sal, frote con las manos hasta unir los ingredientes y obtener una mezcla con grumos. Reserve en la heladera hasta el momento de utilizar. Armado:. Acomode los gajos de manzana sobre la masa blanqueada desde los bordes hacia el centro, luego cubra con el crumble y por ultimo espolvoree con azúcar impalpable.Cocine en horno precalentado a 170oC durante 40 minutos.Deje enfriar a temperatura ambiente, luego desmolde.Presentación: Sirva las porciones acompañadas de crema chantilly o helado de crema a gusto',
                 tiempo: 90,
                 precio: 120,
                 estrellas: 3.2,
                 video: video1,
-                categoria: 'Tentaciones',
+                categoria: 'Recomendados',
 		restricciones: ['vegetariano'],
                 pack: 3,
               },

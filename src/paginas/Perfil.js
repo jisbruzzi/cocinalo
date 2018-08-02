@@ -21,6 +21,7 @@ import RedeemIcon from '@material-ui/icons/Redeem';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import Divider from '@material-ui/core/Divider';
 import Switch from '@material-ui/core/Switch';
+import Checkbox from '@material-ui/core/Checkbox';
 
 const styles = theme => ({
   container: {
@@ -128,12 +129,14 @@ class Perfil extends Component {
                   paddingTop:"16px",
                 }}>
               <div className={classes.iconos}>
-                      <Typography variant="subheading" align="left" style={{fontFamily: 'Patua One','text-align':'left'}}>
+                      <Typography variant="subheading" align="left" style={{fontFamily: 'Patua One'}}>
                   	    Vegetariano
-                        <Switch
+                        <Checkbox style={{float: "right"}}
                           checked={this.state.vegetariano}
                           onChange={this.handleChangeVegetariano('vegetariano')}
                           value="vegetariano"
+
+
                           />
                       </Typography>
                       <br/>
@@ -141,7 +144,7 @@ class Perfil extends Component {
                       <br/>
                       <Typography variant="subheading" align="left" style={{fontFamily: 'Patua One','text-align':'left'}}>
                   	    Celiaco
-                        <Switch
+                        <Checkbox style={{float: "right"}}
                           checked={this.state.celiaco}
                           onChange={this.handleChangeCeliaco('celiaco')}
                           value="celiaco"

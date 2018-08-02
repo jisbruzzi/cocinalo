@@ -146,7 +146,7 @@ class Proxy {
           this.data.packsComprados.push({
             id: pack.id,
             nombre: pack.nombre,
-            cantidad: 30
+            cantidad: 5
           });
         }
         resolve()
